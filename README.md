@@ -1,433 +1,263 @@
 # THREADS
 
-**Tactical Hub for Readiness, Execution, Administration, Data & Sync**
+### Tactical Hub for Readiness, Execution, Administration, Data & Sync
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/docker-compose%20ready-2496ED.svg?logo=docker)](docker-compose.yml)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg?logo=fastapi)](app/main.py)
-[![React](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react)](web/package.json)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg?logo=postgresql)](migrations/)
-[![Kubernetes](https://img.shields.io/badge/Kubernetes-manifests-326CE5.svg?logo=kubernetes)](k8s/)
-
-THREADS is a full-stack unit management and readiness platform designed for disconnected, intermittent, and limited (DIL) environments. It ingests data from up to 14 authoritative Army Systems of Record (SOR) via a Python `dlt`-based ETL pipeline, consolidates it into a PostgreSQL relational core, and serves it to a React 19 single-page application through a FastAPI REST layer.
-
-The platform is deployable via **Docker Compose** (development), **Kubernetes** (staging/cloud), and **Zarf/UDS** (production air-gap).
+[![Kubernetes](https://img.shields.io/badge/kubernetes-manifests-326CE5.svg?logo=kubernetes)](k8s/)
+[![Air-Gap](https://img.shields.io/badge/air--gap-Zarf%2FUDS-orange.svg)](zarf.yaml)
 
 ---
 
-## Architecture
+## The Problem
 
-```
-┌─────────────────── External Systems of Record (SOR) ───────────────────────┐
-│  IPPS-A · MEDPROS · DTMS · DISS · JKO · STEPP · GCSS-Army · DTS · ATTARS  │
-│  iPERMS · TMT · FMSWeb · ATCTS                                              │
-└─────────────────────────────┬───────────────────────────────────────────────┘
-                              │ JSON drops  (ETL_DROP_DIR/<source>/*.json)
-                              ▼
-                    ┌─────────────────┐
-                    │   ETL CronJob   │   Python dlt (extract + schema evolution)
-                    │  etl/pipeline.py│──► staging.* tables
-                    │  etl/merge.sql  │──► core.* tables  (idempotent upserts)
-                    └────────┬────────┘
-                             │
-                    ┌────────▼────────┐
-                    │  PostgreSQL 16  │   relational spine + JSONB leaves
-                    │  core.*         │   core.soldiers, core.equipment_lines, …
-                    │  staging.*      │   14 per-source staging tables
-                    └────────┬────────┘
-                             │
-                    ┌────────▼────────┐
-                    │   FastAPI API   │   asyncpg · bearer-token auth · CORS
-                    │  app/main.py    │   GET /api/data  PUT /api/soldiers/:id
-                    └────────┬────────┘
-                             │
-                    ┌────────▼────────┐
-                    │  React 19 SPA   │   TypeScript · Vite · CSS Modules
-                    │  served by nginx│   S1–S9 staff sections + unit views
-                    └─────────────────┘
-```
+Every unit leader in the U.S. military already knows what the data shows.
 
-### Deployment Tiers
+In 2015, Dr. Leonard Wong and Dr. Stephen Gerras published *[Lying to Ourselves: Dishonesty in the Army Profession](https://press.armywarcollege.edu/monographs/673/)* through the U.S. Army War College. What they documented wasn't a scandal — it was standard operating procedure. When the Army floods units with more requirements than any human organization can possibly execute, and when reporting noncompliance isn't an acceptable alternative, something breaks. Officers become ethically numb. Their signatures — once symbols of professional integrity — become administrative tools for maneuvering through bureaucracy. Subordinates are forced to make a private calculation: which requirements will actually be done to standard, and which will only be **reported** as done to standard.
 
-| Tier | Tool | Target |
+The readiness data flowing up the chain of command isn't a picture of reality. It's a picture of what the institution demanded be reported.
+
+The system that produces this distortion is the one every unit operates every day: **over 2,300 authoritative Army systems**, none of which natively talk to each other, layered on top of an unofficial Microsoft shadow infrastructure — SharePoint trackers, Teams channels, Excel rosters, Outlook suspense chains, and Word forms — that actually runs day-to-day operations at every echelon from squad to COCOM.
+
+The S1 runs a tracker for leaves, a separate tracker for flags, another for evaluations, another for awards — none of them fed from the same source, none of them automatically updated when something changes in IPPS-A or HR Connect. The S4 manages equipment readiness in GCSS-Army but tracks maintenance status in a separate spreadsheet that gets emailed to the XO on Monday mornings. The commander asks for a readiness report and four people spend four hours manually pulling data from six systems to build a PowerPoint that is already out of date by the time it's briefed.
+
+This isn't inefficiency. This is the architecture of distortion.
+
+---
+
+## The Solution
+
+THREADS is a **purpose-built integration layer** that connects a unit's authoritative systems of record — the systems that actually own the data — and consolidates them into a single operational picture that updates automatically.
+
+It doesn't replace IPPS-A. It doesn't replace MEDPROS or DTMS or GCSS-Army. Those systems are the sources of truth and they stay that way. What THREADS does is pull the data from those systems, reconcile it, and present it to the people who need it — in one place, in real time, without the manual transfer work that currently lives in someone's personal SharePoint folder.
+
+**The Microsoft Office Master Badge is retired. Say hello to THREADS.**
+
+What a unit gets:
+- Every soldier's readiness status — medical, training, administrative, clearance, equipment — in a single view, sourced directly from the authoritative systems
+- Suspense tracking that actually knows when something is due because it reads the system, not because an NCO manually updated a spreadsheet
+- Leave tracker populated from IPPS-A, not from a handwritten DA 31 log
+- Awards pipeline status without emailing each section
+- Equipment readiness from GCSS-Army, not from Monday's email attachment
+- Travel authorization and voucher status from DTS
+- Clearance PR due dates from DISS before they become a problem
+- Training currency — AFT, SHARP, cyber, weapons qual — from the systems that own that data
+
+No more shadow work. No more "I'll need to check the tracker." No more briefing numbers you aren't sure of.
+
+---
+
+## Who This Is For
+
+| Role | What THREADS does for you |
+|---|---|
+| **Commander / CSM** | Single readiness picture across all S-sections; no more waiting for the Monday brief to know what's real |
+| **XO** | Suspense tracking that surfaces what's overdue before it becomes a commander's problem |
+| **S1** | IPPS-A, MEDPROS, HR Connect, and iPERMS consolidated; leave tracker auto-populated; awards pipeline visible to anyone with access |
+| **S3** | Battle rhythm in one place; training status fed from DTMS and ATTARS, not from NCO-maintained spreadsheets |
+| **S4** | GCSS-Army property book and maintenance status without the weekly email chain |
+| **S6** | AUP/cyber compliance from ATCTS; system access visibility |
+| **S2** | Clearance status from DISS; STEPP training completion; JKO records |
+| **Staff NCOs** | The tracker is the system. No more maintaining parallel records. |
+
+---
+
+## What It Connects
+
+THREADS currently integrates with 14 Army Systems of Record:
+
+| System | What it provides |
+|---|---|
+| **IPPS-A** | Master personnel roster, leave (DA Form 31), evaluation status, admin flags |
+| **MEDPROS** | Medical readiness class, dental, immunizations, deployment-limiting conditions |
+| **DTMS** | AFT scores, CFT scores, course completions, training management |
+| **DISS** | Security clearance eligibility, investigation dates, PR due dates |
+| **JKO** | Online course completions and compliance status |
+| **STEPP** | Security training certifications |
+| **GCSS-Army** | Equipment property book, maintenance status, FMC/PMC/NMC by LIN |
+| **DTS** | Travel authorizations, per diem, voucher status |
+| **ATTARS** | Soldier-level and unit-level training readiness |
+| **iPERMS** | OMPF completeness, record audit status |
+| **TMT** | Task management and cross-section suspense tracking |
+| **FMSWeb** | MTOE authorized positions, SDAP authorizations, para/line data |
+| **ATCTS** | AUP compliance, cyber awareness, SHARP completion |
+
+---
+
+## Deployment Options
+
+THREADS runs where the unit operates — it doesn't require an internet connection, a commercial cloud account, or a dedicated IT staff.
+
+| Environment | How | What it takes |
 |---|---|---|
-| Development | `docker compose up --build` | Local workstation |
-| Staging / cloud | `kubectl apply -k deploy/k3d` | k3d or any K8s cluster |
-| Production (air-gap) | `zarf package deploy` | Disconnected environments |
+| **Local demo** | `docker compose up` | A laptop and 10 minutes |
+| **Unit server / S6 rack** | Docker Compose or Kubernetes | A single server; can run offline |
+| **Air-gapped / SIPR** | Zarf/UDS package | Pre-bundled install; no internet required at deploy time |
+| **Cloud (NIPRNet/AWS GovCloud)** | Kubernetes manifests | Standard DoD cloud environment |
 
 ---
 
-## Features
-
-- **14-source ETL pipeline** — ingests from IPPS-A, MEDPROS, DTMS, DISS, JKO, STEPP, GCSS-Army, DTS, ATTARS, iPERMS, TMT, FMSWeb MTOE, and ATCTS/AUP; new SOR sources add a `@dlt.resource` + a migration, not a schema rewrite
-- **S1–S9 coordinating staff sections** — Personnel, Intelligence, Operations, Logistics, Plans, Communications, Training, Finance, Civil Affairs; each section consumes its relevant SOR data
-- **Special Staff pages** — Medical, SHARP/EO, Finance, Safety, CBRN, Career Counselor
-- **Integration Map** — in-app panel showing all connected/pending/planned SOR integrations with field-level descriptions
-- **Unit hierarchy** — Group → Battalion → Company views with configurable MTOE positions
-- **Leave tracker** — sourced from IPPS-A DA Form 31 leave data
-- **Awards pipeline** — tracks nominations through submission
-- **Clearance tracking** — DISS PR due dates, eligibility status
-- **Equipment readiness** — GCSS-Army property book with FMC/PMC/NMC status
-- **Travel management** — DTS authorization and voucher tracking
-- **Task management** — TMT cross-section suspense tracking
-- **Relational spine + JSONB leaves** — PostgreSQL schema pattern that handles mixed-type fields and arbitrary SOR structure variance without schema changes
-- **Idempotent ETL** — `ON CONFLICT DO UPDATE` merge SQL; safe to replay; staging schema auto-evolved by dlt
-- **Air-gap packaging** — Zarf/UDS bundle wraps all images and Kubernetes manifests for offline install
-- **Zero-trust API** — bearer-token or `X-Api-Key` header; build-time inlined into SPA bundle
-
----
-
-## Tech Stack
-
-| Layer | Technology | Version |
-|---|---|---|
-| Frontend | React + TypeScript + Vite | 19 / ~6.0 / 8.x |
-| Routing | React Router | 7.x |
-| Styling | CSS Modules | — |
-| API | FastAPI + uvicorn | 0.115 / 0.34 |
-| DB driver | asyncpg | 0.30 |
-| Database | PostgreSQL | 16 |
-| ETL | dlt (data load tool) | 1.4 |
-| Web server | nginx | 1.27 |
-| Container | Docker / Compose | — |
-| Orchestration | Kubernetes | 1.29+ |
-| Air-gap | Zarf / UDS | — |
-| CI/CD | GitHub Actions (self-hosted) | — |
-
----
-
-## Quick Start
-
-**Prerequisites:** Docker Desktop (or Docker + Compose v2), Git
+## Quick Start (Demo)
 
 ```bash
 git clone https://github.com/catalystnexusllc-hub/threads-platform.git
 cd threads-platform
-cp .env.example .env          # review and adjust if needed
+cp .env.example .env
 docker compose up --build
 ```
 
-Open **http://localhost:8080** — the SPA loads with demo data already seeded.
+Open **http://localhost:8080**
 
-The API is also accessible directly at **http://localhost:8000/api/health**.
+The demo loads with a full synthetic unit roster, training records, equipment status, travel authorizations, and clearance data so you can see every section working without connecting to any real system.
 
-### What runs
-
-| Container | Port | Notes |
-|---|---|---|
-| `web` | 8080 | nginx serving the built React SPA; `/api` proxied to `api:8000` |
-| `api` | 8000 | FastAPI + uvicorn; runs DB migrations and seeds on startup |
-| `postgres` | (internal) | PostgreSQL 16; named volume `threads-pg` |
+> **Note:** All demo data is completely synthetic — procedurally generated, not sourced from any real unit or personnel record. See [`seed/README.md`](seed/README.md).
 
 ---
 
-## Configuration
+## How Data Flows
 
-All configuration is via environment variables. Copy `.env.example` to `.env` and set:
+At its core, THREADS is an **ETL pipeline** — Extract, Transform, Load. In plain terms: it reads data from the systems that own it, normalizes it into a common format, and makes it available through a single interface.
 
-| Variable | Default | Required | Description |
-|---|---|---|---|
-| `DATABASE_URL` | — | **Yes** | PostgreSQL DSN: `postgresql://user:pass@host:5432/db` |
-| `API_KEY` | (empty) | No | Bearer token for all `/api` routes. Empty = open (dev only). |
-| `CORS_ORIGIN` | `http://localhost:3000` | No | Comma-separated allowed origins. Use `*` only in isolated airgap. |
-| `NODE_ENV` | `development` | No | Label echoed by `/api/health`. |
+```
+Your authoritative systems (IPPS-A, MEDPROS, DTMS, DISS, ...)
+        │
+        │  Each system exports a data file (JSON) on a schedule
+        │  — or THREADS pulls via API where available
+        ▼
+THREADS ETL pipeline
+        │  Reads each system's data
+        │  Normalizes field names (every system calls the ID something different)
+        │  Loads into the THREADS database
+        │  Runs automatically on a schedule; safe to replay
+        ▼
+THREADS database (PostgreSQL)
+        │  Single consolidated store
+        │  Every record stamped with its source system and timestamp
+        │  App edits distinguished from ETL data — provenance is always visible
+        ▼
+THREADS web application
+        │  One interface for all sections
+        │  Role-based views (S1 sees S1 data; commander sees the roll-up)
+        ▼
+The truth, visible to the people who need it
+```
 
-**Web build-time variable** (baked into the SPA bundle):
-
-| Variable | Default | Description |
-|---|---|---|
-| `VITE_API_KEY` | (empty) | Sent as `X-Api-Key` header on all API calls. Must match `API_KEY`. |
+No data is invented by THREADS. If the source system is wrong, THREADS shows that. The difference is that THREADS shows it to everyone simultaneously, automatically, so there's no longer a gap between what the system says and what the tracker says.
 
 ---
 
-## ETL Pipeline
+## Architecture (Technical Summary)
 
-### How it works
+For developers and technical decision makers:
 
-```
-ETL_DROP_DIR/<source>/*.json
-        ↓ dlt extract (etl/pipeline.py)
-staging.<source> tables          ← dlt replaces each run
-        ↓ idempotent SQL merge (etl/merge.sql)
-core.* tables                    ← upserts on natural keys (dodid, lin, task_id …)
-        ↓ FastAPI /api/data
-React frontend
-```
+| Layer | Technology | Purpose |
+|---|---|---|
+| Web application | React 19 + TypeScript, served by nginx | The interface — S1–S9 sections, unit views, command dashboard |
+| API | FastAPI (Python) | Serves data to the frontend; handles all write operations |
+| Database | PostgreSQL 16 | Consolidated data store: relational tables + JSONB for flexible SOR payloads |
+| ETL pipeline | Python `dlt` (data load tool) | Reads SOR file drops → staging tables → core tables (idempotent) |
+| Container runtime | Docker / Kubernetes | Runs everything; single-node capable for unit-server deployment |
+| Air-gap packaging | Zarf / UDS | Bundles all images and config for offline install; no internet at deploy time |
 
-1. **Extract:** Each SOR system drops a JSON file (array or JSON-lines) into `ETL_DROP_DIR/<source>/`. The `etl/pipeline.py` dlt resources read these files, handle both flat and nested-envelope formats, normalize field names, and load into `staging.*` tables.
+The database uses a **relational spine + JSONB leaves** pattern — structured tables for the data that gets joined and filtered (soldiers, units, events), with flexible JSON storage for the source-system payloads that vary in structure between SOR providers. This means adding a new system of record doesn't require rebuilding the database schema.
 
-2. **Load:** `etl/run.py` triggers dlt → staging, then executes `etl/merge.sql` inside a single transaction. Each block upserts staging rows into the corresponding core table on the natural key. `DISTINCT ON` collapses duplicate staging rows (latest wins).
+Full technical documentation: [`ARCHITECTURE.md`](ARCHITECTURE.md)
 
-3. **Provenance:** Every row in `core.*` carries `source_system` and `updated_at`. App-side edits carry `source_system='app'` so ETL and manual edits are always distinguishable.
+---
 
-### SOR connectors
+## For Developers
 
-| Resource | Drop dir | Core target | Join key |
-|---|---|---|---|
-| `ipps_a_personnel` | `ipps_a/` | `core.soldiers` | EDIPI/DODID |
-| `medpros_readiness` | `medpros/` | `core.soldier_medical` | DODID |
-| `dtms_training` | `dtms/` | `core.soldier_acft` | DODID |
-| `diss_clearances` | `diss/` | `core.soldier_clearance` | DODID |
-| `jko_completions` | `jko/` | `core.soldier_training` (jko key) | DODID |
-| `stepp_certs` | `stepp/` | `core.soldier_training` (stepp key) | DODID |
-| `attars_training` | `attars/` | `core.soldier_training` (attars key) | DODID |
-| `attars_events` | `attars/` | `core.training_events` | event_id |
-| `iperms_records` | `iperms/` | `core.soldier_admin_docs` | DODID |
-| `cyber_aup` | `atcts/` | `core.soldier_training` (aup key) | DODID |
-| `gcss_equipment` | `gcss/` | `core.equipment_lines` | LIN + NSN |
-| `dts_travel` | `dts/` | `core.travel_authorizations` | auth_number |
-| `tmt_tasks` | `tmt/` | `core.tmt_tasks` | task_id |
-| `fmsweb_positions` | `fmsweb/` | `core.mtoe_positions` | para_line |
+### Prerequisites
 
-### Running the ETL manually
+Docker Desktop, Git. That's it for the demo.
 
-```bash
-# Inside the running api container (seeds bundled datasets)
-docker compose exec api python -c "from etl.run import main; main()"
-
-# Or run the ETL container standalone
-docker compose run --rm etl
-```
+For local development: Node.js 22+, Python 3.12+.
 
 ### Adding a new SOR connector
 
-1. Add a `@dlt.resource` in `etl/pipeline.py` that reads from `_read_records("<source>")` and yields normalized fields + `_raw`.
-2. Add the resource to `threads_sources()`.
-3. Add a staging table in a new migration (`migrations/000N_*.sql`).
-4. Add a merge block in `etl/merge.sql`.
-5. Drop JSON files into `ETL_DROP_DIR/<source>/` and run the ETL.
+Each system of record is one self-contained module:
+1. A Python function that reads the system's data export and normalizes it
+2. A database table that receives that data
+3. A SQL merge block that moves it from staging into the live database
 
----
+No changes to the core application. No schema rebuild. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the step-by-step.
 
-## Database Schema
-
-The schema follows a **relational spine + JSONB leaves** pattern:
-
-- **Relational spine:** Real tables with foreign keys for entities and collections the ETL joins on (`core.soldiers`, `core.units`, `core.standup_events`, etc.). `soldiers.dodid` is the natural ETL key.
-- **JSONB leaves:** Per-source 1:1 side tables (`soldier_medical`, `soldier_acft`, `soldier_training`, `soldier_clearance`, `soldier_admin_docs`) carry arbitrary SOR payload as JSONB. This handles mixed-type fields and structure variance without schema changes.
-- **Entity tables:** Non-soldier-keyed sources get their own tables (`core.equipment_lines`, `core.travel_authorizations`, `core.tmt_tasks`, `core.mtoe_positions`, `core.training_events`).
-
-See [`migrations/0001_core_schema.sql`](migrations/0001_core_schema.sql) for the full schema with commentary.
-
-### Key tables
+### Project structure
 
 ```
-core.soldiers              — relational spine; dodid is the ETL natural key
-core.soldier_medical       — MEDPROS leaf (JSONB)
-core.soldier_acft          — DTMS AFT/training leaf (JSONB)
-core.soldier_training      — multi-source training leaf: jko/stepp/attars/aup keys (JSONB)
-core.soldier_clearance     — DISS clearance leaf
-core.soldier_admin_docs    — iPERMS OMPF completeness
-core.equipment_lines       — GCSS-Army property book (keyed on lin+nsn)
-core.travel_authorizations — DTS travel (keyed on auth_number)
-core.tmt_tasks             — TMT task management (keyed on task_id)
-core.mtoe_positions        — FMSWeb MTOE authorized positions (keyed on para_line)
-core.training_events       — ATTARS training events (keyed on event_id)
+app/           FastAPI backend
+etl/           Data pipeline (one file per SOR connector)
+migrations/    Database schema (versioned, idempotent)
+web/           React frontend (S1–S9 pages, unit views, integration map)
+k8s/           Kubernetes manifests for cluster deployment
+seed/          Synthetic demo data (100% fictional)
+pipelines/     Field-level documentation: which system feeds which field in which UI
 ```
+
+Full structure: [`ARCHITECTURE.md#project-structure`](ARCHITECTURE.md)
 
 ---
 
 ## API Reference
 
-All routes require `Authorization: Bearer <API_KEY>` or `X-Api-Key: <API_KEY>` (unless `API_KEY` is empty).
-
 | Method | Route | Description |
 |---|---|---|
-| `GET` | `/api/health` | Health check; returns `{status, env, ts}` |
-| `GET` | `/api/data` | Full data payload (soldiers, units, sections, events, sitreps, leader groups) |
-| `PUT` | `/api/soldiers/:id` | Update a soldier record (partial update, preserves unset fields) |
-| `GET` | `/api/sections/:unit` | Get all sections for a unit |
-| `POST` | `/api/sections/:unit` | Create a section |
-| `PUT` | `/api/sections/:unit/:key` | Update a section |
-| `GET` | `/api/sitreps` | List all sitrep records |
-| `PUT` | `/api/sitreps/:index` | Upsert a sitrep by position index |
-| `GET` | `/api/events` | List standup events |
-| `POST` | `/api/events` | Create standup event |
-| `PUT` | `/api/events/:id` | Update standup event |
-| `DELETE` | `/api/events/:id` | Delete standup event |
-| `GET` | `/api/leader-groups` | Get leader group layout |
-| `PUT` | `/api/leader-groups` | Replace leader group layout |
-| `PUT` | `/api/locations` | Update leader location assignments |
+| `GET` | `/api/health` | System health check |
+| `GET` | `/api/data` | Full data payload — soldiers, units, sections, events, readiness |
+| `PUT` | `/api/soldiers/:id` | Update a soldier record |
+| `GET/POST/PUT` | `/api/sections/:unit` | Unit section data |
+| `GET/PUT` | `/api/sitreps` | Monthly readiness reports |
+| `GET/POST/PUT/DELETE` | `/api/events` | Battle rhythm / standup events |
+| `GET/PUT` | `/api/leader-groups` | Command team board layout |
+| `PUT` | `/api/locations` | Leader location assignments |
 
----
-
-## Kubernetes Deployment
-
-### Prerequisites
-
-- `kubectl` configured against your cluster
-- Namespace `threads` (auto-created by manifests)
-- A PostgreSQL instance accessible from the cluster (or use the bundled StatefulSet)
-
-### Deploy
-
-```bash
-# Create the secret (replace values)
-kubectl create secret generic threads-secret \
-  --namespace threads \
-  --from-literal=API_KEY=your-api-key \
-  --from-literal=PG_PASSWORD=your-pg-password \
-  --from-literal=DATABASE_URL=postgresql://threads:your-pg-password@postgres:5432/threads
-
-# Apply all manifests
-kubectl apply -k k8s/
-
-# Watch rollout
-kubectl rollout status deployment/api -n threads
-kubectl rollout status deployment/web -n threads
-```
-
-### ETL CronJob
-
-```bash
-# Trigger ETL manually
-kubectl create job --from=cronjob/etl etl-manual -n threads
-
-# Watch logs
-kubectl logs -l job-name=etl-manual -n threads -f
-```
-
----
-
-## Air-Gap Deployment (Zarf / UDS)
-
-THREADS ships as a Zarf package for disconnected/air-gapped environments.
-
-```bash
-# On a connected machine — build the package
-zarf package create . --confirm
-
-# Transfer threads-*.zst to the air-gapped system, then:
-zarf package deploy threads-*.zst --confirm
-
-# Or deploy as a full UDS bundle
-uds deploy uds-bundle-threads-*.tar.zst --confirm
-```
-
-See [`DEPLOY-k3d.md`](DEPLOY-k3d.md) for the full k3d staging workflow.
-
----
-
-## Development
-
-### Frontend
-
-```bash
-cd web
-npm install
-cp .env.example .env.local   # set VITE_API_KEY if your API uses one
-npm run dev                  # Vite dev server at http://localhost:5173
-```
-
-The Vite dev server proxies `/api` to `http://localhost:8000` (see `vite.config.ts`).
-
-### Backend
-
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-export DATABASE_URL=postgresql://threads:threads@localhost:5432/threads
-export API_KEY=dev-key
-uvicorn app.main:app --reload --port 8000
-```
-
-The API auto-applies migrations and seeds demo data from `seed/seed.json` on first startup.
-
-### ETL
-
-```bash
-cd etl
-pip install -r requirements.txt
-export DATABASE_URL=postgresql://threads:threads@localhost:5432/threads
-export DESTINATION__POSTGRES__CREDENTIALS=$DATABASE_URL
-export ETL_DROP_DIR=/path/to/your/drop/dir
-python run.py
-```
-
-To test with the bundled demo data, copy the `seed/datasets/external-sor/` files into subdirectories matching the source names (`ipps_a/`, `medpros/`, `dtms/`, etc.) under `ETL_DROP_DIR`.
-
----
-
-## Project Structure
-
-```
-threads-platform/
-├── app/
-│   ├── main.py              # FastAPI application, routes, auth middleware
-│   └── db.py                # asyncpg pool, migration runner, data reconstruction
-├── etl/
-│   ├── pipeline.py          # dlt resources — one per SOR connector
-│   ├── run.py               # ETL entrypoint: dlt load + SQL merge
-│   ├── merge.sql            # 14 idempotent staging→core upsert blocks
-│   └── stage_datasets.py    # Helper to stage bundled demo datasets
-├── migrations/
-│   ├── 0001_core_schema.sql # Relational core: soldiers, events, leave, awards …
-│   ├── 0002_etl_staging.sql # Initial staging tables (IPPS-A, MEDPROS, DTMS)
-│   ├── 0003_staging_expansion.sql  # 13 new staging tables + 6 new core entity tables
-│   └── 0004_staging_dlt_owned.sql  # dlt schema ownership migration
-├── seed/
-│   ├── seed.json            # Initial data seeded by the API on first startup
-│   └── datasets/
-│       ├── external-sor/    # 16 JSON files simulating SOR API drops
-│       └── internal/        # 9 JSON files for THREADS-native data
-├── web/
-│   └── src/
-│       ├── pages/army/      # Army branch: ArmyApp, S1–S9 pages, unit pages
-│       ├── components/      # Shared UI: SiteHeader, ClassificationBanner
-│       └── types/           # TypeScript type definitions
-├── nginx/
-│   └── threads.conf         # SPA serving + /api reverse proxy
-├── k8s/                     # Kubernetes manifests (namespace → postgres → api → web → etl CronJob)
-├── deploy/k3d/              # kustomize overlay for k3d staging
-├── pipelines/
-│   └── coordinating-staff-data-pipeline.md  # Field-level SOR→UI mapping for all staff sections
-├── Dockerfile.api
-├── Dockerfile.web           # Multi-stage: Node build → nginx serve
-├── Dockerfile.etl
-├── docker-compose.yml
-├── zarf.yaml                # Zarf air-gap package definition
-├── uds-bundle.yaml          # UDS bundle wrapping the Zarf package
-└── .github/workflows/
-    └── deploy-k3d.yml       # CI: build → import into k3d → rolling deploy
-```
+All routes require `Authorization: Bearer <API_KEY>` or `X-Api-Key: <API_KEY>`.
 
 ---
 
 ## Roadmap
 
-- [x] PostgreSQL 16 backend replacing SQLite
-- [x] FastAPI REST layer with asyncpg
-- [x] API key authentication
-- [x] dlt-based ETL with 14 SOR connectors
-- [x] Idempotent SQL merge (staging → core)
-- [x] React 19 SPA with full S1–S9 staff sections
+### Done
+- [x] Full S1–S9 coordinating staff sections
 - [x] Unit hierarchy (Group → Battalion → Company)
-- [x] Special Staff pages (Medical, SHARP, Finance, Safety, CBRN)
-- [x] Integration Map panel (in-app SOR status)
-- [x] Kubernetes manifests + Zarf/UDS air-gap packaging
-- [x] Self-hosted CI/CD (GitHub Actions → k3d)
-- [ ] Edit forms wired to PUT endpoints (currently read-only for most fields)
-- [ ] CAC/PIV authentication (replace API key)
-- [ ] Navy and Air Force branch verticals
-- [ ] Dagster asset-based ETL orchestration
-- [ ] Real-time sync via WebSocket push
-- [ ] STIG-hardened container images
-- [ ] IL4/IL5 deployment guide
+- [x] Special Staff pages (Medical, SHARP/EO, Finance, Safety, CBRN, Career Counselor)
+- [x] 14 SOR connectors with idempotent ETL pipeline
+- [x] Air-gap deployment via Zarf/UDS
+- [x] Integration Map — in-app panel showing status of all connected systems
+- [x] PostgreSQL backend with provenance tracking (who wrote what, from which system)
+
+### Next
+- [ ] Edit forms wired to live API (currently read-only for most fields in the demo)
+- [ ] CAC/PIV authentication (replaces API key for production)
+- [ ] Navy, Air Force, and Marine Corps branch verticals
+- [ ] Real-time data push (WebSocket) so the screen updates without refresh
+- [ ] Dagster-based ETL scheduling with retry logic and alerting
+- [ ] IL4/IL5 deployment guide for classified network environments
+
+---
+
+## Background
+
+THREADS was conceived by a former Army officer who lived this problem firsthand. The mission gap it addresses isn't unique to one branch, one echelon, or one MOS — it is endemic across the entire Department of Defense. Every unit, at every level, is running some version of the same shadow infrastructure: the tracker that lives in someone's SharePoint, the roster that gets emailed Friday afternoon, the checklist that exists because the system doesn't.
+
+The Wong and Gerras study named what every leader already felt: the reporting environment we built doesn't just create inefficiency — it creates dishonesty. Not because the Army is full of dishonest people, but because we built a system that makes honesty functionally impossible to sustain at scale.
+
+THREADS is what it looks like to take that problem seriously.
 
 ---
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Security
 
-See [SECURITY.md](SECURITY.md) for vulnerability reporting instructions.
+See [SECURITY.md](SECURITY.md)
 
 ## License
 
-Apache 2.0 — see [LICENSE](LICENSE).
+Apache 2.0 — see [LICENSE](LICENSE)
 
 ---
 
-> **Demo data notice:** All personnel records, unit data, and operational content included in `seed/` are completely synthetic and procedurally generated. No real DoD personnel records or sensitive information is included. See [`seed/README.md`](seed/README.md).
+> **Demo data notice:** All personnel records, unit data, and operational content in `seed/` are completely synthetic. No real DoD personnel records or sensitive information is included. See [`seed/README.md`](seed/README.md).
