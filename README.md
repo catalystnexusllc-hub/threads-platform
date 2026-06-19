@@ -17,7 +17,7 @@ In 2015, Dr. Leonard Wong and Dr. Stephen Gerras published *[Lying to Ourselves:
 
 The readiness data flowing up the chain of command isn't a picture of reality. It's a picture of what the institution demanded be reported.
 
-The system that produces this distortion is the one every unit operates every day: **over 2,300 authoritative Army systems**, none of which natively talk to each other, layered on top of an unofficial Microsoft shadow infrastructure — SharePoint trackers, Teams channels, Excel rosters, Outlook suspense chains, and Word forms — that actually runs day-to-day operations at every echelon from squad to COCOM.
+The system that produces this distortion is the one every unit operates every day: **over 250 authoritative Army systems** — and more than 2,300 across the Department of Defense — none of which natively talk to each other, layered on top of an unofficial Microsoft shadow infrastructure — SharePoint trackers, Teams channels, Excel rosters, Outlook suspense chains, and Word forms — that actually runs day-to-day operations at every echelon from squad to COCOM.
 
 The S1 runs a tracker for leaves, a separate tracker for flags, another for evaluations, another for awards — none of them fed from the same source, none of them automatically updated when something changes in IPPS-A or HR Connect. The S4 manages equipment readiness in GCSS-Army but tracks maintenance status in a separate spreadsheet that gets emailed to the XO on Monday mornings. The commander asks for a readiness report and four people spend four hours manually pulling data from six systems to build a PowerPoint that is already out of date by the time it's briefed.
 

@@ -14,7 +14,7 @@ Every unit leader in the American military already knows this. The study named i
 
 ## The Machine That Produces the Distortion
 
-The Army formally requires units to operate across more than **2,300 authoritative systems**. Not guidelines. Not recommendations. Systems that commanders are legally, professionally, and administratively required to use. IPPS-A for personnel. MEDPROS for medical readiness. DTMS for training management. GCSS-Army for equipment. DISS for clearances. DTS for travel. TMT for task management. JKO for online training. STEPP for security certifications. iPERMS for personnel records. FMSWeb for the MTOE. And hundreds more.
+The Army formally requires units to operate across more than **250 authoritative systems** — part of a Department of Defense inventory exceeding 2,300 systems across the services. Not guidelines. Not recommendations. Systems that commanders are legally, professionally, and administratively required to use. IPPS-A for personnel. MEDPROS for medical readiness. DTMS for training management. GCSS-Army for equipment. DISS for clearances. DTS for travel. TMT for task management. JKO for online training. STEPP for security certifications. iPERMS for personnel records. FMSWeb for the MTOE. And hundreds more.
 
 None of them natively talk to each other.
 
