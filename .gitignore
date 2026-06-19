@@ -1,0 +1,43 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+dist/
+*.egg-info/
+.dlt/
+
+# Node
+node_modules/
+web/dist/
+web/.vite/
+
+# Build artifacts
+*.db
+threads.db
+*.zst
+*.tar.zst
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Secrets
+*.pem
+*.key
+secret.yaml
+k8s/secret.yaml

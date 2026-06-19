@@ -1,0 +1,4 @@
+dlt[postgres]==1.4.0
+# dlt's dbt helper imports pkg_resources; python:3.12-slim doesn't ship setuptools,
+# and setuptools 81+ REMOVED pkg_resources — so pin below the removal.
+setuptools<81

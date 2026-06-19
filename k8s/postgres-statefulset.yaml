@@ -1,0 +1,81 @@
+# ── k8s/postgres-statefulset.yaml ─────────────────────────────────────────────
+# In-cluster PostgreSQL — the single stateful component. One replica (single
+# writer); the app tier scales independently. Storage is owned here via the
+# volumeClaimTemplate, so the API pods are stateless.
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: threads
+  labels:
+    app: threads-postgres
+spec:
+  serviceName: postgres          # governing headless Service (postgres-service.yaml)
+  replicas: 1
+  selector:
+    matchLabels:
+      app: threads-postgres
+  template:
+    metadata:
+      labels:
+        app: threads-postgres
+    spec:
+      securityContext:
+        fsGroup: 999             # postgres uid/gid in the official image
+      containers:
+        - name: postgres
+          image: postgres:16
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+              name: postgres
+          env:
+            # PGDATA in a subdir so the PVC mount root isn't the data dir
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: threads-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: threads-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: threads-secret
+                  key: POSTGRES_DB
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+          readinessProbe:
+            exec:
+              command: ["sh", "-c", "pg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\""]
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 6
+          livenessProbe:
+            exec:
+              command: ["sh", "-c", "pg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\""]
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            failureThreshold: 6
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 5Gi
+        # storageClassName: default   # set to your cluster's StorageClass

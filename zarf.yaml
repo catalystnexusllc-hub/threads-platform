@@ -1,0 +1,84 @@
+# ── zarf.yaml ─────────────────────────────────────────────────────────────────
+# Zarf Package — THREADS Platform
+#
+# Build:   zarf package create . --confirm
+# Deploy:  zarf package deploy zarf-package-threads-platform-*.tar.zst --confirm
+#
+# Prerequisites:
+#   - Zarf CLI installed (https://docs.zarf.dev)
+#   - Docker available and logged into the image registry
+#   - kubectl context pointing to the target cluster
+#   - The api + web + etl images built and pushed to a registry Zarf can reach:
+#       docker build -f Dockerfile.api -t ghcr.io/catalystnexus/threads-api:2.4.1 .
+#       docker build -f Dockerfile.web -t ghcr.io/catalystnexus/threads-web:2.4.1 .
+#       docker build -f Dockerfile.etl -t ghcr.io/catalystnexus/threads-etl:2.4.1 .
+#
+# For UDS bundles, wrap this package in uds-bundle.yaml instead of deploying directly.
+
+kind: ZarfPackageConfig
+
+metadata:
+  name: threads-platform
+  version: 2.4.1
+  description: >
+    THREADS - Tactical Hub for Readiness, Execution, Administration, Data & Sync.
+    A unit readiness management platform designed for airgap Kubernetes deployment.
+    FastAPI API + nginx SPA + in-cluster PostgreSQL.
+  architecture: amd64
+  # url: https://github.com/catalystnexus/threads-platform
+
+components:
+  # ── Namespace ───────────────────────────────────────────────────────────────
+  - name: threads-namespace
+    required: true
+    description: "Create the 'threads' Kubernetes namespace"
+    manifests:
+      - name: namespace
+        namespace: default
+        files:
+          - k8s/namespace.yaml
+
+  # ── Container Images (baked into the airgap package) ────────────────────────
+  - name: threads-images
+    required: true
+    description: "API (FastAPI), web (nginx SPA), and PostgreSQL images"
+    images:
+      - ghcr.io/catalystnexus/threads-api:2.4.1
+      - ghcr.io/catalystnexus/threads-web:2.4.1
+      - ghcr.io/catalystnexus/threads-etl:2.4.1
+      - postgres:16
+
+  # ── Kubernetes Manifests ───────────────────────────────────────────────────
+  - name: threads-k8s
+    required: true
+    description: "Deploy THREADS (Postgres StatefulSet, api + web Deployments/Services, Ingress)"
+    manifests:
+      - name: threads-manifests
+        namespace: threads
+        files:
+          - k8s/configmap.yaml
+          - k8s/postgres-statefulset.yaml
+          - k8s/postgres-service.yaml
+          - k8s/api-deployment.yaml
+          - k8s/api-service.yaml
+          - k8s/web-deployment.yaml
+          - k8s/web-service.yaml
+          - k8s/ingress.yaml
+          - k8s/etl-drop-pvc.yaml
+          - k8s/etl-cronjob.yaml
+    # Secret must exist before deploy — see k8s/secret.yaml.example or inject via
+    # a UDS credential bundle. It feeds both Postgres (POSTGRES_*) and the api
+    # (DATABASE_URL, API_KEY).
+    actions:
+      onDeploy:
+        before:
+          - description: "Verify threads-secret exists with DATABASE_URL"
+            cmd: |
+              kubectl get secret threads-secret -n threads -o jsonpath='{.data.DATABASE_URL}' >/dev/null 2>&1 \
+                || (echo "ERROR: threads-secret with DATABASE_URL must exist before deploy. See k8s/secret.yaml.example" && exit 1)
+
+  # ── Seeding ─────────────────────────────────────────────────────────────────
+  # No data injection needed: the api image bundles seed/seed.json and the data
+  # layer seeds the database idempotently on first start (empty DB only),
+  # serialized across replicas by a pg_advisory_lock. To ship a unit-specific
+  # dataset, replace seed/seed.json before building the api image.

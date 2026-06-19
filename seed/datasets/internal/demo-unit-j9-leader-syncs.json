@@ -1,0 +1,398 @@
+{
+  "leaderGroups": {
+    "monday": {
+      "id": "monday",
+      "label": "Monday",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "HQ",
+          "note": "Weekly CDR battle rhythm — BUB 0900, CDR sync 1300"
+        },
+        {
+          "name": "Ortega",
+          "rank": "MAJ",
+          "role": "BN XO",
+          "dodid": "5051001002",
+          "location": "HQ",
+          "note": "Staff sync 0800; logistics review 1400"
+        },
+        {
+          "name": "Vasquez",
+          "rank": "MAJ",
+          "role": "S3 Operations",
+          "dodid": "5051004001",
+          "location": "HQ",
+          "note": "ODA CDR sync 0930; targeting meeting 1000 SIPR"
+        },
+        {
+          "name": "Thompson",
+          "rank": "CPT",
+          "role": "Alpha Co CDR",
+          "dodid": "5053000001",
+          "location": "PDY",
+          "note": "Range coordination — ODA-5211 live fire"
+        },
+        {
+          "name": "Hassan",
+          "rank": "CPT",
+          "role": "S2 Intel OIC",
+          "dodid": "5051003001",
+          "location": "HQ",
+          "note": "Intel sync 1000 SCIF; Group threat brief"
+        },
+        {
+          "name": "Okafor",
+          "rank": "MAJ",
+          "role": "S9 CA OIC",
+          "dodid": "5051010001",
+          "location": "TDY-C",
+          "note": "TDY — USSOCOM Tampa CENTCOM CA coordination"
+        }
+      ]
+    },
+    "tuesday": {
+      "id": "tuesday",
+      "label": "Tuesday",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "HQ",
+          "note": "Group CDR downlink SVTC 0900; ACFT test observation"
+        },
+        {
+          "name": "Harris",
+          "rank": "CPT",
+          "role": "Bravo Co CDR",
+          "dodid": "5054000001",
+          "location": "Range",
+          "note": "ACFT test OIC — B Co test window"
+        },
+        {
+          "name": "Donovan",
+          "rank": "MAJ",
+          "role": "S5 Plans OIC",
+          "dodid": "5051006001",
+          "location": "HQ",
+          "note": "XO sync 1300; wargame review 1400"
+        },
+        {
+          "name": "Kowalczyk",
+          "rank": "CPT",
+          "role": "S6 Signal OIC",
+          "dodid": "5051007001",
+          "location": "HQ",
+          "note": "Network status brief; AUP compliance review 1000"
+        },
+        {
+          "name": "Navarro",
+          "rank": "MAJ",
+          "role": "S8 Finance OIC",
+          "dodid": "5051009001",
+          "location": "HQ",
+          "note": "Finance sync with DFAS rep — pay discrepancy review"
+        },
+        {
+          "name": "Okonkwo",
+          "rank": "SFC",
+          "role": "ODA-5221 Team Sgt",
+          "dodid": "5054001003",
+          "location": "Medical",
+          "note": "Shoulder follow-up — physical therapy Womack AMC"
+        }
+      ]
+    },
+    "wednesday": {
+      "id": "wednesday",
+      "label": "Wednesday",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "TDY-O",
+          "note": "CDR at Group HQ — weekly Group CDR meeting; returns 1700"
+        },
+        {
+          "name": "Ortega",
+          "rank": "MAJ",
+          "role": "BN XO (Acting CDR)",
+          "dodid": "5051001002",
+          "location": "HQ",
+          "note": "Acting CDR; training meeting chair 1300"
+        },
+        {
+          "name": "Vasquez",
+          "rank": "MAJ",
+          "role": "S3 Operations",
+          "dodid": "5051004001",
+          "location": "HQ",
+          "note": "Targeting 1000 SIPR; KLE review 1400 SVTC"
+        },
+        {
+          "name": "Hayes",
+          "rank": "CPT",
+          "role": "S7 Training OIC",
+          "dodid": "5051008001",
+          "location": "HQ",
+          "note": "Training meeting 1300 — T-week brief; DTMS review"
+        },
+        {
+          "name": "Diallo",
+          "rank": "SFC",
+          "role": "S9 NCOIC / CA NCO",
+          "dodid": "5051010002",
+          "location": "PDY",
+          "note": "FHA project site walk — partner nation medical clinic"
+        },
+        {
+          "name": "McKinley",
+          "rank": "CW3",
+          "role": "S8 Finance Tech",
+          "dodid": "5051009002",
+          "location": "Leave",
+          "note": "Annual leave — approved 5-day block; returns Monday"
+        }
+      ]
+    },
+    "thursday": {
+      "id": "thursday",
+      "label": "Thursday",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "Range",
+          "note": "Range day — CDR observing ODA-5213 CQB certification"
+        },
+        {
+          "name": "Lynch",
+          "rank": "CPT",
+          "role": "Charlie Co CDR",
+          "dodid": "5055000001",
+          "location": "HQ",
+          "note": "XO sync 1300; CAR review for ODA-5232 pending deployment"
+        },
+        {
+          "name": "Warren",
+          "rank": "SFC",
+          "role": "S7 NCOIC",
+          "dodid": "5051008002",
+          "location": "Range",
+          "note": "Range OIC — CQB certification grader"
+        },
+        {
+          "name": "Okafor",
+          "rank": "MAJ",
+          "role": "S9 CA OIC",
+          "dodid": "5051010001",
+          "location": "HQ",
+          "note": "Returned from TDY — CENTCOM CA annex update; S9/S5 coordination"
+        },
+        {
+          "name": "Perkins",
+          "rank": "MSG",
+          "role": "S3 NCOIC",
+          "dodid": "5051004002",
+          "location": "HQ",
+          "note": "O&I brief prep 0830; readiness SVTC 0900 SIPR"
+        },
+        {
+          "name": "Riley",
+          "rank": "SFC",
+          "role": "S3 Admin (MEB)",
+          "dodid": "5051004006",
+          "location": "Medical",
+          "note": "MEB follow-up — BAMC consult; non-deployable; WTU coordination"
+        }
+      ]
+    },
+    "friday": {
+      "id": "friday",
+      "label": "Friday",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "HQ",
+          "note": "Weekly closeout brief 1500 — all sections; CSM notes follow"
+        },
+        {
+          "name": "Vasquez",
+          "rank": "MAJ",
+          "role": "S3 Operations",
+          "dodid": "5051004001",
+          "location": "PDY",
+          "note": "Motor pool maintenance observation 0800–1100"
+        },
+        {
+          "name": "Hassan",
+          "rank": "CPT",
+          "role": "S2 Intel OIC",
+          "dodid": "5051003001",
+          "location": "HQ",
+          "note": "GWOT theater brief 1300 SCIF; S2 weekly closeout metrics"
+        },
+        {
+          "name": "Phillips",
+          "rank": "CPT",
+          "role": "S1 Personnel",
+          "dodid": "5051002001",
+          "location": "HQ",
+          "note": "Personnel readiness update 1000; flagging report to CDR"
+        },
+        {
+          "name": "Hayes",
+          "rank": "CPT",
+          "role": "S7 Training OIC",
+          "dodid": "5051008001",
+          "location": "HQ",
+          "note": "DTMS closeout — training hours input; ACFT data review 1100"
+        },
+        {
+          "name": "Donovan",
+          "rank": "MAJ",
+          "role": "S5 Plans",
+          "dodid": "5051006001",
+          "location": "Leave",
+          "note": "Leave — approved 4-day pass; returns Monday"
+        }
+      ]
+    },
+    "weekend_duty": {
+      "id": "weekend_duty",
+      "label": "Weekend Duty",
+      "leaders": [
+        {
+          "name": "Petrov",
+          "rank": "SSG",
+          "role": "S7 DTMS Mgr",
+          "dodid": "5051008003",
+          "location": "PDY",
+          "note": "Weekend CDO — covers BN duty officer duties Sat"
+        },
+        {
+          "name": "Simmons",
+          "rank": "SSG",
+          "role": "S8 Pay Tech",
+          "dodid": "5051009004",
+          "location": "HQ",
+          "note": "ADSO on-call — finance emergency only; available by cell"
+        },
+        {
+          "name": "Ibrahim",
+          "rank": "SSG",
+          "role": "S9 CA NCO",
+          "dodid": "5051010003",
+          "location": "PDY",
+          "note": "BN duty NCO Saturday; partner nation coordination SOP on-hand"
+        }
+      ]
+    }
+  },
+  "closeoutLeaderGroups": {
+    "monday_co": {
+      "id": "monday_co",
+      "label": "Monday Closeout",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "HQ",
+          "note": "Weekly closeout — stand-down 1600; safety brief"
+        },
+        {
+          "name": "Vasquez",
+          "rank": "MAJ",
+          "role": "S3 Operations",
+          "dodid": "5051004001",
+          "location": "HQ",
+          "note": "Ops summary to CDR — targeting status, upcoming ranges"
+        },
+        {
+          "name": "Donovan",
+          "rank": "MAJ",
+          "role": "S5 Plans OIC",
+          "dodid": "5051006001",
+          "location": "HQ",
+          "note": "SITREP status — Jan–Jun complete; Jul overdue (TDY conflict)"
+        },
+        {
+          "name": "Kowalczyk",
+          "rank": "CPT",
+          "role": "S6 Signal OIC",
+          "dodid": "5051007001",
+          "location": "HQ",
+          "note": "Network status — all green; AUP outstanding: O'Brien (suspended)"
+        }
+      ]
+    },
+    "friday_co": {
+      "id": "friday_co",
+      "label": "Friday Weekly Closeout",
+      "leaders": [
+        {
+          "name": "Bradley",
+          "rank": "LTC",
+          "role": "BN Commander",
+          "dodid": "5051001001",
+          "location": "HQ",
+          "note": "Weekly closeout brief — all sections report; CDR notes to CSM"
+        },
+        {
+          "name": "Vasquez",
+          "rank": "MAJ",
+          "role": "S3 Operations",
+          "dodid": "5051004001",
+          "location": "HQ",
+          "note": "S3 ops summary — motor pool ready; 3 ODAs deployment-ready"
+        },
+        {
+          "name": "Navarro",
+          "rank": "MAJ",
+          "role": "S8 Finance OIC",
+          "dodid": "5051009001",
+          "location": "HQ",
+          "note": "EOM suspenses — 1 open (DD93 overdue Garza); FLPP audit complete"
+        },
+        {
+          "name": "Hayes",
+          "rank": "CPT",
+          "role": "S7 Training OIC",
+          "dodid": "5051008001",
+          "location": "HQ",
+          "note": "Training metrics — ACFT pass rate 91.2%; 3 Required (1 MEB, 2 new gains)"
+        },
+        {
+          "name": "Okafor",
+          "rank": "MAJ",
+          "role": "S9 CA OIC",
+          "dodid": "5051010001",
+          "location": "HQ",
+          "note": "CA update — FHA project on track; CENTCOM CA annex submitted to Group"
+        },
+        {
+          "name": "Hassan",
+          "rank": "CPT",
+          "role": "S2 Intel OIC",
+          "dodid": "5051003001",
+          "location": "HQ",
+          "note": "Intel summary — SIGINT update briefed; no emerging high-priority threats"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# ── k8s/etl-drop-pvc.yaml ─────────────────────────────────────────────────────
+# Drop zone for source datasets. The third party (or a sync/share process)
+# writes files here under <source>/*.json; the ETL CronJob reads them.
+# Use ReadWriteMany if an external writer + the job need concurrent access and
+# your StorageClass supports it; otherwise ReadWriteOnce + operator `kubectl cp`.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: threads-etl-drop
+  namespace: threads
+  labels:
+    app: threads-etl
+spec:
+  accessModes:
+    - ReadWriteOnce          # change to ReadWriteMany for an external NFS/share writer
+  resources:
+    requests:
+      storage: 1Gi
+  # storageClassName: default

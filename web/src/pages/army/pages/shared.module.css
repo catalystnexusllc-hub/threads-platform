@@ -1,0 +1,52 @@
+/* Shared page primitives for Army data-backed pages. */
+.page { padding: 20px; max-width: 1200px; margin: 0 auto; }
+.state, .stateErr { padding: 40px; text-align: center; color: #888; font-size: 14px; }
+.stateErr { color: #e74c3c; }
+
+.header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+.header h2 { font-size: 18px; color: #1a1a1a; font-weight: 700; }
+.header h2 i { color: var(--gold); margin-right: 8px; }
+.sub { font-size: 12px; color: #888; }
+.spacer { flex: 1; }
+
+.select { background: #fff; border: 1px solid #ddd; color: #333; padding: 6px 10px; border-radius: 6px; font-size: 13px; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 18px; }
+.stat { border-radius: 8px; padding: 20px 16px; text-align: center; }
+.statValue { font-size: 32px; font-weight: 800; color: #fff; line-height: 1; }
+.statLabel { font-size: 10px; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+.grid2 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 16px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+.card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.cardHeader { padding: 12px 16px; border-bottom: 1px solid #e8e8e8; font-size: 13px; font-weight: 700; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+.cardHeader i { color: var(--gold); margin-right: 8px; }
+.cardBody { padding: 16px; }
+
+.tableWrap { max-height: 540px; overflow-y: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th { text-align: left; padding: 10px 14px; color: #ccc; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #333; position: sticky; top: 0; background: #1a1a1a; }
+.table td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; color: #333; }
+.table tbody tr.click { cursor: pointer; }
+.table tbody tr.click:hover { background: #f9f9f9; }
+.activeRow { background: rgba(201, 162, 39, 0.08) !important; }
+.activeRow td { color: #1a1a1a; }
+
+.dim { color: #aaa; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.empty { padding: 40px 16px; text-align: center; color: #aaa; font-size: 13px; }
+.pill { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: rgba(201,162,39,0.12); color: var(--gold); text-transform: capitalize; }
+
+.dl { display: grid; grid-template-columns: 110px 1fr; gap: 8px 12px; font-size: 13px; }
+.dl dt { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 1px; }
+.dl dd { color: #333; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab { background: #f0f0f0; border: 1px solid #ddd; color: #888; padding: 7px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
+.tabActive { background: rgba(201,162,39,0.12); border-color: var(--gold-dim); color: var(--gold); }
+
+.navCards { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.navCard { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 12px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.8px; }
+.navCard:hover { border-color: var(--gold); box-shadow: 0 2px 8px rgba(201,162,39,0.15); color: #1a1a1a; }
+.navCard i { font-size: 22px; color: var(--gold); }

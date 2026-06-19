@@ -1,0 +1,411 @@
+/* ── View toggle ─────────────────────────────────────────────────────────── */
+.viewToggle {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.viewToggleLabel {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #333;
+  margin-right: 8px;
+}
+
+.viewBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: none;
+  border: 1px solid #1e1e1e;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.viewBtn:hover { background: #141414; color: #999; border-color: #2a2a2a; }
+
+.viewBtnActive {
+  background: rgba(201, 162, 39, 0.12) !important;
+  border-color: rgba(201, 162, 39, 0.4) !important;
+  color: #c9a227 !important;
+}
+
+.viewBtnActive i { color: rgba(201, 162, 39, 0.7); }
+
+.viewDivider {
+  width: 1px;
+  height: 20px;
+  background: #1e1e1e;
+  margin: 0 6px;
+}
+
+/* ── Profile hero ────────────────────────────────────────────────────────── */
+.profileHero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 7px;
+  margin-bottom: 14px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #c9a227;
+  flex-shrink: 0;
+  letter-spacing: -1px;
+}
+
+.profileName {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ddd;
+  letter-spacing: 0.5px;
+}
+
+.profileMeta {
+  font-size: 11px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.profileMeta strong { color: #888; font-weight: 600; }
+
+.profileBadges {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.4px;
+}
+
+.badgeGreen { background: rgba(39,174,96,0.12); border: 1px solid rgba(39,174,96,0.3); color: #27ae60; }
+.badgeAmber { background: rgba(230,156,60,0.12); border: 1px solid rgba(230,156,60,0.3); color: #e69c3c; }
+.badgeBlue  { background: rgba(41,128,185,0.12); border: 1px solid rgba(41,128,185,0.3); color: #2980b9; }
+.badgeGray  { background: rgba(150,150,150,0.08); border: 1px solid #2a2a2a; color: #666; }
+.badgeGold  { background: rgba(201,162,39,0.12); border: 1px solid rgba(201,162,39,0.3); color: #c9a227; }
+
+.heroSpacer { flex: 1; }
+
+.heroStats {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.heroStat {
+  text-align: center;
+}
+
+.heroStatValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ccc;
+  line-height: 1;
+}
+
+.heroStatLabel {
+  font-size: 9px;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* ── Numbered tab nav bar ────────────────────────────────────────────────── */
+.tabNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.tabNavBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #1e1e1e;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.tabNavBtn:hover { background: #141414; color: #999; border-color: #2a2a2a; }
+
+.tabNavActive {
+  background: rgba(201, 162, 39, 0.1) !important;
+  border-color: rgba(201, 162, 39, 0.35) !important;
+  color: #c9a227 !important;
+}
+
+.tabNavNum {
+  font-size: 9px;
+  font-weight: 800;
+  color: #333;
+  letter-spacing: 0.3px;
+}
+
+.tabNavActive .tabNavNum { color: rgba(201, 162, 39, 0.7); }
+
+/* ── Action button bar ───────────────────────────────────────────────────── */
+.actionBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+  background: #080808;
+  border: 1px solid #141414;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 16px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  background: none;
+  border: 1px solid #1a1a1a;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.actionBtn:hover { background: #141414; border-color: #2e2e2e; color: #aaa; }
+.actionBtn i { font-size: 9px; color: #2e2e2e; transition: color 0.15s; }
+.actionBtn:hover i { color: #666; }
+
+.actionBtnActive,
+.actionBtnActive:hover {
+  background: rgba(201, 162, 39, 0.1) !important;
+  border-color: rgba(201, 162, 39, 0.35) !important;
+  color: #c9a227 !important;
+}
+
+.actionBtnActive i,
+.actionBtnActive:hover i { color: rgba(201, 162, 39, 0.6) !important; }
+
+/* ── Content cards ───────────────────────────────────────────────────────── */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gridAuto { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+
+.card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 10px 16px;
+  border-bottom: 1px solid #141414;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #aaa;
+  background: #0d0d0d;
+}
+
+.cardHeader i { color: #c9a227; margin-right: 8px; }
+.cardBody { padding: 14px 16px; }
+
+/* ── DL pairs ────────────────────────────────────────────────────────────── */
+.dl { display: grid; grid-template-columns: 120px 1fr; gap: 6px 12px; font-size: 12px; }
+.dl dt { color: #555; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 1px; }
+.dl dd { color: '#888'; }
+.dl dd strong { color: #ccc; }
+
+/* ── Readiness row ───────────────────────────────────────────────────────── */
+.readinessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.readinessTile {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 7px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.readinessTileLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.readinessTileValue {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ddd;
+  line-height: 1.1;
+}
+
+.readinessTileSub {
+  font-size: 10px;
+  color: #555;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+.tableWrap { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table th {
+  text-align: left;
+  padding: 9px 12px;
+  color: #555;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1px solid #1a1a1a;
+  background: #0d0d0d;
+}
+
+.table td { padding: 9px 12px; border-bottom: 1px solid #111; color: #888; }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover td { background: #0d0d0d; }
+
+/* ── Awards list ─────────────────────────────────────────────────────────── */
+.awardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.awardsItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #111;
+  font-size: 12px;
+  color: #999;
+}
+
+.awardsItem:last-child { border-bottom: none; }
+.awardsItem i { color: #c9a227; font-size: 13px; width: 18px; text-align: center; flex-shrink: 0; }
+
+/* ── Admin doc tiles ─────────────────────────────────────────────────────── */
+.docTiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.docTile {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.docTileLabel {
+  font-size: 13px;
+  font-weight: 800;
+  color: #bbb;
+  margin-bottom: 4px;
+}
+
+.docTileStatus {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ── Org alert bar ───────────────────────────────────────────────────────── */
+.alertBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.alertRed   { background: rgba(231,76,60,0.1);  border: 1px solid rgba(231,76,60,0.25);  color: #e74c3c; }
+.alertAmber { background: rgba(230,156,60,0.1); border: 1px solid rgba(230,156,60,0.25); color: #e69c3c; }
+.alertGreen { background: rgba(39,174,96,0.1);  border: 1px solid rgba(39,174,96,0.25);  color: #27ae60; }
+
+/* ── Stub placeholder ────────────────────────────────────────────────────── */
+.stub {
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.stub i { font-size: 28px; display: block; margin-bottom: 12px; }
+.stub strong { color: #555; display: block; margin-bottom: 4px; font-size: 13px; }
+.stub span { font-size: 11px; color: #333; }

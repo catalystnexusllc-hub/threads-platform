@@ -1,0 +1,303 @@
+{
+  "extractMetadata": {
+    "system": "JKO",
+    "fullName": "Joint Knowledge Online",
+    "version": "6.1",
+    "report": "Unit Online Training Completion Report",
+    "unitUIC": "W25T2A",
+    "unit": "2nd Bn, Demo Battalion (Airborne)",
+    "extractDate": "18 Jun 2026",
+    "extractedBy": "S6 AUP Tracking — SGT Moore / CPT Kowalczyk",
+    "classification": "UNCLASSIFIED",
+    "notes": "JKO is the DoD's primary online training portal. Required courses are annual unless noted. Expired training triggers account flagging in ATCTS and potential NIPR/SIPR account review. Status reflects completion as of extract date.",
+    "requiredCourses": [
+      { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge (Annual)", "frequency": "Annual", "creditHours": 1.0, "requiredFor": "All personnel with NIPR/SIPR access" },
+      { "courseId": "JKO-DOD-002", "title": "Acceptable Use Policy (AUP) Training", "frequency": "Annual", "creditHours": 0.5, "requiredFor": "All personnel with network accounts" },
+      { "courseId": "JKO-DOD-003", "title": "SHARP Annual Training (VT)", "frequency": "Annual", "creditHours": 1.0, "requiredFor": "All personnel" },
+      { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I Awareness Training", "frequency": "Annual", "creditHours": 2.0, "requiredFor": "All personnel" },
+      { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness Training", "frequency": "Annual", "creditHours": 1.0, "requiredFor": "All personnel" },
+      { "courseId": "JKO-DOD-006", "title": "Law of Armed Conflict (LOAC) — Level 1", "frequency": "Annual", "creditHours": 1.5, "requiredFor": "All personnel" },
+      { "courseId": "JKO-DOD-007", "title": "Joint Ethics Regulation (JER) / Ethics Training", "frequency": "Annual", "creditHours": 0.5, "requiredFor": "All personnel" },
+      { "courseId": "JKO-DOD-008", "title": "SAEDA (Subversion and Espionage Directed Against the Army)", "frequency": "Annual", "creditHours": 1.0, "requiredFor": "All personnel with security clearances" },
+      { "courseId": "JKO-DOD-009", "title": "Combating Trafficking in Persons (CTIP)", "frequency": "Annual", "creditHours": 0.5, "requiredFor": "All personnel — SOCOM mandatory" },
+      { "courseId": "JKO-DOD-010", "title": "Equal Opportunity (EO) Annual Training", "frequency": "Annual", "creditHours": 1.0, "requiredFor": "All personnel" },
+      { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection Awareness", "frequency": "Annual", "creditHours": 1.5, "requiredFor": "All SOCOM-assigned personnel" },
+      { "courseId": "JKO-SOCOM-012", "title": "SF Operational Security (SF OPSEC) Advanced", "frequency": "Annual", "creditHours": 2.0, "requiredFor": "All SF-assigned personnel (18-series and staff)" }
+    ],
+    "totalRecords": 30
+  },
+  "records": [
+    {
+      "edipi": "5051001001",
+      "name": "Bradley, Michael K.",
+      "rank": "LTC",
+      "unit": "BN Staff — Command",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "Acceptable Use Policy (AUP)", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-010", "title": "Equal Opportunity", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "28 Jan 2026", "expirationDate": "28 Jan 2027", "score": 96, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051002001",
+      "name": "Phillips, Sarah T.",
+      "rank": "CPT",
+      "unit": "BN Staff — S1",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-010", "title": "Equal Opportunity", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "28 Jan 2026", "expirationDate": "28 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "29 Jan 2026", "expirationDate": "29 Jan 2027", "score": 88, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051002002",
+      "name": "Garza, Roberto M.",
+      "rank": "SFC",
+      "unit": "BN Staff — S1",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "14 Jan 2026", "expirationDate": "14 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "14 Jan 2026", "expirationDate": "14 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 84, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-010", "title": "Equal Opportunity", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "28 Jan 2026", "expirationDate": "28 Jan 2027", "score": 84, "status": "Current" }
+      ]
+    },
+    {
+      "eipi": "5051003001",
+      "edipi": "5051003001",
+      "name": "Hassan, Kareem A.",
+      "rank": "CPT",
+      "unit": "BN Staff — S2",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-010", "title": "Equal Opportunity", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 96, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051007006",
+      "name": "O'Brien, Sean M.",
+      "rank": "SGT",
+      "unit": "BN Staff — S6",
+      "overallStatus": "Non-Compliant — SUSPENDED",
+      "accountStatus": "NIPR SUSPENDED — AUP Expired + Multiple Non-Compliance",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 82, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 100, "status": "OVERDUE — EXPIRED; Account SUSPENDED" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 80, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 82, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 78, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 100, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 80, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 82, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 78, "status": "OVERDUE — Expired Mar 2026" }
+      ],
+      "securityNotes": "CRITICAL: NIPR account SUSPENDED — AUP expired Mar 2026. Cannot access JKO to complete overdue training (circular dependency). S6 must create offline completion pathway or temporarily restore restricted access for training only. Multiple training failures — DTS voucher also overdue (separate S8 issue)."
+    },
+    {
+      "edipi": "5051007007",
+      "name": "Moore, Marcus T.",
+      "rank": "SGT",
+      "unit": "BN Staff — S6",
+      "overallStatus": "Warning — AUP Expiring",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "15 Jul 2025", "expirationDate": "15 Jul 2026", "score": 84, "status": "Expiring — 27 days" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "15 Jul 2025", "expirationDate": "15 Jul 2026", "score": 100, "status": "Expiring — 27 days" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 84, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" }
+      ],
+      "securityNotes": "AUP and Cyber Awareness expire 15 Jul 2026 — 27 days remaining. SGT Moore notified. Must renew before 15 Jul or account suspended."
+    },
+    {
+      "edipi": "5051008001",
+      "name": "Hayes, Brittany M.",
+      "rank": "CPT",
+      "unit": "BN Staff — S7",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "28 Jan 2026", "expirationDate": "28 Jan 2027", "score": 90, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051008002",
+      "name": "Warren, Daniel J.",
+      "rank": "SFC",
+      "unit": "BN Staff — S7",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "14 Jan 2026", "expirationDate": "14 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "14 Jan 2026", "expirationDate": "14 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 88, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5053001003",
+      "name": "Guerrero, Roberto A.",
+      "rank": "SFC",
+      "unit": "ODA-5211 — Team Sgt",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-006", "title": "LOAC Level 1", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-008", "title": "SAEDA", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 94, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5054001003",
+      "name": "Okonkwo, Chidi B.",
+      "rank": "SFC",
+      "unit": "ODA-5221 — Team Sgt",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 90, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5055001003",
+      "name": "Foster, William H.",
+      "rank": "SFC",
+      "unit": "ODA-5231 — Team Sgt",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 84, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-SOCOM-012", "title": "SF OPSEC Advanced", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 86, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051009001",
+      "name": "Navarro, Carlos M.",
+      "rank": "MAJ",
+      "unit": "BN Staff — S8",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "JKO-DOD-007", "title": "Ethics Training (GPC/Finance Focus)", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 100, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051010001",
+      "name": "Okafor, James A.",
+      "rank": "MAJ",
+      "unit": "BN Staff — S9",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 92, "status": "Current" }
+      ]
+    },
+    {
+      "edipi": "5051010002",
+      "name": "Diallo, Aminata S.",
+      "rank": "SFC",
+      "unit": "BN Staff — S9",
+      "overallStatus": "Compliant",
+      "completions": [
+        { "courseId": "JKO-DOD-001", "title": "DoD Cyber Awareness Challenge", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-002", "title": "AUP", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-003", "title": "SHARP", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-DOD-004", "title": "Antiterrorism Level I", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "JKO-DOD-005", "title": "OPSEC Awareness", "completionDate": "23 Jan 2026", "expirationDate": "23 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "JKO-DOD-009", "title": "CTIP", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "JKO-SOCOM-011", "title": "USSOCOM Force Protection", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 94, "status": "Current" }
+      ]
+    }
+  ],
+  "complianceSummary": {
+    "totalRecords": 30,
+    "compliant": 26,
+    "suspended": 1,
+    "warning": 1,
+    "nonCompliant": 2,
+    "accountsSuspended": ["O'Brien, Sean M. — NIPR account SUSPENDED since Apr 2026 (AUP expired Mar 2026)"],
+    "expiringWithin30Days": ["Moore, Marcus T. — AUP and Cyber Awareness expire 15 Jul 2026"],
+    "criticalItems": [
+      "O'Brien — ALL training overdue; NIPR suspended; cannot access JKO to renew (circular); DTS voucher also overdue",
+      "Multiple soldiers have 15-22 required courses due within 6 months — bulk renewal window recommended Jan 2027"
+    ],
+    "nextBulkCompletionWindow": "Jan 2027 — Annual training standup",
+    "jkoAdminContact": "SGT Moore / CPT Kowalczyk (S6) — jko.admin@2-demo.army.mil"
+  }
+}

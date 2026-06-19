@@ -1,0 +1,119 @@
+/* ── Admin quick-nav bar ─────────────────────────────────────────────────── */
+.adminNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 8px 10px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+}
+
+.tabActionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  background: none;
+  border: 1px solid #1a1a1a;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.tabActionBtn:hover {
+  background: #141414;
+  border-color: #2e2e2e;
+  color: #aaa;
+}
+
+.tabActionBtn i {
+  font-size: 9px;
+  color: #2e2e2e;
+  transition: color 0.15s;
+}
+
+.tabActionBtn:hover i { color: #666; }
+
+.tabActionActive,
+.tabActionActive:hover {
+  background: rgba(201, 162, 39, 0.1) !important;
+  border-color: rgba(201, 162, 39, 0.35) !important;
+  color: #c9a227 !important;
+}
+
+.tabActionActive i,
+.tabActionActive:hover i {
+  color: rgba(201, 162, 39, 0.6) !important;
+}
+
+/* ── Integration status bar ──────────────────────────────────────────────── */
+.sorBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #0e0e0e;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.sorBarLabel {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #444;
+  margin-right: 4px;
+}
+
+.sorPill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.sorConnected  { background: rgba(39,174,96,0.1);  border: 1px solid rgba(39,174,96,0.25);  color: #27ae60; }
+.sorPending    { background: rgba(230,156,60,0.1);  border: 1px solid rgba(230,156,60,0.25);  color: #e69c3c; }
+.sorDisconnect { background: rgba(231,76,60,0.1);   border: 1px solid rgba(231,76,60,0.25);   color: #e74c3c; }
+
+.sorDot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+/* ── Placeholder ─────────────────────────────────────────────────────────── */
+.srcPending {
+  color: #444;
+  font-style: italic;
+  font-size: 11px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btnSecondary {
+  background: #1e1e1e;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 7px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btnSecondary:hover { border-color: #fff; color: #fff; }

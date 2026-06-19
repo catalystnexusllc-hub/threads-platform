@@ -1,0 +1,41 @@
+# ── k8s/ingress.yaml ──────────────────────────────────────────────────────────
+# Single host, path-split so the SPA and API share one origin (no CORS):
+#   /api  → api Service  (FastAPI, 8000)
+#   /     → web Service  (nginx SPA, 80)
+# pathType: Prefix → controllers match the longer "/api" prefix first.
+# Adjust host, ingressClassName, and TLS to match your cluster.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: threads-platform
+  namespace: threads
+  labels:
+    app: threads-platform
+  annotations:
+    # Uncomment for Istio / UDS:
+    # kubernetes.io/ingress.class: "istio"
+spec:
+  ingressClassName: nginx   # change to match your cluster's ingress class
+  rules:
+    - host: threads.local    # replace with your actual hostname
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: api
+                port:
+                  number: 8000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80
+  # TLS — uncomment and configure once certificates are available
+  # tls:
+  #   - hosts:
+  #       - threads.local
+  #     secretName: threads-tls

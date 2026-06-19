@@ -1,0 +1,465 @@
+{
+  "extractMetadata": {
+    "system": "iPERMS",
+    "version": "2.4",
+    "report": "Unit OMPF Document Completeness Audit",
+    "unitUIC": "W25T2A",
+    "unit": "2nd Bn, Demo Battalion (Airborne)",
+    "extractDate": "18 Jun 2026",
+    "extractedBy": "S1 Personnel Officer — CPT Phillips",
+    "classification": "FOUO // Privacy Act Data — Handle Per AR 340-21",
+    "notes": "iPERMS is the official repository for the Official Military Personnel File (OMPF). This extract reflects document completeness status as of extract date. Documents marked MISSING require S1 action."
+  },
+  "records": [
+    {
+      "dodid": "5051001001",
+      "name": "Bradley, Michael K.",
+      "rank": "LTC",
+      "unit": "BN Staff",
+      "section": "Command",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "OER", "period": "01 Jun 2025–31 May 2026", "signedDate": "15 Jun 2026", "status": "Filed", "iPermsId": "OER-5051001001-2026" },
+            { "type": "OER", "period": "01 Jun 2024–31 May 2025", "signedDate": "14 Jun 2025", "status": "Filed", "iPermsId": "OER-5051001001-2025" },
+            { "type": "OER", "period": "01 Jun 2023–31 May 2024", "signedDate": "12 Jun 2024", "status": "Filed", "iPermsId": "OER-5051001001-2024" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "LOM", "date": "15 Jun 2024", "status": "Filed", "iPermsId": "638-5051001001-LOM-2024" },
+          { "type": "DA638", "award": "MSM (3rd Award)", "date": "01 Jan 2022", "status": "Filed", "iPermsId": "638-5051001001-MSM3-2022" },
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "15 Jun 2019", "status": "Filed", "iPermsId": "638-5051001001-MSM2-2019" }
+        ],
+        "training": [
+          { "type": "CGSC Diploma", "institution": "Command and General Staff College", "date": "15 Jun 2018", "status": "Filed", "iPermsId": "TRN-5051001001-CGSC-2018" },
+          { "type": "SFQC Diploma", "institution": "JFK SWCS", "date": "01 Apr 2002", "status": "Filed", "iPermsId": "TRN-5051001001-SFQC-2002" }
+        ],
+        "administrative": [
+          { "type": "DA3349 (Profile)", "date": null, "status": "None on File — No Active Profile", "iPermsId": null },
+          { "type": "Oath of Office", "date": "01 Jun 1998", "status": "Filed", "iPermsId": "ADM-5051001001-OATH-1998" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5051002002",
+      "name": "Garza, Roberto M.",
+      "rank": "SFC",
+      "unit": "BN Staff",
+      "section": "S1",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Mar 2025–28 Feb 2026", "signedDate": "15 Mar 2026", "status": "Filed", "iPermsId": "NCOER-5051002002-2026" },
+            { "type": "NCOER", "period": "01 Mar 2024–28 Feb 2025", "signedDate": "14 Mar 2025", "status": "Filed", "iPermsId": "NCOER-5051002002-2025" }
+          ],
+          "nextEvalDue": "28 Feb 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Jun 2023", "status": "Filed", "iPermsId": "638-5051002002-MSM-2023" },
+          { "type": "DA638", "award": "ARCOM (4th Award)", "date": "15 Jan 2022", "status": "Filed", "iPermsId": "638-5051002002-ARCOM4-2022" }
+        ],
+        "training": [
+          { "type": "ALC Diploma", "institution": "ALC", "date": "15 Sep 2012", "status": "Filed", "iPermsId": "TRN-5051002002-ALC-2012" },
+          { "type": "SLC Diploma", "institution": "SLC", "date": "01 Jun 2018", "status": "Filed", "iPermsId": "TRN-5051002002-SLC-2018" }
+        ],
+        "administrative": [
+          { "type": "DD93 (Record of Emergency Data)", "date": "15 Jan 2022", "status": "OUTDATED — Update required; beneficiary info changed post-deployment 2024", "iPermsId": "ADM-5051002002-DD93-2022" },
+          { "type": "SGLV8286 (SGLI Election)", "date": "01 Mar 2020", "status": "OUTDATED — Overdue for review", "iPermsId": "ADM-5051002002-SGLV-2020" }
+        ]
+      },
+      "recordCompleteness": "Incomplete — Admin Update Required",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["DD93 outdated — post-deployment 2024", "SGLV overdue annual review"]
+    },
+    {
+      "dodid": "5051002005",
+      "name": "Bynum, Keisha A.",
+      "rank": "SGT",
+      "unit": "BN Staff",
+      "section": "S1",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "15 Apr 2026–14 Apr 2027", "signedDate": null, "status": "NOT DUE — Initial eval period in progress", "iPermsId": null }
+          ],
+          "nextEvalDue": "14 Apr 2027"
+        },
+        "awards": [],
+        "training": [
+          { "type": "ALC Diploma", "institution": "ALC — Fort Knox", "date": "14 Apr 2026", "status": "Filed", "iPermsId": "TRN-5051002005-ALC-2026" }
+        ],
+        "administrative": [
+          { "type": "DD93 (Record of Emergency Data)", "date": null, "status": "MISSING — In-processing action item", "iPermsId": null },
+          { "type": "SGLV8286 (SGLI Election)", "date": null, "status": "MISSING — In-processing action item", "iPermsId": null },
+          { "type": "Oath of Enlistment", "date": "15 May 2021", "status": "Filed", "iPermsId": "ADM-5051002005-OATH-2021" }
+        ]
+      },
+      "recordCompleteness": "Incomplete — New Gain In-Processing",
+      "lastAuditDate": "18 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["NEW GAIN — DD93 and SGLV missing; 30-day in-processing deadline"]
+    },
+    {
+      "dodid": "5051003001",
+      "name": "Hassan, Kareem A.",
+      "rank": "CPT",
+      "unit": "BN Staff",
+      "section": "S2",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "OER", "period": "01 Jun 2025–31 May 2026", "signedDate": "12 Jun 2026", "status": "Filed", "iPermsId": "OER-5051003001-2026" },
+            { "type": "OER", "period": "01 Jun 2024–31 May 2025", "signedDate": "11 Jun 2025", "status": "Filed", "iPermsId": "OER-5051003001-2025" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Jun 2024", "status": "Filed", "iPermsId": "638-5051003001-MSM-2024" },
+          { "type": "DA638", "award": "ARCOM (3rd Award)", "date": "15 Jan 2022", "status": "Filed", "iPermsId": "638-5051003001-ARCOM3-2022" }
+        ],
+        "training": [
+          { "type": "MIOBC Diploma", "institution": "MIOBC — Huachuca", "date": "01 Sep 2014", "status": "Filed", "iPermsId": "TRN-5051003001-MIOBC-2014" },
+          { "type": "Security Officer Course", "institution": "DIA", "date": "15 Feb 2019", "status": "Filed", "iPermsId": "TRN-5051003001-SOC-2019" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "15 Sep 2021", "status": "Filed — Current", "iPermsId": "ADM-5051003001-DD93-2021" },
+          { "type": "SGLV8286", "date": "15 Sep 2021", "status": "Filed — Current", "iPermsId": "ADM-5051003001-SGLV-2021" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5051004001",
+      "name": "Vasquez, Carlos R.",
+      "rank": "MAJ",
+      "unit": "BN Staff",
+      "section": "S3",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "OER", "period": "01 Jun 2025–31 May 2026", "signedDate": "13 Jun 2026", "status": "Filed", "iPermsId": "OER-5051004001-2026" },
+            { "type": "OER", "period": "01 Jun 2024–31 May 2025", "signedDate": "15 Jun 2025", "status": "Filed", "iPermsId": "OER-5051004001-2025" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "15 Jun 2024", "status": "Filed", "iPermsId": "638-5051004001-MSM2-2024" }
+        ],
+        "training": [
+          { "type": "ILE Diploma", "institution": "ILE — Fort Leavenworth", "date": "15 Jun 2020", "status": "Filed", "iPermsId": "TRN-5051004001-ILE-2020" },
+          { "type": "SFQC Diploma", "institution": "JFK SWCS", "date": "01 Apr 2008", "status": "Filed", "iPermsId": "TRN-5051004001-SFQC-2008" },
+          { "type": "JTAC Certification", "institution": "USAF JTAC School", "date": "01 Nov 2015", "status": "Filed", "iPermsId": "TRN-5051004001-JTAC-2015" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Jul 2022", "status": "Filed — Current", "iPermsId": "ADM-5051004001-DD93-2022" },
+          { "type": "SGLV8286", "date": "01 Jul 2022", "status": "Filed — Current", "iPermsId": "ADM-5051004001-SGLV-2022" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5051005002",
+      "name": "Delgado, Maria L.",
+      "rank": "SFC",
+      "unit": "BN Staff",
+      "section": "S4",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Jun 2025–31 May 2026", "signedDate": "10 Jun 2026", "status": "Filed", "iPermsId": "NCOER-5051005002-2026" },
+            { "type": "NCOER", "period": "01 Jun 2024–31 May 2025", "signedDate": "12 Jun 2025", "status": "Filed", "iPermsId": "NCOER-5051005002-2025" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Mar 2023", "status": "Filed", "iPermsId": "638-5051005002-MSM-2023" }
+        ],
+        "training": [
+          { "type": "SLC Diploma", "institution": "SLC — Fort Lee", "date": "15 Aug 2017", "status": "Filed", "iPermsId": "TRN-5051005002-SLC-2017" },
+          { "type": "Property Book Unit Supply Enhanced (PBUSE) Cert", "institution": "Army Logistics U", "date": "01 Mar 2019", "status": "Filed", "iPermsId": "TRN-5051005002-PBUSE-2019" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Jun 2024", "status": "Filed — Current", "iPermsId": "ADM-5051005002-DD93-2024" },
+          { "type": "SGLV8286", "date": "01 Jun 2024", "status": "Filed — Current", "iPermsId": "ADM-5051005002-SGLV-2024" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["NOTE: PRR overdue — see DISS record; clearance action may affect access"]
+    },
+    {
+      "dodid": "5051006001",
+      "name": "Donovan, Patrick C.",
+      "rank": "MAJ",
+      "unit": "BN Staff",
+      "section": "S5",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "OER", "period": "01 Jun 2025–31 May 2026", "signedDate": "14 Jun 2026", "status": "Filed", "iPermsId": "OER-5051006001-2026" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "15 Jun 2023", "status": "Filed", "iPermsId": "638-5051006001-MSM2-2023" }
+        ],
+        "training": [
+          { "type": "CGSC Diploma", "institution": "CGSC — Fort Leavenworth", "date": "15 Jun 2019", "status": "Filed", "iPermsId": "TRN-5051006001-CGSC-2019" },
+          { "type": "Civil Affairs Qualification Course", "institution": "JFK SWCS", "date": "01 Aug 2008", "status": "Filed", "iPermsId": "TRN-5051006001-CAQC-2008" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Oct 2022", "status": "Filed — Current", "iPermsId": "ADM-5051006001-DD93-2022" },
+          { "type": "SGLV8286", "date": "01 Oct 2022", "status": "Filed — Current", "iPermsId": "ADM-5051006001-SGLV-2022" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5051008002",
+      "name": "Warren, Daniel J.",
+      "rank": "SFC",
+      "unit": "BN Staff",
+      "section": "S7",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Mar 2025–28 Feb 2026", "signedDate": "12 Mar 2026", "status": "Filed", "iPermsId": "NCOER-5051008002-2026" }
+          ],
+          "nextEvalDue": "28 Feb 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "01 Mar 2024", "status": "Filed", "iPermsId": "638-5051008002-MSM2-2024" },
+          { "type": "DA638", "award": "BSM (V)", "date": "01 Jun 2020", "status": "Filed", "iPermsId": "638-5051008002-BSM-V-2020" }
+        ],
+        "training": [
+          { "type": "SFQC Diploma", "institution": "JFK SWCS", "date": "01 Apr 2004", "status": "Filed", "iPermsId": "TRN-5051008002-SFQC-2004" },
+          { "type": "SLC Diploma", "institution": "SLC", "date": "15 Jun 2013", "status": "Filed", "iPermsId": "TRN-5051008002-SLC-2013" },
+          { "type": "Jumpmaster (JM) Certification", "institution": "Airborne School", "date": "01 Sep 2011", "status": "Filed", "iPermsId": "TRN-5051008002-JM-2011" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 May 2021", "status": "Filed — Current", "iPermsId": "ADM-5051008002-DD93-2021" },
+          { "type": "SGLV8286", "date": "01 May 2021", "status": "Filed — Current", "iPermsId": "ADM-5051008002-SGLV-2021" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5051009001",
+      "name": "Navarro, Carlos M.",
+      "rank": "MAJ",
+      "unit": "BN Staff",
+      "section": "S8",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "OER", "period": "01 Jun 2025–31 May 2026", "signedDate": "10 Jun 2026", "status": "Filed", "iPermsId": "OER-5051009001-2026" },
+            { "type": "OER", "period": "15 Oct 2023–31 May 2025", "signedDate": "14 Jun 2025", "status": "Filed", "iPermsId": "OER-5051009001-2025" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "14 Oct 2023", "status": "Filed", "iPermsId": "638-5051009001-MSM2-2023" }
+        ],
+        "training": [
+          { "type": "Finance OBC Diploma", "institution": "Finance OBC — Fort Jackson", "date": "01 Oct 1999", "status": "Filed", "iPermsId": "TRN-5051009001-FOBC-1999" },
+          { "type": "Finance CCC Diploma", "institution": "Finance CCC — Fort Jackson", "date": "15 Jun 2009", "status": "Filed", "iPermsId": "TRN-5051009001-FCCC-2009" },
+          { "type": "GPC Certifying Officer Training", "institution": "DAU Online", "date": "01 Nov 2023", "status": "Filed", "iPermsId": "TRN-5051009001-GPC-2023" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Oct 2023", "status": "Filed — Current", "iPermsId": "ADM-5051009001-DD93-2023" },
+          { "type": "SGLV8286", "date": "01 Oct 2023", "status": "Filed — Current", "iPermsId": "ADM-5051009001-SGLV-2023" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    },
+    {
+      "dodid": "5053001003",
+      "name": "Guerrero, Roberto A.",
+      "rank": "SFC",
+      "unit": "Alpha Co",
+      "section": "ODA-5211",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Jan 2025–31 Dec 2025", "signedDate": "12 Jan 2026", "status": "Filed", "iPermsId": "NCOER-5053001003-2025" },
+            { "type": "NCOER", "period": "01 Jan 2024–31 Dec 2024", "signedDate": "10 Jan 2025", "status": "Filed", "iPermsId": "NCOER-5053001003-2024" }
+          ],
+          "nextEvalDue": "31 Dec 2026"
+        },
+        "awards": [
+          { "type": "DA638", "award": "BSM (V) (2nd Award)", "date": "15 Jun 2023", "status": "Filed", "iPermsId": "638-5053001003-BSM-V2-2023" },
+          { "type": "DA638", "award": "MSM (2nd Award)", "date": "01 Jan 2022", "status": "Filed", "iPermsId": "638-5053001003-MSM2-2022" },
+          { "type": "DA638", "award": "ARCOM (5th Award)", "date": "01 Jul 2020", "status": "Filed", "iPermsId": "638-5053001003-ARCOM5-2020" },
+          { "type": "DA638", "award": "CIB", "date": "01 Dec 2007", "status": "Filed", "iPermsId": "638-5053001003-CIB-2007" }
+        ],
+        "training": [
+          { "type": "SFQC Diploma", "institution": "JFK SWCS", "date": "01 Sep 2007", "status": "Filed", "iPermsId": "TRN-5053001003-SFQC-2007" },
+          { "type": "SLC Diploma", "institution": "SLC", "date": "15 Jan 2012", "status": "Filed", "iPermsId": "TRN-5053001003-SLC-2012" },
+          { "type": "HALO/HAHO Certificate", "institution": "JFK SWCS", "date": "01 Mar 2010", "status": "Filed", "iPermsId": "TRN-5053001003-HAHO-2010" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Jan 2021", "status": "Filed — Current", "iPermsId": "ADM-5053001003-DD93-2021" },
+          { "type": "SGLV8286", "date": "01 Jan 2021", "status": "Filed — Current", "iPermsId": "ADM-5053001003-SGLV-2021" }
+        ]
+      },
+      "recordCompleteness": "Complete",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Thompson / Alpha Co S1"
+    },
+    {
+      "dodid": "5051004006",
+      "name": "Riley, Marcus A.",
+      "rank": "SFC",
+      "unit": "BN Staff",
+      "section": "S3 / WTU",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Jun 2024–31 May 2025", "signedDate": "12 Jun 2025", "status": "Filed", "iPermsId": "NCOER-5051004006-2025" }
+          ],
+          "nextEvalDue": "31 May 2026 — MEB HOLD; eval under WTU system"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Jun 2022", "status": "Filed", "iPermsId": "638-5051004006-MSM-2022" },
+          { "type": "Purple Heart", "award": "PH — IED injury 2019", "date": "01 Mar 2019", "status": "Filed", "iPermsId": "638-5051004006-PH-2019" }
+        ],
+        "training": [
+          { "type": "SFQC Diploma", "institution": "JFK SWCS", "date": "01 Aug 2009", "status": "Filed", "iPermsId": "TRN-5051004006-SFQC-2009" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Jun 2022", "status": "Filed — Current", "iPermsId": "ADM-5051004006-DD93-2022" },
+          { "type": "SGLV8286", "date": "01 Jun 2022", "status": "Filed — Current", "iPermsId": "ADM-5051004006-SGLV-2022" },
+          { "type": "DA3349 (Permanent Profile)", "date": "15 Mar 2026", "status": "Filed — MEB in Progress", "iPermsId": "ADM-5051004006-PROF-2026" },
+          { "type": "MEB Referral Package", "date": "01 Apr 2026", "status": "Filed — Under Review BAMC PEB", "iPermsId": "ADM-5051004006-MEB-2026" }
+        ]
+      },
+      "recordCompleteness": "MEB File Active — Additional Documents Pending",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["MEB IN PROGRESS — PEB review at BAMC; transition docs pending; coordinate with WTU"]
+    },
+    {
+      "dodid": "5056000003",
+      "name": "Ingram, Tyrone D.",
+      "rank": "MSG",
+      "unit": "Support Co",
+      "section": "Command",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Jun 2025–31 May 2026", "signedDate": "10 Jun 2026", "status": "Filed", "iPermsId": "NCOER-5056000003-2026" }
+          ],
+          "nextEvalDue": "31 May 2027"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM (3rd Award)", "date": "15 Jun 2023", "status": "Filed", "iPermsId": "638-5056000003-MSM3-2023" },
+          { "type": "DA638", "award": "ARCOM (5th Award)", "date": "01 Jun 2021", "status": "Filed", "iPermsId": "638-5056000003-ARCOM5-2021" }
+        ],
+        "training": [
+          { "type": "SLC Diploma", "institution": "SLC — Fort Lee", "date": "01 Jun 2011", "status": "Filed", "iPermsId": "TRN-5056000003-SLC-2011" },
+          { "type": "Master Leader Course", "institution": "SGM Academy", "date": "15 Mar 2016", "status": "Filed", "iPermsId": "TRN-5056000003-MLC-2016" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "15 Jun 2019", "status": "OUTDATED — PCS gap 2025; beneficiary update required", "iPermsId": "ADM-5056000003-DD93-2019" },
+          { "type": "SGLV8286", "date": "15 Jun 2019", "status": "OUTDATED — Overdue annual review", "iPermsId": "ADM-5056000003-SGLV-2019" }
+        ]
+      },
+      "recordCompleteness": "Incomplete — Admin Update Required",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["DD93 outdated — PCS gap 2025; S1 counseling required within 30 days", "SGLV overdue"]
+    },
+    {
+      "dodid": "5051008007",
+      "name": "Washington, James R.",
+      "rank": "SSG",
+      "unit": "BN Staff",
+      "section": "S7 / WTU",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Mar 2024–28 Feb 2025", "signedDate": "12 Mar 2025", "status": "Filed", "iPermsId": "NCOER-5051008007-2025" }
+          ],
+          "nextEvalDue": "28 Feb 2026 — MEB HOLD"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Mar 2023", "status": "Filed", "iPermsId": "638-5051008007-MSM-2023" },
+          { "type": "Purple Heart", "award": "PH — combat knee injury 2023", "date": "15 Aug 2023", "status": "Filed", "iPermsId": "638-5051008007-PH-2023" }
+        ],
+        "training": [
+          { "type": "SFQC Diploma", "institution": "JFK SWCS — SF Medic (18D)", "date": "01 Apr 2015", "status": "Filed", "iPermsId": "TRN-5051008007-SFQC-2015" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Mar 2023", "status": "Filed — Current", "iPermsId": "ADM-5051008007-DD93-2023" },
+          { "type": "SGLV8286", "date": "01 Mar 2023", "status": "Filed — Current", "iPermsId": "ADM-5051008007-SGLV-2023" },
+          { "type": "DA3349 (Permanent Profile)", "date": "01 Sep 2023", "status": "Filed — MEB In Progress", "iPermsId": "ADM-5051008007-PROF-2023" },
+          { "type": "MEB Referral Package", "date": "01 Nov 2023", "status": "Filed — PEB Review Ongoing", "iPermsId": "ADM-5051008007-MEB-2023" }
+        ]
+      },
+      "recordCompleteness": "MEB File Active — Additional Documents Pending",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1",
+      "flags": ["MEB IN PROGRESS — combat injury knee; WTU coordination; VA rating pending"]
+    },
+    {
+      "dodid": "5051010002",
+      "name": "Diallo, Aminata S.",
+      "rank": "SFC",
+      "unit": "BN Staff",
+      "section": "S9",
+      "ompfSections": {
+        "performance": {
+          "documents": [
+            { "type": "NCOER", "period": "01 Aug 2025–31 Jul 2026", "signedDate": null, "status": "PENDING — Due Jul 2026", "iPermsId": null }
+          ],
+          "nextEvalDue": "31 Jul 2026"
+        },
+        "awards": [
+          { "type": "DA638", "award": "MSM", "date": "01 Aug 2022", "status": "Filed", "iPermsId": "638-5051010002-MSM-2022" },
+          { "type": "DA638", "award": "ARCOM (4th Award)", "date": "01 Jun 2021", "status": "Filed", "iPermsId": "638-5051010002-ARCOM4-2021" }
+        ],
+        "training": [
+          { "type": "CAQC Diploma", "institution": "Civil Affairs Qualification Course — JFK SWCS", "date": "01 Jun 2008", "status": "Filed", "iPermsId": "TRN-5051010002-CAQC-2008" },
+          { "type": "SLC Diploma", "institution": "SLC", "date": "15 Aug 2015", "status": "Filed", "iPermsId": "TRN-5051010002-SLC-2015" }
+        ],
+        "administrative": [
+          { "type": "DD93", "date": "01 Aug 2021", "status": "Filed — Current", "iPermsId": "ADM-5051010002-DD93-2021" },
+          { "type": "SGLV8286", "date": "01 Aug 2021", "status": "Filed — Current", "iPermsId": "ADM-5051010002-SGLV-2021" }
+        ]
+      },
+      "recordCompleteness": "Complete — NCOER Pending End of Period",
+      "lastAuditDate": "15 Jun 2026",
+      "auditedBy": "CPT Phillips / S1"
+    }
+  ],
+  "auditSummary": {
+    "totalRecordsAudited": 14,
+    "complete": 9,
+    "incompleteAdminUpdate": 3,
+    "mebFileActive": 2,
+    "criticalFlags": [
+      "Garza — DD93/SGLV outdated (deployment gap 2024)",
+      "Bynum — DD93/SGLV missing (new gain, 30-day deadline)",
+      "Ingram — DD93/SGLV outdated (PCS gap 2025)",
+      "Riley — MEB in progress (BAMC PEB)",
+      "Washington — MEB in progress (WTU)"
+    ],
+    "nextFullAudit": "01 Sep 2026"
+  }
+}

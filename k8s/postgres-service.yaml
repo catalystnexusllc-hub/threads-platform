@@ -1,0 +1,19 @@
+# ── k8s/postgres-service.yaml ─────────────────────────────────────────────────
+# Headless Service governing the StatefulSet. Clients connect via the DNS name
+# "postgres" (matches the host in DATABASE_URL).
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: threads
+  labels:
+    app: threads-postgres
+spec:
+  clusterIP: None
+  selector:
+    app: threads-postgres
+  ports:
+    - name: postgres
+      protocol: TCP
+      port: 5432
+      targetPort: 5432

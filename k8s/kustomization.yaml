@@ -1,0 +1,20 @@
+# ── k8s/kustomization.yaml ────────────────────────────────────────────────────
+# Base resource list, used only as a kustomize base for overlays (e.g.
+# overlays/k3d). It is invisible to the Zarf/UDS path: zarf.yaml lists each
+# k8s/*.yaml file explicitly, and the README applies files individually — neither
+# reads this file. Do not add image/patch transforms here; keep the base neutral.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - postgres-statefulset.yaml
+  - postgres-service.yaml
+  - api-deployment.yaml
+  - api-service.yaml
+  - web-deployment.yaml
+  - web-service.yaml
+  - ingress.yaml
+  - etl-drop-pvc.yaml
+  - etl-cronjob.yaml

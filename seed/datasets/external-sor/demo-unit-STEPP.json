@@ -1,0 +1,380 @@
+{
+  "extractMetadata": {
+    "system": "STEPP",
+    "fullName": "Security Training, Education and Professionalization Portal",
+    "version": "2.3",
+    "report": "Unit Security Training Completion Report",
+    "unitUIC": "W25T2A",
+    "unit": "2nd Bn, Demo Battalion (Airborne)",
+    "extractDate": "18 Jun 2026",
+    "extractedBy": "S2 Security Manager — SFC Okafor",
+    "classification": "FOUO",
+    "notes": "STEPP tracks mandatory security awareness training for all personnel with clearances. Required courses are annual unless noted. Overdue status triggers access review with security manager.",
+    "requiredCourses": [
+      { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "frequency": "Annual", "creditHours": 1.0 },
+      { "courseId": "STEPP-002", "title": "Derivative Classification Training", "frequency": "Annual", "creditHours": 1.0 },
+      { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "frequency": "Annual", "creditHours": 1.0 },
+      { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "frequency": "Annual", "creditHours": 1.5 },
+      { "courseId": "STEPP-005", "title": "Foreign Travel Briefing", "frequency": "Pre/Post Travel", "creditHours": 0.5 },
+      { "courseId": "STEPP-006", "title": "Security Manager Certification Course", "frequency": "One-time (Req for Security Managers)", "creditHours": 40.0 },
+      { "courseId": "STEPP-007", "title": "SCI Indoctrination Briefing", "frequency": "One-time + Annual Update", "creditHours": 2.0 },
+      { "courseId": "STEPP-008", "title": "NATO Security Training", "frequency": "One-time + Annual Update", "creditHours": 3.0 }
+    ],
+    "totalRecords": 22
+  },
+  "records": [
+    {
+      "edipi": "5051001001",
+      "name": "Bradley, Michael K.",
+      "rank": "LTC",
+      "unit": "BN Staff — Command",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "18 Jan 2026", "expirationDate": "18 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "01 Jul 2022", "expirationDate": "01 Jul 2027", "score": null, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "20 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051001002",
+      "name": "Ortega, James F.",
+      "rank": "MAJ",
+      "unit": "BN Staff — XO",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 91, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 89, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "01 Dec 2020", "expirationDate": "01 Dec 2025", "score": null, "status": "OVERDUE — Annual update not completed" }
+      ],
+      "overallStatus": "Non-Compliant — SCI Update Overdue",
+      "lastReviewDate": "25 Jan 2026",
+      "securityManagerNotes": "SCI annual indoc update 6+ months overdue. Must be completed prior to access to new SCI compartments. Schedule with S2 immediately."
+    },
+    {
+      "edipi": "5051003001",
+      "name": "Hassan, Kareem A.",
+      "rank": "CPT",
+      "unit": "BN Staff — S2",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "12 Jan 2026", "expirationDate": "12 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "14 Jan 2026", "expirationDate": "14 Jan 2027", "score": 99, "status": "Current" },
+        { "courseId": "STEPP-006", "title": "Security Manager Certification Course", "completionDate": "15 Aug 2021", "expirationDate": "N/A", "score": 94, "status": "Current — One-Time" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "01 May 2021", "expirationDate": "01 May 2026", "score": null, "status": "OVERDUE — Due May 2026" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Pre-Travel)", "completionDate": "01 Mar 2026", "expirationDate": "N/A", "score": null, "status": "Current — Completed Pre-TDY CENTCOM" }
+      ],
+      "overallStatus": "Non-Compliant — SCI Annual Update Overdue",
+      "lastReviewDate": "14 Jan 2026",
+      "securityManagerNotes": "ASRT/Deriv Class/IT/CIAR all current. SCI annual update expired May 2026 — 1 month overdue. Schedule immediately."
+    },
+    {
+      "edipi": "5051003002",
+      "name": "Okafor, Emeka C.",
+      "rank": "SFC",
+      "unit": "BN Staff — S2 NCOIC",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "10 Jan 2026", "expirationDate": "10 Jan 2027", "score": 100, "status": "Current" },
+        { "courseId": "STEPP-006", "title": "Security Manager Certification Course", "completionDate": "01 Sep 2023", "expirationDate": "N/A", "score": 98, "status": "Current — One-Time" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "15 Sep 2023", "expirationDate": "15 Sep 2026", "score": null, "status": "Current — Expiring Sep 2026" }
+      ],
+      "overallStatus": "Compliant — SCI Update Expiring Q3 2026",
+      "lastReviewDate": "10 Jan 2026",
+      "securityManagerNotes": "All current. SCI update due Sep 2026 — schedule before 01 Aug 2026."
+    },
+    {
+      "edipi": "5051003004",
+      "name": "Yusuf, Abdirahman M.",
+      "rank": "SSG",
+      "unit": "BN Staff — S2",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 91, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "17 Jan 2026", "expirationDate": "17 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "01 Sep 2022", "expirationDate": "01 Sep 2026", "score": null, "status": "Current — Expiring Sep 2026" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "17 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051003005",
+      "name": "Richardson, Marcus T.",
+      "rank": "SSG",
+      "unit": "BN Staff — S2",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 82, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "15 Jan 2026", "expirationDate": "15 Jan 2027", "score": 80, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 78, "status": "Current — RETAKE: Failed first attempt (score 68)" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 81, "status": "Current" },
+        { "courseId": "STEPP-007", "title": "SCI Annual Update Briefing", "completionDate": "01 May 2023", "expirationDate": "01 May 2027", "score": null, "status": "Current" }
+      ],
+      "overallStatus": "Compliant — Insider Threat Training Noted (Failed First Attempt)",
+      "lastReviewDate": "22 Jan 2026",
+      "securityManagerNotes": "FLAGGED: Insider Threat training first attempt failed (68/80 pass). Passed on retake. Combined with SOCRATES incident (DISS SAR filed Nov 2025) — heightened monitoring in place. Document counseling."
+    },
+    {
+      "edipi": "5051004001",
+      "name": "Vasquez, Carlos R.",
+      "rank": "MAJ",
+      "unit": "BN Staff — S3",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 97, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 93, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 94, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "24 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051006001",
+      "name": "Donovan, Patrick C.",
+      "rank": "MAJ",
+      "unit": "BN Staff — S5",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "18 Jan 2026", "expirationDate": "18 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "18 Jan 2026", "expirationDate": "18 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Pre-Travel)", "completionDate": "01 Apr 2026", "expirationDate": "N/A", "score": null, "status": "Current — CGSC TDY Tampa" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "22 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051007001",
+      "name": "Kowalczyk, Michael A.",
+      "rank": "CPT",
+      "unit": "BN Staff — S6",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 88, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 85, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 87, "status": "OVERDUE — Expired Mar 2026" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "15 Mar 2025", "expirationDate": "15 Mar 2026", "score": 82, "status": "OVERDUE — Expired Mar 2026" }
+      ],
+      "overallStatus": "Non-Compliant — ALL Annual Training Overdue",
+      "lastReviewDate": "15 Mar 2025",
+      "securityManagerNotes": "ALL required annual STEPP training expired Mar 2026 — 3 months overdue. CPT Kowalczyk was TDY Mar–May 2026 for network upgrade support. Must complete all 4 courses within 30 days (NLT 18 Jul 2026). Access review required if not complete by 01 Jul 2026."
+    },
+    {
+      "edipi": "5053000001",
+      "name": "Thompson, Marcus J.",
+      "rank": "CPT",
+      "unit": "Alpha Co — CDR",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 93, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 91, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 89, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "26 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5054000001",
+      "name": "Harris, Brenda K.",
+      "rank": "CPT",
+      "unit": "Bravo Co — CDR",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 90, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "26 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5055000001",
+      "name": "Lynch, Kevin P.",
+      "rank": "CPT",
+      "unit": "Charlie Co — CDR",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 89, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "26 Jan 2026", "expirationDate": "26 Jan 2027", "score": 87, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "26 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5053001003",
+      "name": "Guerrero, Roberto A.",
+      "rank": "SFC",
+      "unit": "ODA-5211 — Team Sgt",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 90, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 91, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "29 Jan 2026", "expirationDate": "29 Jan 2027", "score": 89, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Pre-Travel)", "completionDate": "01 Oct 2025", "expirationDate": "N/A", "score": null, "status": "Current — Pre-deployment briefing" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "29 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5054001003",
+      "name": "Okonkwo, Chidi B.",
+      "rank": "SFC",
+      "unit": "ODA-5221 — Team Sgt",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 89, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 87, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "29 Jan 2026", "expirationDate": "29 Jan 2027", "score": 85, "status": "Current" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "29 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5055001003",
+      "name": "Foster, William H.",
+      "rank": "SFC",
+      "unit": "ODA-5231 — Team Sgt",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 85, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 86, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "29 Jan 2026", "expirationDate": "29 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Pre-Travel)", "completionDate": "01 Nov 2025", "expirationDate": "N/A", "score": null, "status": "Current — Pre-deployment" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "29 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051009002",
+      "name": "McKinley, Marcus T.",
+      "rank": "CW3",
+      "unit": "BN Staff — S8",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2025", "expirationDate": "20 Jan 2026", "score": 84, "status": "OVERDUE — Expired Jan 2026" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2025", "expirationDate": "20 Jan 2026", "score": 80, "status": "OVERDUE — Expired Jan 2026" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2025", "expirationDate": "22 Jan 2026", "score": 81, "status": "OVERDUE — Expired Jan 2026" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "24 Jan 2025", "expirationDate": "24 Jan 2026", "score": 79, "status": "OVERDUE — Expired Jan 2026" }
+      ],
+      "overallStatus": "Non-Compliant — ALL Training Overdue 5+ Months",
+      "lastReviewDate": "24 Jan 2025",
+      "securityManagerNotes": "CRITICAL: All annual training expired Jan 2026. PRR also pending adjudication (DISS). Combined non-compliance is a risk indicator. Must complete all STEPP training NLT 30 Jun 2026. Security manager counseling required."
+    },
+    {
+      "edipi": "5051010001",
+      "name": "Okafor, James A.",
+      "rank": "MAJ",
+      "unit": "BN Staff — S9",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 92, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 93, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Pre/Post Travel)", "completionDate": "15 Jun 2026", "expirationDate": "N/A", "score": null, "status": "Current — Post-TDY USSOCOM debrief complete" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "24 Jan 2026",
+      "securityManagerNotes": null
+    },
+    {
+      "edipi": "5051010002",
+      "name": "Diallo, Aminata S.",
+      "rank": "SFC",
+      "unit": "BN Staff — S9",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 97, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 98, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Multi-country Pre-Travel)", "completionDate": "01 May 2026", "expirationDate": "N/A", "score": null, "status": "Current — CENTCOM AOR briefing" },
+        { "courseId": "STEPP-008", "title": "NATO Security Training", "completionDate": "15 Jun 2021", "expirationDate": "15 Jun 2026", "score": 92, "status": "EXPIRING — Due Jun 2026; renewal required" }
+      ],
+      "overallStatus": "Partially Non-Compliant — NATO Training Expired",
+      "lastReviewDate": "24 Jan 2026",
+      "securityManagerNotes": "NATO Security Training expired Jun 2026. Complete renewal via STEPP NATO module NLT 30 Jun 2026. All other annual training current."
+    },
+    {
+      "edipi": "5053003005",
+      "name": "Al-Rasheed, Khalid M.",
+      "rank": "SSG",
+      "unit": "ODA-5212 — Intel Sgt",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 95, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "25 Jan 2026", "expirationDate": "25 Jan 2027", "score": 97, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "27 Jan 2026", "expirationDate": "27 Jan 2027", "score": 94, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "29 Jan 2026", "expirationDate": "29 Jan 2027", "score": 96, "status": "Current" },
+        { "courseId": "STEPP-005", "title": "Foreign Travel Briefing (Multi-country)", "completionDate": "01 Sep 2025", "expirationDate": "N/A", "score": null, "status": "Current — CENTCOM deployment pre-brief" }
+      ],
+      "overallStatus": "Compliant",
+      "lastReviewDate": "29 Jan 2026",
+      "securityManagerNotes": "Foreign contact briefing protocol maintained. Excellent compliance record."
+    },
+    {
+      "edipi": "5051004006",
+      "name": "Riley, Marcus A.",
+      "rank": "SFC",
+      "unit": "BN Staff — S3/WTU",
+      "clearanceLevel": "TS/SCI",
+      "trainingCompletions": [
+        { "courseId": "STEPP-001", "title": "Annual Security Refresher Training (ASRT)", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 88, "status": "Current" },
+        { "courseId": "STEPP-002", "title": "Derivative Classification Training", "completionDate": "20 Jan 2026", "expirationDate": "20 Jan 2027", "score": 85, "status": "Current" },
+        { "courseId": "STEPP-003", "title": "Insider Threat Awareness Training", "completionDate": "22 Jan 2026", "expirationDate": "22 Jan 2027", "score": 87, "status": "Current" },
+        { "courseId": "STEPP-004", "title": "Counterintelligence Awareness and Reporting (CIAR)", "completionDate": "24 Jan 2026", "expirationDate": "24 Jan 2027", "score": 84, "status": "Current" }
+      ],
+      "overallStatus": "Compliant — Access Note: MEB/Non-Deployable",
+      "lastReviewDate": "24 Jan 2026",
+      "securityManagerNotes": "Training current. MEB non-deployable status — limit SCIF access to admin functions only per CDR guidance."
+    }
+  ],
+  "complianceSummary": {
+    "totalRecords": 22,
+    "compliant": 14,
+    "nonCompliant": 4,
+    "expiringWithin90Days": 3,
+    "partiallyNonCompliant": 1,
+    "criticalFlags": [
+      "Kowalczyk — ALL annual training overdue (TDY conflict); must complete by 18 Jul 2026",
+      "McKinley — ALL annual training overdue 5+ months; combined PRR non-compliance; security counseling required",
+      "Hassan — SCI annual update expired; 1 month overdue",
+      "Ortega — SCI annual update 6+ months overdue",
+      "Richardson — Insider Threat training first attempt failed; flagged per DISS SAR",
+      "Diallo — NATO Security Training expired; renewal required"
+    ],
+    "nextBulkTrainingWindow": "Jan 2027",
+    "securityManagerReviewDate": "01 Jul 2026"
+  }
+}

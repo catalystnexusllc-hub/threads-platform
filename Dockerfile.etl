@@ -1,0 +1,27 @@
+# THREADS — ETL image (dlt + merge). Run on a schedule by k8s/etl-cronjob.yaml.
+FROM python:3.12-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /etl
+
+COPY etl/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Pipeline code + the merge SQL (run.py reads merge.sql next to itself)
+COPY etl/ ./
+
+# Bundled SOR datasets so the job is self-contained (ETL_AUTOSEED stages them).
+# Set ETL_AUTOSEED=0 to ingest real external drops instead.
+COPY seed/datasets/external-sor/ ./datasets/external-sor/
+
+RUN useradd -m -u 10002 etl && chown -R etl /etl
+USER etl
+
+# dlt keeps pipeline state under the home dir
+ENV DLT_DATA_DIR=/home/etl/.dlt \
+    ETL_DATASETS_DIR=/etl/datasets/external-sor \
+    ETL_DROP_DIR=/tmp/drop
+
+ENTRYPOINT ["python", "run.py"]

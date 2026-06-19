@@ -1,0 +1,16 @@
+# ── k8s/configmap.yaml ────────────────────────────────────────────────────────
+# Non-secret application configuration for the api (FastAPI) tier.
+# Sensitive values (DATABASE_URL, API_KEY, POSTGRES_PASSWORD) go in the Secret.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: threads-config
+  namespace: threads
+  labels:
+    app: threads-platform
+data:
+  NODE_ENV: "production"
+  # With the nginx + api split behind one ingress host the SPA is same-origin,
+  # so CORS is effectively unused. Keep it locked to the ingress hostname.
+  # Use "*" only in a fully-isolated airgap environment with no public network.
+  CORS_ORIGIN: "http://threads.local"

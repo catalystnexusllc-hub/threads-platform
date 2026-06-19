@@ -1,0 +1,45 @@
+# ── deploy/k3d/kustomization.yaml ─────────────────────────────────────────────
+# k3d-on-GCP overlay — the shared working/staging cluster.
+#
+# Lives OUTSIDE k8s/ on purpose: kustomize rejects an overlay nested inside its
+# own base directory (false "cycle"). The base k8s/ manifests stay
+# Zarf/UDS-neutral (nginx IngressClass + the spec.rules[0].host that
+# uds-bundle.yaml overrides); this overlay layers the k3d-only differences so the
+# airgap Zarf/UDS path is untouched.
+#
+# Deploy:  kubectl apply -k deploy/k3d
+# The GitHub Actions workflow rewrites the image tags below to the build SHA,
+# imports those images into k3d, then runs the apply.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# The base resource list (k8s/kustomization.yaml).
+resources:
+  - ../../k8s
+
+# Image tags. The deploy workflow rewrites each `newTag` to the build SHA and
+# runs `k3d image import <name>:<tag>` — newName is unchanged so the imported
+# ref matches what the pods request (imagePullPolicy: IfNotPresent → no pull).
+images:
+  - name: ghcr.io/catalystnexus/threads-api
+    newTag: dev
+  - name: ghcr.io/catalystnexus/threads-web
+    newTag: dev
+  - name: ghcr.io/catalystnexus/threads-etl
+    newTag: dev
+
+# k3d ships Traefik (not ingress-nginx) and the VM is reached by IP, so:
+#   - switch the IngressClass nginx → traefik
+#   - drop the host rule so it matches any Host header / raw IP
+# Both changes are overlay-local; the base ingress (and the UDS
+# spec.rules[0].host override) is unaffected.
+patches:
+  - target:
+      kind: Ingress
+      name: threads-platform
+    patch: |
+      - op: replace
+        path: /spec/ingressClassName
+        value: traefik
+      - op: remove
+        path: /spec/rules/0/host

@@ -1,0 +1,180 @@
+{
+  "soldiers": {
+    "guerrero_lom_nominee": {
+      "name": "Guerrero, Roberto A.", "rank": "SFC", "position": "Team Sergeant ODA-5211", "mos": "18Z",
+      "unit": "ODA-5211", "section": "Team Sgt", "branch": "Army",
+      "ssn": "XXX-XX-8001", "dodid": "5053001003",
+      "niprEmail": "roberto.a.guerrero.mil@army.mil",
+      "gainDate": "01 Jan 2021", "ets": "31 Dec 2027",
+      "awards": {
+        "current": ["BSM (V) (2)", "MSM (2)", "ARCOM (5)", "CIB"],
+        "submitted": [],
+        "nominated": [
+          {
+            "award": "LOM",
+            "citation": "For exceptionally meritorious conduct in the performance of outstanding services and achievements as ODA-5211 Team Sergeant from January 2021 to present. SFC Guerrero's leadership and tactical expertise directly contributed to 14 successful foreign internal defense missions and three partner nation force-on-force exercises in support of CENTCOM objectives.",
+            "for": "Accumulated actions during the period 01 Jan 2021 – 31 Dec 2025",
+            "nominatedBy": "CPT Mitchell",
+            "nominatedDate": "01 Oct 2025",
+            "currentStatus": "Nominated — routing through CDR",
+            "stage": 1
+          }
+        ]
+      }
+    },
+    "okonkwo_bsm_v": {
+      "name": "Okonkwo, Chidi B.", "rank": "SFC", "position": "Team Sergeant ODA-5221", "mos": "18Z",
+      "unit": "ODA-5221", "section": "Team Sgt", "branch": "Army",
+      "ssn": "XXX-XX-8002", "dodid": "5054001003",
+      "niprEmail": "chidi.b.okonkwo.mil@army.mil",
+      "gainDate": "01 Jul 2020", "ets": "30 Jun 2027",
+      "awards": {
+        "current": ["BSM (V)", "MSM", "ARCOM (4)"],
+        "submitted": [
+          {
+            "award": "MSM (2nd Award)",
+            "citation": "For exceptionally meritorious service as ODA-5221 Team Sergeant from July 2020 to present, distinguished by superior operational planning and execution during multiple counter-narco-terrorism operations and partner nation advisory missions throughout CENTCOM.",
+            "for": "Sustained superior performance 01 Jul 2020 – 30 Jun 2025",
+            "submittedBy": "CPT Harris",
+            "submittedDate": "15 Nov 2025",
+            "currentStatus": "Submitted — Group awaiting final Group CDR signature",
+            "stage": 3
+          }
+        ],
+        "nominated": []
+      }
+    },
+    "thompson_bsm": {
+      "name": "Thompson, Marcus J.", "rank": "CPT", "position": "Alpha Company Commander", "mos": "18A",
+      "unit": "Alpha Co 2-5 SFG", "section": "Command", "branch": "Army",
+      "ssn": "XXX-XX-8003", "dodid": "5053000001",
+      "niprEmail": "marcus.j.thompson.mil@army.mil",
+      "gainDate": "01 Jun 2023", "ets": "30 Sep 2031",
+      "awards": {
+        "current": ["BSM (V)", "MSM", "ARCOM (4)"],
+        "submitted": [],
+        "nominated": [
+          {
+            "award": "BSM (2nd Award)",
+            "citation": "For exceptionally meritorious service as Alpha Company Commander, 2nd Battalion, Demo Battalion from June 2023 to present. CPT Thompson led three operational deployments and unified the company to achieve the highest readiness rating in the battalion history.",
+            "for": "01 Jun 2023 – 31 May 2026",
+            "nominatedBy": "LTC Bradley",
+            "nominatedDate": "15 Nov 2025",
+            "currentStatus": "Nominated — CDR packet in draft",
+            "stage": 1
+          }
+        ]
+      }
+    },
+    "chen_msm_submitted": {
+      "name": "Chen, David W.", "rank": "SSG", "position": "Communications Sergeant ODA-5213", "mos": "18E",
+      "unit": "ODA-5213", "section": "Comms", "branch": "Army",
+      "ssn": "XXX-XX-8004", "dodid": "5053003012",
+      "niprEmail": "david.w.chen.mil@army.mil",
+      "gainDate": "01 Jul 2023", "ets": "30 Jun 2027",
+      "awards": {
+        "current": ["ARCOM (2)", "AAM (3)"],
+        "submitted": [
+          {
+            "award": "MSM",
+            "citation": "For exceptionally meritorious service as Communications Sergeant, ODA-5213, from July 2023 to present. SSG Chen's expertise in SATCOM, wideband communications, and multi-echelon integration directly enabled every ODA-5213 operational mission and maintained zero communications downtime during three consecutive overseas deployments.",
+            "for": "01 Jul 2023 – 30 Jun 2026",
+            "submittedBy": "CPT Warren",
+            "submittedDate": "01 Oct 2025",
+            "currentStatus": "Submitted — BN CDR endorsed; awaiting Group CDR signature",
+            "stage": 3
+          }
+        ],
+        "nominated": []
+      }
+    },
+    "moreno_arcom": {
+      "name": "Moreno, Elena R.", "rank": "SFC", "position": "Medical Section NCOIC", "mos": "68W",
+      "unit": "Support Co 2-5 SFG", "section": "Medical", "branch": "Army",
+      "ssn": "XXX-XX-8005", "dodid": "5056000026",
+      "niprEmail": "elena.r.moreno.mil@army.mil",
+      "gainDate": "01 Apr 2021", "ets": "31 Mar 2028",
+      "awards": {
+        "current": ["MSM", "ARCOM (4)", "AAM (2)"],
+        "submitted": [
+          {
+            "award": "ARCOM (5th Award)",
+            "citation": "For meritorious service as Medical Section NCOIC, Support Company, 2nd Battalion, Demo Battalion from April 2024 to April 2026. SFC Moreno managed battalion medical readiness at 92% MRC Class 1/2, coordinating 47 SRP events and ensuring 100% medical records compliance prior to three operational deployments.",
+            "for": "01 Apr 2024 – 01 Apr 2026",
+            "submittedBy": "CPT Robinson",
+            "submittedDate": "15 Sep 2025",
+            "currentStatus": "Submitted — awaiting BN CDR signature; in S1 queue",
+            "stage": 2
+          }
+        ],
+        "nominated": []
+      }
+    },
+    "navarro_msm_end_of_tour": {
+      "name": "Navarro, Carlos M.", "rank": "MAJ", "position": "Battalion S8 (Finance)", "mos": "36A",
+      "unit": "2-5 SFG", "section": "S8", "branch": "Army",
+      "ssn": "XXX-XX-8006", "dodid": "5051009001",
+      "niprEmail": "carlos.m.navarro.mil@army.mil",
+      "gainDate": "15 Oct 2023", "ets": "31 Dec 2032",
+      "awards": {
+        "current": ["MSM (2)", "ARCOM (3)"],
+        "submitted": [],
+        "nominated": [
+          {
+            "award": "MSM (3rd Award)",
+            "citation": "For exceptionally meritorious service as Battalion S8, 2nd Battalion, Demo Battalion from October 2023 to October 2026. MAJ Navarro achieved zero pay errors across 307 soldiers over 36 months, resolved 14 DFAS discrepancies, and managed over $1.2M in GPC expenditures with 100% compliance.",
+            "for": "15 Oct 2023 – 15 Oct 2026",
+            "nominatedBy": "LTC Bradley",
+            "nominatedDate": "01 Oct 2025",
+            "currentStatus": "Nominated — EOT award; CDR reviewing draft",
+            "stage": 1
+          }
+        ]
+      }
+    },
+    "reyes_arcom_v": {
+      "name": "Reyes, Miguel A.", "rank": "SFC", "position": "Weapons Sergeant ODA-5231", "mos": "18B",
+      "unit": "ODA-5231", "section": "Weapons", "branch": "Army",
+      "ssn": "XXX-XX-8007", "dodid": "5055001005",
+      "niprEmail": "miguel.a.reyes.mil@army.mil",
+      "gainDate": "01 Oct 2021", "ets": "30 Sep 2027",
+      "awards": {
+        "current": ["BSM", "ARCOM (2)", "AAM (3)"],
+        "submitted": [
+          {
+            "award": "ARCOM (V) (3rd Award)",
+            "citation": "For meritorious actions in direct support of combat operations during Operation Enduring Freedom – Afghanistan Remnants from March 2025 to August 2025. SFC Reyes displayed exceptional tactical proficiency and personal valor during four direct action missions, neutralizing imminent threats to partner forces and US Special Operations personnel.",
+            "for": "01 Mar 2025 – 01 Aug 2025",
+            "submittedBy": "CPT Cooper",
+            "submittedDate": "15 Oct 2025",
+            "currentStatus": "Submitted — Group CDR signed; in PERSCOM queue",
+            "stage": 4
+          }
+        ],
+        "nominated": []
+      }
+    },
+    "ingram_bsm_nominee": {
+      "name": "Ingram, Tyrone D.", "rank": "MSG", "position": "Support Company First Sergeant", "mos": "92Y",
+      "unit": "Support Co 2-5 SFG", "section": "Command", "branch": "Army",
+      "ssn": "XXX-XX-8008", "dodid": "5056000003",
+      "niprEmail": "tyrone.d.ingram.mil@army.mil",
+      "gainDate": "15 Jun 2019", "ets": "30 Jun 2027",
+      "awards": {
+        "current": ["MSM (3)", "ARCOM (5)", "AAM (4)"],
+        "submitted": [],
+        "nominated": [
+          {
+            "award": "BSM",
+            "citation": "For exceptionally meritorious service as Support Company First Sergeant, 2nd Battalion, Demo Battalion from June 2022 to June 2027. MSG Ingram rebuilt Support Company readiness from 74% to 97% Class 1/2 deployable, overhauled battalion property accountability, and mentored 14 NCOs selected for promotion ahead of peers.",
+            "for": "01 Jun 2022 – 01 Jun 2027",
+            "nominatedBy": "CPT Robinson",
+            "nominatedDate": "15 Nov 2025",
+            "currentStatus": "Nominated — routing through CDR for endorsement",
+            "stage": 1
+          }
+        ]
+      }
+    }
+  }
+}

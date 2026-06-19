@@ -1,0 +1,141 @@
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #0a0a0a;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: #0a0a0a; }
+.sidebar::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+
+.sectionTitle {
+  padding: 18px 16px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #c9a227;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px 16px;
+}
+
+.groupLabel {
+  padding: 12px 10px 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.internalItem,
+.adminItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.internalNum,
+.adminNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px;
+  height: 16px;
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.internalNum {
+  background: #181818;
+  border: 1px solid #252525;
+  color: #4a4a4a;
+}
+
+.adminNum {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  color: #505050;
+}
+
+.navItem.active .internalNum {
+  background: rgba(201, 162, 39, 0.12);
+  border-color: rgba(201, 162, 39, 0.3);
+  color: rgba(201, 162, 39, 0.8);
+}
+
+.navItem.active .adminNum {
+  background: rgba(201, 162, 39, 0.2);
+  border-color: rgba(201, 162, 39, 0.4);
+  color: #c9a227;
+}
+
+.navItem {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navItem:hover { background: #141414; color: #ccc; }
+
+.navItem.active {
+  background: rgba(201, 162, 39, 0.15);
+  color: #c9a227;
+  border-left: 2px solid #c9a227;
+  padding-left: 10px;
+}
+
+.numPrefix {
+  font-size: 12px;
+  font-weight: 800;
+  color: #3a3a3a;
+  letter-spacing: 0.3px;
+}
+
+.navItem.active .numPrefix {
+  color: rgba(201, 162, 39, 0.6);
+}
+
+.sub {
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  padding-left: 20px;
+}
+
+.sub.active {
+  padding-left: 18px;
+}
+
+.sub:hover { color: #ccc; }
+
+.extLink {
+  color: #3a3a3a;
+  font-style: italic;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.extLink:hover { color: #666; }

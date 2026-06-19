@@ -1,0 +1,675 @@
+{
+  "extractMetadata": {
+    "system": "DTMS",
+    "fullName": "Digital Training Management System",
+    "version": "4.0",
+    "report": "Unit AFT and CFT Results — BN Training Data Extract",
+    "unitUIC": "W25T2A",
+    "unit": "2nd Bn, Demo Battalion (Airborne)",
+    "reportingPeriod": "01 Jan 2026 – 18 Jun 2026",
+    "extractDate": "18 Jun 2026",
+    "extractedBy": "S7 Training Officer — CPT Hayes / SSG Petrov (DTMS Manager)",
+    "classification": "UNCLASSIFIED",
+    "fitnessTests": {
+      "aft": {
+        "name": "Army Fitness Test (AFT)",
+        "policy": "DA Pam 670-1 / HQDA EXORD 001-26",
+        "events": ["MDL (3-Rep Max Deadlift)", "SPT (Standing Power Throw)", "HRP (Hand-Release Push-Up)", "SDC (Sprint-Drag-Carry)", "Plank", "2MR (2-Mile Run)"],
+        "minimumPassScore": 300,
+        "maximumScore": 600,
+        "frequency": "Semiannual (may test quarterly per CDR discretion)"
+      },
+      "cft": {
+        "name": "Combat Fitness Test (CFT)",
+        "policy": "SECDEF Directive — Hegseth Memo dtd 15 Jan 2025; Army Implementation Guidance dtd 01 Apr 2025",
+        "description": "Combat-focused supplemental fitness assessment measuring tactical athlete capability under operational conditions. Replaces no existing test — supplements AFT as a warfighter readiness indicator.",
+        "events": [
+          "400m Sprint",
+          "Casualty Drag (75m with 200-lb weighted sled)",
+          "Ammo Can Lift (30-lb can, max reps in 2 min)",
+          "3-Mile Ruck (45-lb ruck, timed)",
+          "Combat Water Survival Assessment (CWSA)"
+        ],
+        "passStandards": {
+          "sprint400m": "< 90 seconds",
+          "casualtyDrag75m": "< 45 seconds",
+          "ammoCan30lb": "> 30 reps in 2 minutes",
+          "ruck3mi45lb": "< 72 minutes (1:12:00)",
+          "combatWater": "Pass (swim 25m in uniform, equipment extraction, float)"
+        },
+        "frequency": "Semiannual (aligned with AFT cycle; separate test day)",
+        "grading": "GO/NO-GO per event. Overall: All events GO = CFT Pass"
+      }
+    },
+    "notes": "AFT scoring updated per Army Fitness Test policy (Jan 2026). Plank (held to exhaustion, scored 0:00–4:20) replaced Leg Tuck. All prior ACFT records re-coded as AFT. CFT integrated as separate semiannual event per SECDEF guidance.",
+    "totalRecords": 45
+  },
+  "soldiers": [
+    {
+      "dodid": "5051001001", "name": "Bradley, Michael K.", "rank": "LTC", "mos": "18A",
+      "unit": "BN Staff", "section": "Command", "gender": "M", "age": 48,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 280, "spt": 9.6, "hrp": 44, "sdc": "1:58", "plank": "3:02", "twoMileRun": "15:02" },
+        "score": 516
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 76, "casualtyDrag75m": 41, "ammoCan30lb": 42, "ruck3mi45lb": "58:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051001002", "name": "Ortega, James F.", "rank": "MAJ", "mos": "18A",
+      "unit": "BN Staff", "section": "XO", "gender": "M", "age": 43,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 300, "spt": 10.2, "hrp": 50, "sdc": "1:52", "plank": "3:15", "twoMileRun": "14:28" },
+        "score": 548
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 72, "casualtyDrag75m": 38, "ammoCan30lb": 48, "ruck3mi45lb": "55:12", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051002001", "name": "Phillips, Sarah T.", "rank": "CPT", "mos": "42H",
+      "unit": "BN Staff", "section": "S1", "gender": "F", "age": 31,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 200, "spt": 7.8, "hrp": 38, "sdc": "2:08", "plank": "2:55", "twoMileRun": "16:22" },
+        "score": 494
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 82, "casualtyDrag75m": 42, "ammoCan30lb": 36, "ruck3mi45lb": "63:15", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051002002", "name": "Garza, Roberto M.", "rank": "SFC", "mos": "42A",
+      "unit": "BN Staff", "section": "S1", "gender": "M", "age": 42,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 260, "spt": 9.0, "hrp": 42, "sdc": "2:02", "plank": "2:48", "twoMileRun": "15:44" },
+        "score": 504
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 78, "casualtyDrag75m": 40, "ammoCan30lb": 40, "ruck3mi45lb": "60:18", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051002005", "name": "Bynum, Keisha A.", "rank": "SGT", "mos": "42A",
+      "unit": "BN Staff", "section": "S1", "gender": "F", "age": 25,
+      "aft": {
+        "testDate": null, "testType": "AFT", "status": "Required",
+        "events": null, "score": null,
+        "note": "New gain — test scheduled 25 Jun 2026"
+      },
+      "cft": {
+        "testDate": null, "status": "Required",
+        "events": null, "grade": null,
+        "note": "New gain — CFT scheduled 20 Sep 2026"
+      }
+    },
+    {
+      "dodid": "5051003001", "name": "Hassan, Kareem A.", "rank": "CPT", "mos": "35D",
+      "unit": "BN Staff", "section": "S2", "gender": "M", "age": 32,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 285, "spt": 10.4, "hrp": 52, "sdc": "1:51", "plank": "3:22", "twoMileRun": "14:08" },
+        "score": 562
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 70, "casualtyDrag75m": 36, "ammoCan30lb": 50, "ruck3mi45lb": "54:08", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051003002", "name": "Okafor, Emeka C.", "rank": "SFC", "mos": "35L",
+      "unit": "BN Staff", "section": "S2", "gender": "M", "age": 41,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 270, "spt": 9.8, "hrp": 46, "sdc": "1:56", "plank": "3:10", "twoMileRun": "14:52" },
+        "score": 534
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 74, "casualtyDrag75m": 39, "ammoCan30lb": 45, "ruck3mi45lb": "57:22", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051004001", "name": "Vasquez, Carlos R.", "rank": "MAJ", "mos": "18A",
+      "unit": "BN Staff", "section": "S3", "gender": "M", "age": 41,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 310, "spt": 10.8, "hrp": 55, "sdc": "1:48", "plank": "3:28", "twoMileRun": "13:55" },
+        "score": 568
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 68, "casualtyDrag75m": 35, "ammoCan30lb": 52, "ruck3mi45lb": "52:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051004002", "name": "Perkins, James B.", "rank": "MSG", "mos": "18Z",
+      "unit": "BN Staff", "section": "S3", "gender": "M", "age": 47,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 290, "spt": 9.4, "hrp": 48, "sdc": "1:59", "plank": "3:05", "twoMileRun": "15:18" },
+        "score": 524
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 74, "casualtyDrag75m": 38, "ammoCan30lb": 44, "ruck3mi45lb": "58:10", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051004006", "name": "Riley, Marcus A.", "rank": "SFC", "mos": "18F",
+      "unit": "BN Staff", "section": "S3/WTU", "gender": "M", "age": 40,
+      "aft": {
+        "testDate": null, "testType": "AFT", "status": "Exempt — MEB Profile",
+        "events": null, "score": null,
+        "note": "MEB in progress — permanent profile; AFT exempt"
+      },
+      "cft": {
+        "testDate": null, "status": "Exempt — MEB Profile",
+        "events": null, "grade": null,
+        "note": "MEB non-deployable — CFT exempt pending PEB outcome"
+      }
+    },
+    {
+      "dodid": "5051005001", "name": "Morrison, David P.", "rank": "MAJ", "mos": "92A",
+      "unit": "BN Staff", "section": "S4", "gender": "M", "age": 40,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 240, "spt": 8.8, "hrp": 40, "sdc": "2:05", "plank": "2:45", "twoMileRun": "16:05" },
+        "score": 482
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 80, "casualtyDrag75m": 42, "ammoCan30lb": 36, "ruck3mi45lb": "62:30", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051005002", "name": "Delgado, Maria L.", "rank": "SFC", "mos": "92Y",
+      "unit": "BN Staff", "section": "S4", "gender": "F", "age": 39,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 180, "spt": 7.2, "hrp": 32, "sdc": "2:18", "plank": "2:40", "twoMileRun": "17:15" },
+        "score": 446
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 86, "casualtyDrag75m": 44, "ammoCan30lb": 32, "ruck3mi45lb": "65:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051006001", "name": "Donovan, Patrick C.", "rank": "MAJ", "mos": "38A",
+      "unit": "BN Staff", "section": "S5", "gender": "M", "age": 40,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 260, "spt": 9.6, "hrp": 48, "sdc": "1:54", "plank": "3:18", "twoMileRun": "14:36" },
+        "score": 538
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 73, "casualtyDrag75m": 37, "ammoCan30lb": 46, "ruck3mi45lb": "56:22", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051007001", "name": "Kowalczyk, Michael A.", "rank": "CPT", "mos": "25A",
+      "unit": "BN Staff", "section": "S6", "gender": "M", "age": 29,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 250, "spt": 9.8, "hrp": 50, "sdc": "1:52", "plank": "3:20", "twoMileRun": "14:10" },
+        "score": 548
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 71, "casualtyDrag75m": 36, "ammoCan30lb": 48, "ruck3mi45lb": "54:48", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051008001", "name": "Hayes, Brittany M.", "rank": "CPT", "mos": "18A",
+      "unit": "BN Staff", "section": "S7", "gender": "F", "age": 30,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 185, "spt": 8.0, "hrp": 40, "sdc": "2:04", "plank": "3:12", "twoMileRun": "15:44" },
+        "score": 512
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 80, "casualtyDrag75m": 42, "ammoCan30lb": 38, "ruck3mi45lb": "62:05", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051008002", "name": "Warren, Daniel J.", "rank": "SFC", "mos": "18Z",
+      "unit": "BN Staff", "section": "S7", "gender": "M", "age": 45,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 295, "spt": 10.0, "hrp": 50, "sdc": "1:54", "plank": "3:15", "twoMileRun": "14:48" },
+        "score": 536
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 73, "casualtyDrag75m": 37, "ammoCan30lb": 46, "ruck3mi45lb": "56:40", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051008007", "name": "Washington, James R.", "rank": "SSG", "mos": "18D",
+      "unit": "BN Staff", "section": "S7/WTU", "gender": "M", "age": 34,
+      "aft": {
+        "testDate": null, "testType": "AFT", "status": "Exempt — MEB Profile",
+        "events": null, "score": null,
+        "note": "MEB in progress — combat knee injury; AFT exempt"
+      },
+      "cft": {
+        "testDate": null, "status": "Exempt — MEB Profile",
+        "events": null, "grade": null,
+        "note": "MEB non-deployable — CFT exempt"
+      }
+    },
+    {
+      "dodid": "5051009001", "name": "Navarro, Carlos M.", "rank": "MAJ", "mos": "36A",
+      "unit": "BN Staff", "section": "S8", "gender": "M", "age": 47,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 240, "spt": 8.6, "hrp": 40, "sdc": "2:06", "plank": "2:50", "twoMileRun": "16:12" },
+        "score": 482
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 81, "casualtyDrag75m": 43, "ammoCan30lb": 36, "ruck3mi45lb": "63:00", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051009002", "name": "McKinley, Marcus T.", "rank": "CW3", "mos": "360A",
+      "unit": "BN Staff", "section": "S8", "gender": "M", "age": 48,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 220, "spt": 8.2, "hrp": 36, "sdc": "2:12", "plank": "2:38", "twoMileRun": "17:02" },
+        "score": 452
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 84, "casualtyDrag75m": 44, "ammoCan30lb": 32, "ruck3mi45lb": "66:18", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051010001", "name": "Okafor, James A.", "rank": "MAJ", "mos": "38A",
+      "unit": "BN Staff", "section": "S9", "gender": "M", "age": 40,
+      "aft": {
+        "testDate": "15 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 265, "spt": 9.8, "hrp": 48, "sdc": "1:55", "plank": "3:10", "twoMileRun": "14:44" },
+        "score": 532
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 73, "casualtyDrag75m": 38, "ammoCan30lb": 44, "ruck3mi45lb": "57:06", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5051010002", "name": "Diallo, Aminata S.", "rank": "SFC", "mos": "38B",
+      "unit": "BN Staff", "section": "S9", "gender": "F", "age": 41,
+      "aft": {
+        "testDate": "21 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 175, "spt": 7.6, "hrp": 38, "sdc": "2:06", "plank": "3:08", "twoMileRun": "16:00" },
+        "score": 502
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 82, "casualtyDrag75m": 41, "ammoCan30lb": 35, "ruck3mi45lb": "63:22", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053000001", "name": "Thompson, Marcus J.", "rank": "CPT", "mos": "18A",
+      "unit": "Alpha Co", "section": "CDR", "gender": "M", "age": 31,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 300, "spt": 10.6, "hrp": 55, "sdc": "1:47", "plank": "3:30", "twoMileRun": "13:48" },
+        "score": 574
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 66, "casualtyDrag75m": 33, "ammoCan30lb": 54, "ruck3mi45lb": "51:28", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001001", "name": "Mitchell, James R.", "rank": "CPT", "mos": "18A",
+      "unit": "Alpha Co", "section": "ODA-5211 CDR", "gender": "M", "age": 28,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 315, "spt": 11.2, "hrp": 62, "sdc": "1:41", "plank": "3:44", "twoMileRun": "13:12" },
+        "score": 596
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 64, "casualtyDrag75m": 30, "ammoCan30lb": 58, "ruck3mi45lb": "49:12", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001003", "name": "Guerrero, Roberto A.", "rank": "SFC", "mos": "18Z",
+      "unit": "Alpha Co", "section": "ODA-5211", "gender": "M", "age": 41,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 320, "spt": 11.0, "hrp": 60, "sdc": "1:42", "plank": "3:40", "twoMileRun": "13:28" },
+        "score": 586
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 65, "casualtyDrag75m": 31, "ammoCan30lb": 55, "ruck3mi45lb": "50:05", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001004", "name": "Jenkins, Anthony M.", "rank": "SSG", "mos": "18B",
+      "unit": "Alpha Co", "section": "ODA-5211 — Weapons Sgt", "gender": "M", "age": 29,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 330, "spt": 11.4, "hrp": 64, "sdc": "1:39", "plank": "3:48", "twoMileRun": "13:05" },
+        "score": 598
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 63, "casualtyDrag75m": 29, "ammoCan30lb": 60, "ruck3mi45lb": "48:22", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001005", "name": "Rodriguez, Kevin P.", "rank": "SFC", "mos": "18B",
+      "unit": "Alpha Co", "section": "ODA-5211 — Weapons Sgt", "gender": "M", "age": 35,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 295, "spt": 10.4, "hrp": 52, "sdc": "1:50", "plank": "3:18", "twoMileRun": "14:22" },
+        "score": 550
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 70, "casualtyDrag75m": 35, "ammoCan30lb": 50, "ruck3mi45lb": "53:48", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001006", "name": "Moore, Tyler J.", "rank": "SSG", "mos": "18C",
+      "unit": "Alpha Co", "section": "ODA-5211 — Engineer Sgt", "gender": "M", "age": 28,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 305, "spt": 10.8, "hrp": 56, "sdc": "1:46", "plank": "3:32", "twoMileRun": "13:42" },
+        "score": 568
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 67, "casualtyDrag75m": 33, "ammoCan30lb": 52, "ruck3mi45lb": "51:14", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001007", "name": "Sanchez, Miguel A.", "rank": "SFC", "mos": "18C",
+      "unit": "Alpha Co", "section": "ODA-5211 — Engineer Sgt", "gender": "M", "age": 36,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 280, "spt": 10.0, "hrp": 50, "sdc": "1:52", "plank": "3:10", "twoMileRun": "14:50" },
+        "score": 526
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 72, "casualtyDrag75m": 37, "ammoCan30lb": 46, "ruck3mi45lb": "55:30", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001008", "name": "Nguyen, David T.", "rank": "SFC", "mos": "18D",
+      "unit": "Alpha Co", "section": "ODA-5211 — Medic Sgt", "gender": "M", "age": 33,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 260, "spt": 9.6, "hrp": 48, "sdc": "1:55", "plank": "3:08", "twoMileRun": "14:40" },
+        "score": 524
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 73, "casualtyDrag75m": 38, "ammoCan30lb": 44, "ruck3mi45lb": "56:55", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001009", "name": "Rivera, Carlos E.", "rank": "SSG", "mos": "18D",
+      "unit": "Alpha Co", "section": "ODA-5211 — Medic Sgt", "gender": "M", "age": 27,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 270, "spt": 10.2, "hrp": 54, "sdc": "1:48", "plank": "3:28", "twoMileRun": "14:00" },
+        "score": 554
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 68, "casualtyDrag75m": 34, "ammoCan30lb": 52, "ruck3mi45lb": "52:30", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001010", "name": "Kim, Jason S.", "rank": "SFC", "mos": "18E",
+      "unit": "Alpha Co", "section": "ODA-5211 — Comms Sgt", "gender": "M", "age": 34,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 275, "spt": 10.0, "hrp": 50, "sdc": "1:52", "plank": "3:15", "twoMileRun": "14:28" },
+        "score": 534
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 71, "casualtyDrag75m": 36, "ammoCan30lb": 48, "ruck3mi45lb": "54:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001011", "name": "Patel, Raj K.", "rank": "SSG", "mos": "18E",
+      "unit": "Alpha Co", "section": "ODA-5211 — Comms Sgt", "gender": "M", "age": 26,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 280, "spt": 10.6, "hrp": 58, "sdc": "1:44", "plank": "3:38", "twoMileRun": "13:32" },
+        "score": 580
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 65, "casualtyDrag75m": 31, "ammoCan30lb": 56, "ruck3mi45lb": "50:18", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5053001012", "name": "Fitzgerald, Sean D.", "rank": "SGT", "mos": "18F",
+      "unit": "Alpha Co", "section": "ODA-5211 — Intel Sgt", "gender": "M", "age": 24,
+      "aft": {
+        "testDate": "18 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 255, "spt": 9.8, "hrp": 48, "sdc": "1:54", "plank": "3:05", "twoMileRun": "14:38" },
+        "score": 520
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 73, "casualtyDrag75m": 37, "ammoCan30lb": 45, "ruck3mi45lb": "56:12", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5054000001", "name": "Harris, Brenda K.", "rank": "CPT", "mos": "18A",
+      "unit": "Bravo Co", "section": "CDR", "gender": "F", "age": 32,
+      "aft": {
+        "testDate": "19 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 190, "spt": 8.2, "hrp": 42, "sdc": "2:00", "plank": "3:20", "twoMileRun": "15:10" },
+        "score": 524
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 79, "casualtyDrag75m": 40, "ammoCan30lb": 39, "ruck3mi45lb": "61:08", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5054001003", "name": "Okonkwo, Chidi B.", "rank": "SFC", "mos": "18Z",
+      "unit": "Bravo Co", "section": "ODA-5221", "gender": "M", "age": 42,
+      "aft": {
+        "testDate": "19 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 295, "spt": 10.2, "hrp": 52, "sdc": "1:52", "plank": "3:15", "twoMileRun": "14:42" },
+        "score": 542
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 71, "casualtyDrag75m": 36, "ammoCan30lb": 49, "ruck3mi45lb": "55:00", "combatWater": "Pass" },
+        "grade": "GO",
+        "note": "Medical hold — shoulder; completed CFT with medical clearance for non-contact events"
+      }
+    },
+    {
+      "dodid": "5054001006", "name": "Peters, Marcus W.", "rank": "SSG", "mos": "18B",
+      "unit": "Bravo Co", "section": "ODA-5221 — Weapons Sgt", "gender": "M", "age": 28,
+      "aft": {
+        "testDate": "19 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 280, "spt": 10.0, "hrp": 50, "sdc": "1:52", "plank": "3:10", "twoMileRun": "14:22" },
+        "score": 534
+      },
+      "cft": {
+        "testDate": "20 May 2026", "testType": "CFT", "status": "Fail",
+        "events": { "sprint400m": 68, "casualtyDrag75m": 34, "ammoCan30lb": 48, "ruck3mi45lb": "76:20", "combatWater": "Pass" },
+        "grade": "NO-GO",
+        "failedEvents": ["ruck3mi45lb — 76:20 (standard: < 72:00)"],
+        "retakeDate": "17 Jun 2026",
+        "retakeResult": "Fail — 78:12 (2nd attempt)",
+        "note": "Second CFT failure. Admin action initiated per CDR policy. Third test 15 Jul 2026. Counseled 18 Jun."
+      }
+    },
+    {
+      "dodid": "5054002004", "name": "Nguyen, Linh T.", "rank": "SPC", "mos": "25U",
+      "unit": "Bravo Co", "section": "ODA-5222 — Comms", "gender": "F", "age": 23,
+      "aft": {
+        "testDate": "19 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 160, "spt": 6.8, "hrp": 28, "sdc": "2:24", "plank": "2:32", "twoMileRun": "18:08" },
+        "score": 412
+      },
+      "cft": {
+        "testDate": "20 May 2026", "testType": "CFT", "status": "Fail",
+        "events": { "sprint400m": 85, "casualtyDrag75m": 43, "ammoCan30lb": 28, "ruck3mi45lb": "68:42", "combatWater": "Fail" },
+        "grade": "NO-GO",
+        "failedEvents": ["ammoCan30lb — 28 reps (standard: > 30)", "combatWater — Fail"],
+        "retakeDate": "17 Jun 2026",
+        "retakeResult": "Fail — combat water survival (2nd attempt); ammo can: 31 (pass)",
+        "note": "Second CFT failure — combat water survival primary deficiency. Non-swimmer; swim instruction ordered. Admin action per CDR. Third test 15 Jul 2026."
+      }
+    },
+    {
+      "dodid": "5055000001", "name": "Lynch, Kevin P.", "rank": "CPT", "mos": "18A",
+      "unit": "Charlie Co", "section": "CDR", "gender": "M", "age": 30,
+      "aft": {
+        "testDate": "20 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 295, "spt": 10.4, "hrp": 54, "sdc": "1:48", "plank": "3:32", "twoMileRun": "13:52" },
+        "score": 566
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 67, "casualtyDrag75m": 33, "ammoCan30lb": 52, "ruck3mi45lb": "51:55", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5055001003", "name": "Foster, William H.", "rank": "SFC", "mos": "18Z",
+      "unit": "Charlie Co", "section": "ODA-5231", "gender": "M", "age": 42,
+      "aft": {
+        "testDate": "20 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 305, "spt": 10.6, "hrp": 58, "sdc": "1:46", "plank": "3:38", "twoMileRun": "13:44" },
+        "score": 578
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 65, "casualtyDrag75m": 32, "ammoCan30lb": 55, "ruck3mi45lb": "50:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5055001005", "name": "Reyes, Miguel A.", "rank": "SFC", "mos": "18B",
+      "unit": "Charlie Co", "section": "ODA-5231 — Weapons Sgt", "gender": "M", "age": 35,
+      "aft": {
+        "testDate": "20 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 320, "spt": 11.2, "hrp": 62, "sdc": "1:40", "plank": "3:48", "twoMileRun": "13:08" },
+        "score": 596
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 63, "casualtyDrag75m": 29, "ammoCan30lb": 60, "ruck3mi45lb": "48:44", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5056000003", "name": "Ingram, Tyrone D.", "rank": "MSG", "mos": "92Y",
+      "unit": "Support Co", "section": "Command", "gender": "M", "age": 43,
+      "aft": {
+        "testDate": "21 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 250, "spt": 8.8, "hrp": 42, "sdc": "2:04", "plank": "2:52", "twoMileRun": "16:18" },
+        "score": 488
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 80, "casualtyDrag75m": 41, "ammoCan30lb": 38, "ruck3mi45lb": "62:50", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    },
+    {
+      "dodid": "5056000026", "name": "Moreno, Elena R.", "rank": "SFC", "mos": "68W",
+      "unit": "Support Co", "section": "Medical", "gender": "F", "age": 41,
+      "aft": {
+        "testDate": "21 Mar 2026", "testType": "AFT", "status": "Pass",
+        "events": { "mdl": 165, "spt": 7.0, "hrp": 30, "sdc": "2:20", "plank": "2:45", "twoMileRun": "17:42" },
+        "score": 440
+      },
+      "cft": {
+        "testDate": "20 May 2026", "status": "Pass",
+        "events": { "sprint400m": 85, "casualtyDrag75m": 43, "ammoCan30lb": 32, "ruck3mi45lb": "65:10", "combatWater": "Pass" },
+        "grade": "GO"
+      }
+    }
+  ],
+  "unitSummary": {
+    "totalSoldiers": 45,
+    "aftStatus": {
+      "pass": 40,
+      "fail": 0,
+      "required": 1,
+      "exempt_meb": 2,
+      "notYestested": 2,
+      "passRate": 95.2
+    },
+    "cftStatus": {
+      "pass": 40,
+      "fail_second_attempt": 2,
+      "required": 1,
+      "exempt_meb": 2,
+      "passRate": 95.2
+    },
+    "topPerformers": [
+      { "name": "Jenkins, Anthony M.", "rank": "SSG", "aftScore": 598, "unit": "ODA-5211" },
+      { "name": "Reyes, Miguel A.", "rank": "SFC", "aftScore": 596, "unit": "ODA-5231" },
+      { "name": "Mitchell, James R.", "rank": "CPT", "aftScore": 596, "unit": "ODA-5211 CDR" }
+    ],
+    "cftFailedSoldiers": [
+      { "name": "Peters, Marcus W.", "unit": "ODA-5221", "failedEvent": "3-mile ruck (76:20 / 78:12)", "attempts": 2, "status": "Admin action initiated" },
+      { "name": "Nguyen, Linh T.", "unit": "ODA-5222", "failedEvent": "Combat water survival", "attempts": 2, "status": "Admin action initiated; swim instruction ordered" }
+    ],
+    "nextTestWindow": "15 Jul 2026 — CFT 3rd attempt (Peters/Nguyen); 25 Jun 2026 — AFT makeup (new gains)",
+    "dtmsNotes": "AFT renamed from ACFT per Jan 2026 Army Fitness Test policy. Plank event replaces Leg Tuck across all records. CFT integrated per SECDEF Hegseth directive (Jan 2025) / Army implementation Apr 2025. First BN CFT cycle complete — high pass rate."
+  }
+}

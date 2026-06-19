@@ -1,0 +1,179 @@
+{
+  "standupEvents": [
+    {
+      "id": 200, "title": "BN PT / Physical Readiness", "category": "jcu",
+      "dayOfWeek": "MON,TUE,WED,THU,FRI", "startTime": "0630", "endTime": "0800",
+      "location": "Alpha Field / Gym", "lead": "CSM", "participants": "All BN personnel",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Company commanders report PT accountability to S3 by 0815"
+    },
+    {
+      "id": 201, "title": "BN Battle Update Brief (BUB)", "category": "jsoc",
+      "dayOfWeek": "MON,TUE,WED,THU,FRI", "startTime": "0900", "endTime": "0930",
+      "location": "S3 TOC / SVTC", "lead": "S3", "participants": "CDR, XO, SGM, S1–S8, Co CDRs",
+      "sipr": true, "classification": "SECRET",
+      "notes": "Covers current ops status, personnel strength, training schedule"
+    },
+    {
+      "id": 202, "title": "Targeting Coordination Meeting", "category": "jsoc",
+      "dayOfWeek": "MON,WED,FRI", "startTime": "1000", "endTime": "1100",
+      "location": "S2/S3 Conference Room (SCIF)", "lead": "S2", "participants": "CDR, S2, S3, FSO, Fires Sgt",
+      "sipr": true, "classification": "TS//SCI",
+      "notes": "CENTCOM targeting sync; ODA-level HVT tracking; JIPOE update"
+    },
+    {
+      "id": 203, "title": "Intel Sync / Threat Brief", "category": "jsoc",
+      "dayOfWeek": "TUE,THU", "startTime": "1000", "endTime": "1100",
+      "location": "S2 SCIF", "lead": "S2 NCOIC", "participants": "S2 section, ODA Intel Sgts, S3",
+      "sipr": true, "classification": "TS//SCI",
+      "notes": "Regional threat update; SIGINT/HUMINT summaries; RFI processing status"
+    },
+    {
+      "id": 204, "title": "CDR Battle Rhythm / Weekly Sync", "category": "scs",
+      "dayOfWeek": "MON", "startTime": "1300", "endTime": "1500",
+      "location": "CDR's Conference Room", "lead": "BN CDR", "participants": "XO, S-staff, Co CDRs, CSM",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Weekly objectives review; readiness posture; upcoming suspenses"
+    },
+    {
+      "id": 205, "title": "XO Sync / Staff Huddle", "category": "scs",
+      "dayOfWeek": "TUE,THU", "startTime": "1300", "endTime": "1400",
+      "location": "XO's Office", "lead": "XO", "participants": "S1–S8, Company XOs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Staff coordination; suspense tracking; XO actions"
+    },
+    {
+      "id": 206, "title": "Training Meeting", "category": "hsts",
+      "dayOfWeek": "WED", "startTime": "1300", "endTime": "1500",
+      "location": "S7 Conference Room", "lead": "S7", "participants": "CDR, XO, CSM, S3, S7, Co CDRs, 1SGs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "T-week through T+8 training forecast; DTMS input review; range scheduling; ACFT windows"
+    },
+    {
+      "id": 207, "title": "Logistics Sync", "category": "jcu",
+      "dayOfWeek": "MON", "startTime": "1400", "endTime": "1500",
+      "location": "S4 Conference Room", "lead": "S4", "participants": "XO, S4, property book, Co XOs, Support Co CDR",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Supply status; OCIE accountability; maintenance float; Class IX ordering"
+    },
+    {
+      "id": 208, "title": "Communications / IT Status Sync", "category": "jcu",
+      "dayOfWeek": "WED", "startTime": "1000", "endTime": "1100",
+      "location": "S6 Server Room / Conference Room", "lead": "S6", "participants": "XO, S6 section, SIPR admin, Network NCO",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "NIPR/SIPR health check; AUP compliance status; CAC/token renewals; open trouble tickets"
+    },
+    {
+      "id": 209, "title": "SOCOM / Group HQ Weekly Sync (SVTC)", "category": "jsoc",
+      "dayOfWeek": "MON", "startTime": "1000", "endTime": "1030",
+      "location": "CDR's SVTC Suite", "lead": "CDR", "participants": "CDR, XO, S3",
+      "sipr": true, "classification": "SECRET",
+      "notes": "Group Battle Rhythm downlink — Demo Battalion CDR monthly situational brief to Group"
+    },
+    {
+      "id": 210, "title": "Personnel Readiness Update (S1)", "category": "scs",
+      "dayOfWeek": "FRI", "startTime": "1000", "endTime": "1030",
+      "location": "S1 Office / Conference Room", "lead": "S1", "participants": "XO, S1, S8 (finance)",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Strength report; in/out processing status; eval pipeline; flagging status"
+    },
+    {
+      "id": 211, "title": "Finance / Pay Readiness Sync (S8)", "category": "scs",
+      "dayOfWeek": "TUE", "startTime": "1400", "endTime": "1500",
+      "location": "S8 / Finance Office", "lead": "S8", "participants": "XO, S1, S8, 1SGs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Pay discrepancies; FLPP audit; leave sell-back tracking; TDY vouchers"
+    },
+    {
+      "id": 212, "title": "Civil Affairs / MISO Sync (S9/CA)", "category": "jcu",
+      "dayOfWeek": "THU", "startTime": "1400", "endTime": "1500",
+      "location": "S9 Office", "lead": "S9/CA OIC", "participants": "S3, S9, attached CA teams, PSYOP liaison",
+      "sipr": true, "classification": "SECRET",
+      "notes": "FHA/HCA project tracking; partner nation coordination; MISO product approval; CENTCOM CA annex"
+    },
+    {
+      "id": 213, "title": "ODA Commander / Team Leader Sync", "category": "scs",
+      "dayOfWeek": "MON", "startTime": "0930", "endTime": "1000",
+      "location": "S3 Conference Room", "lead": "S3", "participants": "Alpha/Bravo/Charlie Co CDRs, ODA CDRs, S3",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "ODA readiness status; upcoming UTP events; deployment preparation updates"
+    },
+    {
+      "id": 214, "title": "Key Leader Engagement Review (KLE)", "category": "jsoc",
+      "dayOfWeek": "WED", "startTime": "1400", "endTime": "1500",
+      "location": "CDR's Conference Room / SVTC", "lead": "CDR / S3", "participants": "CDR, S2, S3, S9, ODA CDRs",
+      "sipr": true, "classification": "SECRET",
+      "notes": "KLE planning and after-action review; partner nation relationship tracking"
+    },
+    {
+      "id": 215, "title": "Medical Readiness Update", "category": "scs",
+      "dayOfWeek": "FRI", "startTime": "1030", "endTime": "1100",
+      "location": "BN Aid Station", "lead": "BN Surgeon / PA", "participants": "XO, S1, 1SGs, BN Medical",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "MRC status report; PULHES update; deployment non-deployable tracking; dental class 3/4 list"
+    },
+    {
+      "id": 216, "title": "Airborne / Jump Status Review", "category": "hsts",
+      "dayOfWeek": "MON", "startTime": "0800", "endTime": "0830",
+      "location": "S3 Conference Room", "lead": "S3 / Airborne OIC", "participants": "S3, airborne-qualified NCOs, Co 1SGs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Current jump log; currency tracking (90-day, 6-month); upcoming jump windows at Ft. Bragg DZST"
+    },
+    {
+      "id": 217, "title": "GWOT / Theater Campaign Assessment", "category": "jsoc",
+      "dayOfWeek": "FRI", "startTime": "1300", "endTime": "1400",
+      "location": "SCIF / SVTC", "lead": "S2", "participants": "CDR, S2, S3, ODA Intel Sgts",
+      "sipr": true, "classification": "TS//SCI",
+      "notes": "CENTCOM-level theater strategic situation brief; JSOC OPORD synchronization"
+    },
+    {
+      "id": 218, "title": "Language and Cultural Training (LCT) Block", "category": "hsts",
+      "dayOfWeek": "WED,THU", "startTime": "1400", "endTime": "1600",
+      "location": "Language Lab / Training Area", "lead": "S7 / Language NCO", "participants": "All FLPP-designated soldiers",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Arabic, Pashto, Dari, Hausa blocks; DLI ALTA prep; proficiency maintenance for FLPP recert"
+    },
+    {
+      "id": 219, "title": "BN Weekly Closeout / CSM Notes", "category": "scs",
+      "dayOfWeek": "FRI", "startTime": "1500", "endTime": "1530",
+      "location": "Formation Area / Motor Pool", "lead": "CSM", "participants": "All BN personnel (formation)",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Week closeout; safety brief; awards/promotions; upcoming schedule; PT plan for following week"
+    },
+    {
+      "id": 220, "title": "OPSEC / AUP Compliance Review", "category": "hsts",
+      "dayOfWeek": "MON", "startTime": "1100", "endTime": "1130",
+      "location": "S6 Conference Room", "lead": "S6 / OPSEC Officer", "participants": "XO, S6, security manager",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "AUP completion dashboard; overdue personnel list forwarded to 1SGs; SIPR anomaly report"
+    },
+    {
+      "id": 221, "title": "Readiness O&I (Operations and Intelligence)", "category": "jsoc",
+      "dayOfWeek": "THU", "startTime": "0900", "endTime": "1000",
+      "location": "CDR's SVTC Suite (SIPR)", "lead": "S3 / S2", "participants": "CDR, XO, S2, S3, Co CDRs",
+      "sipr": true, "classification": "SECRET",
+      "notes": "Weekly O&I for full readiness picture; links to Group-level deployment forecast; ODA-specific items"
+    },
+    {
+      "id": 222, "title": "Demo Battalion Group Battle Rhythm Sync (downlink)", "category": "jsoc",
+      "dayOfWeek": "TUE", "startTime": "0900", "endTime": "0930",
+      "location": "CDR's SVTC Suite", "lead": "CDR", "participants": "CDR, XO, S2, S3, S1",
+      "sipr": true, "classification": "SECRET",
+      "notes": "Group-level BN CDR call; UTP forecast; deployment sourcing; Group-directed suspenses"
+    },
+    {
+      "id": 223, "title": "Safety Stand-Down / Risk Assessment Review", "category": "hsts",
+      "dayOfWeek": "MON", "startTime": "1130", "endTime": "1200",
+      "location": "S3 Conference Room", "lead": "Safety Officer", "participants": "XO, S3, company safety NCOs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "Weekly risk register; OSHA/AR 385-10 compliance; after-action from any incidents previous week"
+    },
+    {
+      "id": 224, "title": "ACFT / Physical Fitness Data Review", "category": "hsts",
+      "dayOfWeek": "FRI", "startTime": "1100", "endTime": "1130",
+      "location": "S7 Office", "lead": "S7 Training NCO", "participants": "S7, 1SGs, PT NCOs",
+      "sipr": false, "classification": "UNCLASSIFIED",
+      "notes": "DTMS ACFT score reconciliation; Required/Overdue athlete tracking; remedial PT assignment"
+    }
+  ]
+}

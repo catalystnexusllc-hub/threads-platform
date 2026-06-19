@@ -1,0 +1,126 @@
+# ── .github/workflows/deploy-k3d.yml ──────────────────────────────────────────
+# Deploy THREADS to the shared k3d cluster on the GCP VM.
+#
+# Runs on a SELF-HOSTED runner installed on that VM, so it has local docker, k3d
+# and kubectl — nothing about the cluster is exposed to the internet and no
+# kubeconfig/registry creds leave the box. Images are built locally and loaded
+# straight into k3d with `k3d image import` (no registry).
+#
+# This is the cloud working/staging path only. The airgap production delivery
+# stays Zarf + UDS (zarf.yaml / uds-bundle.yaml), which this workflow never touches.
+#
+# Required GitHub repository secrets:
+#   API_KEY      — THREADS API key (also baked into the web bundle as VITE_API_KEY)
+#   PG_PASSWORD  — PostgreSQL password for the 'threads' role
+#
+# Runner prerequisites (see DEPLOY-k3d.md): docker, k3d, kubectl, a k3d cluster
+# named "threads", and a kubeconfig the runner user can use.
+name: deploy-k3d
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys race on the same cluster.
+concurrency:
+  group: deploy-k3d
+  cancel-in-progress: false
+
+env:
+  CLUSTER: threads
+  NAMESPACE: threads
+  # Local image tag prefix only — nothing is pushed to a registry.
+  REGISTRY: ghcr.io/catalystnexus
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, threads-gcp]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # k3d lands in ~/.local/bin, which the runner's service env usually omits.
+      - name: Put user-local bins on PATH
+        run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      # Fail fast with a clear message instead of a confusing "command not found".
+      - name: Verify runner tooling
+        run: |
+          set -euo pipefail
+          for t in docker k3d kubectl; do
+            command -v "$t" >/dev/null || { echo "::error::'$t' not found on the runner PATH — see CI-SETUP.md Phase 1"; exit 1; }
+          done
+          docker version >/dev/null
+          kubectl config current-context
+          k3d cluster list | grep -q "$CLUSTER" || { echo "::error::k3d cluster '$CLUSTER' not found on this runner"; exit 1; }
+
+      - name: Compute image tag
+        id: vars
+        run: echo "tag=${GITHUB_SHA:0:12}" >> "$GITHUB_OUTPUT"
+
+      - name: Build images
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          set -euo pipefail
+          docker build -f Dockerfile.api -t "$REGISTRY/threads-api:$TAG" .
+          # API key is build-time inlined into the SPA bundle (Vite). Same key the
+          # cluster Secret carries, so the browser client authenticates.
+          docker build -f Dockerfile.web -t "$REGISTRY/threads-web:$TAG" \
+            --build-arg VITE_API_KEY="$API_KEY" .
+          docker build -f Dockerfile.etl -t "$REGISTRY/threads-etl:$TAG" .
+
+      - name: Import images into k3d
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
+        run: |
+          set -euo pipefail
+          k3d image import -c "$CLUSTER" \
+            "$REGISTRY/threads-api:$TAG" \
+            "$REGISTRY/threads-web:$TAG" \
+            "$REGISTRY/threads-etl:$TAG"
+
+      - name: Ensure namespace
+        run: kubectl apply -f k8s/namespace.yaml
+
+      - name: Upsert cluster secret
+        env:
+          PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          set -euo pipefail
+          kubectl create secret generic threads-secret -n "$NAMESPACE" \
+            --from-literal=POSTGRES_USER=threads \
+            --from-literal=POSTGRES_PASSWORD="$PG_PASSWORD" \
+            --from-literal=POSTGRES_DB=threads \
+            --from-literal=DATABASE_URL="postgresql://threads:${PG_PASSWORD}@postgres:5432/threads" \
+            --from-literal=API_KEY="$API_KEY" \
+            --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: Pin image tags in the overlay
+        env:
+          TAG: ${{ steps.vars.outputs.tag }}
+        run: |
+          sed -i "s/newTag: dev/newTag: ${TAG}/g" deploy/k3d/kustomization.yaml
+
+      - name: Deploy (kustomize overlay)
+        run: kubectl apply -k deploy/k3d
+
+      - name: Wait for rollout
+        run: |
+          set -euo pipefail
+          kubectl -n "$NAMESPACE" rollout status statefulset/postgres --timeout=180s
+          kubectl -n "$NAMESPACE" rollout status deploy/api --timeout=180s
+          kubectl -n "$NAMESPACE" rollout status deploy/web --timeout=120s
+
+      - name: Smoke test the API
+        run: |
+          set -euo pipefail
+          POD=$(kubectl -n "$NAMESPACE" get pod -l app=threads-api \
+            -o jsonpath='{.items[0].metadata.name}')
+          # /api/health is the only unauthenticated route; reuse the image's own check.
+          kubectl -n "$NAMESPACE" exec "$POD" -- python -c \
+            "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/api/health').status==200 else 1)"
+          echo "API healthy."

@@ -1,0 +1,55 @@
+# ── k8s/web-deployment.yaml ───────────────────────────────────────────────────
+# nginx serving the static SPA and reverse-proxying /api → the api Service.
+# Stateless → multi-replica + RollingUpdate.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: threads
+  labels:
+    app: threads-web
+    version: "2.4.1"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: threads-web
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: threads-web
+        version: "2.4.1"
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/catalystnexus/threads-web:2.4.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              name: http
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "32Mi"
+            limits:
+              cpu: "250m"
+              memory: "128Mi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 10
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 20
+            failureThreshold: 3

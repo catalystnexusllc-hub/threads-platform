@@ -1,0 +1,863 @@
+/* ── Overview page ──────────────────────────────────────────────────────────── */
+.overviewPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.statCard {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cadenceRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.cadenceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 10px;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-align: center;
+}
+
+.cadenceCard:hover {
+  background: #f5f5f5;
+  border-color: rgba(201, 162, 39, 0.45);
+}
+
+.tablesGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+/* ── Sync sub-pages ─────────────────────────────────────────────────────────── */
+.syncPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Meeting info bar ───────────────────────────────────────────────────────── */
+.meetingBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+
+.meetingField {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+}
+
+.meetingField i {
+  color: #bbb;
+  font-size: 11px;
+}
+
+.classLabel {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #27ae60;
+  padding: 3px 8px;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+  border-radius: 3px;
+  background: rgba(39, 174, 96, 0.08);
+}
+
+/* ── Two-column layout ──────────────────────────────────────────────────────── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.colMain { display: flex; flex-direction: column; gap: 16px; }
+.colSide { display: flex; flex-direction: column; gap: 14px; }
+
+/* ── Section card ───────────────────────────────────────────────────────────── */
+.scard {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.scardHeader {
+  padding: 11px 16px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  background: #fafafa;
+}
+
+.scardBody { padding: 14px 16px; }
+
+/* ── Section status grid ────────────────────────────────────────────────────── */
+.sectionGrid { display: flex; flex-direction: column; gap: 0; }
+
+.sectionRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.sectionRow:last-child { border-bottom: none; }
+
+.sectionLeft {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  width: 130px;
+}
+
+.sectionCode {
+  font-size: 11px;
+  font-weight: 800;
+  color: #555;
+  letter-spacing: 0.5px;
+  min-width: 24px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  color: #999;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.sectionUpdate {
+  flex: 1;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.sectionActions {
+  flex-shrink: 0;
+}
+
+.actionBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: rgba(230, 156, 60, 0.12);
+  border: 1px solid rgba(230, 156, 60, 0.3);
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 800;
+  color: #e69c3c;
+}
+
+/* ── Agenda list ────────────────────────────────────────────────────────────── */
+.agendaList { display: flex; flex-direction: column; gap: 6px; }
+
+.agendaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.agendaNum {
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+/* ── Decision cards ─────────────────────────────────────────────────────────── */
+.decisionCard {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.decisionCard:last-child { border-bottom: none; }
+
+.decisionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.decisionSection {
+  font-size: 10px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+.decisionPriority {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.decisionText {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ── Suspense list ──────────────────────────────────────────────────────────── */
+.suspenseList { display: flex; flex-direction: column; gap: 8px; }
+
+.suspenseItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suspenseText {
+  flex: 1;
+  font-size: 12px;
+  color: #555;
+}
+
+.suspenseOpr {
+  font-size: 10px;
+  font-weight: 800;
+  color: #aaa;
+}
+
+/* ── Day tab row ────────────────────────────────────────────────────────────── */
+.dayTabRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.dayTabBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.dayTabBtn:hover { background: #f5f5f5; color: #555; border-color: #ccc; }
+
+.dayTabBtnActive {
+  background: rgba(201, 162, 39, 0.08) !important;
+  border-color: rgba(201, 162, 39, 0.35) !important;
+  color: #c9a227 !important;
+}
+
+/* ── Legend bar ─────────────────────────────────────────────────────────────── */
+.legendBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  margin-bottom: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.legendDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Day count badge ────────────────────────────────────────────────────────── */
+.dayCount {
+  font-size: 9px;
+  font-weight: 800;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  border-radius: 3px;
+  color: #aaa;
+}
+
+.dayTabBtnActive .dayCount {
+  background: rgba(201, 162, 39, 0.12);
+  color: rgba(201, 162, 39, 0.85);
+}
+
+/* ── Timeline (next 72 hrs) ─────────────────────────────────────────────────── */
+.timelineList { display: flex; flex-direction: column; gap: 10px; }
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.timelineDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* ── Risk items ─────────────────────────────────────────────────────────────── */
+.riskItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.riskItem:last-child { border-bottom: none; }
+
+.riskLevel {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  width: 30px;
+}
+
+.riskText {
+  flex: 1;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.riskOwner {
+  font-size: 10px;
+  font-weight: 700;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+/* ── Bullet list ────────────────────────────────────────────────────────────── */
+.bulletList { display: flex; flex-direction: column; gap: 8px; }
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.bulletItem i { margin-top: 2px; }
+
+/* ── View button ────────────────────────────────────────────────────────────── */
+.viewBtn {
+  padding: 3px 10px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.viewBtn:hover { border-color: #c9a227; color: #c9a227; }
+
+/* ── Prep checklist row ─────────────────────────────────────────────────────── */
+.prepRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.prepRow:last-child { border-bottom: none; }
+
+/* ── Sync mission strip ─────────────────────────────────────────────────────── */
+.syncMission {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.syncMissionTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.syncMissionTitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: 0.2px;
+}
+
+.syncBluf {
+  font-size: 11px;
+  color: #666;
+  margin-top: 5px;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.syncMissionMeta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 18px;
+  font-size: 11px;
+  color: #777;
+  flex-wrap: wrap;
+  background: #fafafa;
+}
+
+.syncMissionMeta i { color: #ccc; margin-right: 5px; }
+
+.prepTrack { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.prepBarWrap { width: 90px; height: 4px; background: #e8e8e8; border-radius: 2px; overflow: hidden; }
+.prepBarFill { height: 100%; border-radius: 2px; transition: width 0.4s ease; }
+
+/* ── 3-panel drill layout ───────────────────────────────────────────────────── */
+.drillLayout {
+  display: grid;
+  grid-template-columns: 250px 1fr 230px;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.drillPanel {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.drillPanelLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eeeeee;
+  background: #fafafa;
+}
+
+.drillPanelContent { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+
+/* ── Input panel ────────────────────────────────────────────────────────────── */
+.inputMetricsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+
+.inputMetric {
+  background: #f8f8f8;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.inputMetricValue { font-size: 22px; font-weight: 800; line-height: 1; }
+.inputMetricLabel { font-size: 9px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }
+.inputMetricSub { font-size: 9px; color: #bbb; margin-top: 2px; }
+
+.inputBlock { border: 1px solid #eeeeee; border-radius: 5px; overflow: hidden; }
+.inputBlockTitle { padding: 6px 10px; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #999; background: #f5f5f5; border-bottom: 1px solid #eeeeee; }
+.inputBlockRow { display: flex; align-items: flex-start; gap: 8px; padding: 7px 10px; border-bottom: 1px solid #f5f5f5; font-size: 11px; }
+.inputBlockRow:last-child { border-bottom: none; }
+.inputBlockCode { font-size: 10px; font-weight: 800; color: #888; width: 24px; flex-shrink: 0; padding-top: 1px; }
+.inputBlockText { color: #555; line-height: 1.4; flex: 1; }
+
+/* ── Agenda panel ───────────────────────────────────────────────────────────── */
+.drillAgendaRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.drillAgendaRow:last-child { border-bottom: none; }
+
+.drillAgendaDecision {
+  background: rgba(201, 162, 39, 0.06);
+  border-left: 2px solid rgba(201, 162, 39, 0.4);
+  padding-left: 6px;
+  margin-left: -6px;
+  border-radius: 0 4px 4px 0;
+}
+
+.drillAgendaTime { font-size: 9px; color: #bbb; font-weight: 700; width: 38px; flex-shrink: 0; letter-spacing: 0.3px; }
+.drillAgendaIdx { font-size: 9px; color: #ccc; font-weight: 800; width: 14px; flex-shrink: 0; text-align: right; }
+
+.drillAgendaTopic { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.drillAgendaTopicText { color: #222; font-size: 11px; font-weight: 600; line-height: 1.2; }
+.drillAgendaOwner { font-size: 9px; color: #aaa; font-weight: 700; letter-spacing: 0.5px; }
+.drillAgendaDur { font-size: 9px; font-weight: 800; padding: 1px 5px; border-radius: 3px; border: 1px solid; white-space: nowrap; flex-shrink: 0; }
+.drillAgendaTotal { margin-top: 8px; padding-top: 8px; text-align: right; font-size: 10px; color: #aaa; font-weight: 700; letter-spacing: 0.5px; border-top: 1px solid #eeeeee; }
+
+/* ── Output panel ───────────────────────────────────────────────────────────── */
+.drillOutputCard {
+  background: #f8f8f8;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.drillOutputType { font-size: 8px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; border: 1px solid; align-self: flex-start; }
+.drillOutputProduct { font-size: 11px; color: #222; font-weight: 600; line-height: 1.3; }
+.drillOutputMeta { display: flex; align-items: center; gap: 6px; font-size: 10px; color: #aaa; }
+
+/* ── Today's missions strip (overview) ──────────────────────────────────────── */
+.todayMissions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.todayMissionCard {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.todayMissionCard:hover { background: #fffdf5; border-color: rgba(201,162,39,0.4); box-shadow: 0 2px 8px rgba(201,162,39,0.1); }
+.todayMissionTime { font-size: 10px; font-weight: 700; color: #aaa; letter-spacing: 0.5px; }
+.todayMissionTitle { font-size: 13px; font-weight: 700; color: #111; }
+.todayMissionBluf { font-size: 11px; color: #777; line-height: 1.4; }
+
+/* ── Hero stat tiles ─────────────────────────────────────────────────────────── */
+.heroGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.heroTile {
+  border-radius: 8px;
+  padding: 22px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+}
+
+.heroTileNum {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.heroTileLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* ── Personnel accountability grid ───────────────────────────────────────────── */
+.paxGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.paxCell {
+  background: #ffffff;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.paxCellHighlight {
+  background: rgba(231, 76, 60, 0.05);
+}
+
+.paxNum {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.paxLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Critical items list ──────────────────────────────────────────────────────── */
+.criticalList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.criticalItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.criticalItem:last-child { border-bottom: none; }
+
+.criticalItemBody { flex: 1; min-width: 0; }
+
+.criticalItemTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 3px;
+}
+
+.criticalItemDetail {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.urgencyBadge {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Admin checklist ─────────────────────────────────────────────────────────── */
+.checklistRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 13px;
+  color: #444;
+}
+
+.checklistRow:last-child { border-bottom: none; }
+
+.checklistLabel { flex: 1; }
+
+.checklistStatus {
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Calendar today / tomorrow layout ────────────────────────────────────────── */
+.calColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.calDayHeader {
+  font-size: 13px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.calEventRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 12px;
+}
+
+.calEventRow:last-child { border-bottom: none; }
+
+.calEventTime {
+  font-weight: 700;
+  color: #aaa;
+  width: 38px;
+  flex-shrink: 0;
+}
+
+.calEventTitle {
+  flex: 1;
+  color: #444;
+  margin: 0 10px;
+}
+
+.calEventStatus {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Calendar change chips ────────────────────────────────────────────────────── */
+.calChangeChip {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-align: center;
+  min-width: 64px;
+}
+
+/* ── Three-column content grid ────────────────────────────────────────────────── */
+.threeCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ── Due out status chip ──────────────────────────────────────────────────────── */
+.dueOutStatus {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ── Light-mode table (replaces shared.table inside Digital Syncs) ──────────── */
+.syncTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.syncTable th {
+  text-align: left;
+  padding: 9px 14px;
+  color: #888;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  background: #f7f7f7;
+}
+
+.syncTable td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f3f3f3;
+  color: #333;
+}
+
+.syncTable tbody tr:hover { background: #fafafa; }

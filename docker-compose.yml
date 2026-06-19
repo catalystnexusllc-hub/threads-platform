@@ -1,0 +1,56 @@
+# THREADS — local dev / verification stack (FastAPI + Postgres + nginx).
+# Usage:
+#   cp .env.example .env
+#   docker compose up --build
+# SPA at http://localhost:8080  ·  API proxied at http://localhost:8080/api
+
+services:
+  postgres:
+    image: postgres:16        # -alpine is fine too; 16 chosen to match airgap-cached image
+    container_name: threads-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: threads
+      POSTGRES_PASSWORD: threads
+      POSTGRES_DB: threads
+    volumes:
+      - threads-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U threads -d threads"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: threads-api:local
+    container_name: threads-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://threads:threads@postgres:5432/threads
+      NODE_ENV: ${NODE_ENV:-development}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080}
+      API_KEY: ${API_KEY:-}
+    ports:
+      - "8000:8000"   # exposed for direct API testing; behind nginx in prod
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    image: threads-web:local
+    container_name: threads-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
+
+volumes:
+  threads-pg:
+    driver: local

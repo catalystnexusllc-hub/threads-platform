@@ -1,0 +1,74 @@
+# ── k8s/etl-cronjob.yaml ──────────────────────────────────────────────────────
+# ETL as its own scheduled workload (NOT a sidecar): a pod spins up, loads each
+# source from the drop volume into staging, merges staging → core, then exits.
+# Independent of the api/web tiers — schedule, scale, and fail in isolation.
+#
+# Depends on the staging schema (migration 0002), which the api applies on
+# startup; by the time this runs the schema exists.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: threads-etl
+  namespace: threads
+  labels:
+    app: threads-etl
+spec:
+  schedule: "0 5 * * *"            # daily 05:00 — adjust to the source cadence
+  concurrencyPolicy: Forbid        # never overlap runs
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      activeDeadlineSeconds: 3600
+      template:
+        metadata:
+          labels:
+            app: threads-etl
+        spec:
+          restartPolicy: OnFailure
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 10002
+          containers:
+            - name: etl
+              image: ghcr.io/catalystnexus/threads-etl:2.4.1
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: DATABASE_URL
+                  valueFrom:
+                    secretKeyRef:
+                      name: threads-secret
+                      key: DATABASE_URL
+                # dlt postgres destination reads the same DSN
+                - name: DESTINATION__POSTGRES__CREDENTIALS
+                  valueFrom:
+                    secretKeyRef:
+                      name: threads-secret
+                      key: DATABASE_URL
+                # Self-contained demo: stage the bundled SOR datasets (baked into
+                # the image) into a writable drop dir, then ingest. For real
+                # external drops instead, set ETL_AUTOSEED=0 and point
+                # ETL_DROP_DIR at the mounted /data/drop volume below.
+                - name: ETL_AUTOSEED
+                  value: "1"
+                - name: ETL_DROP_DIR
+                  value: /tmp/drop
+              volumeMounts:
+                # Real-drop path (used when ETL_AUTOSEED=0): a share/operator fills it.
+                - name: drop
+                  mountPath: /data/drop
+                  readOnly: true
+              resources:
+                requests:
+                  cpu: "100m"
+                  memory: "256Mi"
+                limits:
+                  cpu: "1"
+                  memory: "1Gi"
+          volumes:
+            # Where the third party's datasets land. RWX if an external process
+            # (share/NFS) populates it; otherwise an operator copies files in.
+            - name: drop
+              persistentVolumeClaim:
+                claimName: threads-etl-drop

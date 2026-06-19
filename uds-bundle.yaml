@@ -1,0 +1,80 @@
+# ── uds-bundle.yaml ───────────────────────────────────────────────────────────
+# UDS Bundle — THREADS Platform
+#
+# Wraps the Zarf package with UDS-specific networking policies and overrides.
+#
+# Build:   uds create . --confirm
+# Deploy:  uds deploy uds-bundle-threads-platform-*.tar.zst --confirm
+#
+# Prerequisites:
+#   - UDS CLI installed (https://uds.defenseunicorns.com)
+#   - A UDS core bundle already deployed on the target cluster
+#     (provides Istio, monitoring, policy enforcement, etc.)
+#   - The threads Zarf package built and available locally or in a registry
+
+kind: UDSBundle
+
+metadata:
+  name: threads-platform
+  description: >
+    THREADS Platform UDS Bundle — wraps the Zarf application package with
+    UDS network policies and environment overrides for cluster deployment.
+  version: 2.4.1
+  architecture: amd64
+
+packages:
+  # ── Core UDS infrastructure (Istio, Pepr, monitoring) ────────────────────
+  # Uncomment if not already deployed on the cluster:
+  # - name: uds-core-slim-dev
+  #   repository: ghcr.io/defenseunicorns/packages/uds/core
+  #   ref: 0.26.0-upstream
+
+  # ── THREADS Application Package ───────────────────────────────────────────
+  - name: threads-platform
+    # Option A — local build (recommended for airgap / development):
+    path: .
+    # Option B — pull from OCI registry (requires registry access):
+    # repository: ghcr.io/catalystnexus/packages/threads-platform
+    ref: 2.4.1
+
+    # Override Zarf variables at bundle deploy time
+    overrides:
+      threads-k8s:
+        threads-manifests:
+          values:
+            # Override the ingress hostname per environment
+            - path: "spec.rules[0].host"
+              value: "threads.local"    # match k8s/ingress.yaml — change to your cluster hostname
+
+# ── UDS Network Policies ──────────────────────────────────────────────────────
+# UDS uses Pepr to enforce network policies based on these package annotations.
+# Add a UDSPackage CR alongside your manifests for fine-grained egress/ingress
+# control. With the pod split, the relevant flows are:
+#   ingress → web (nginx, :80) and api (:8000) from the ingress gateway
+#   web → api (:8000)            api → postgres (:5432)
+# Example:
+#
+# apiVersion: uds.dev/v1alpha1
+# kind: Package
+# metadata:
+#   name: threads-platform
+#   namespace: threads
+# spec:
+#   network:
+#     allow:
+#       - direction: Ingress
+#         selector:
+#           app: threads-web
+#         remoteNamespace: istio-system
+#         port: 80
+#       - direction: Ingress
+#         selector:
+#           app: threads-api
+#         remoteNamespace: istio-system
+#         port: 8000
+#       - direction: Egress      # api → in-cluster postgres
+#         selector:
+#           app: threads-api
+#         remoteSelector:
+#           app: threads-postgres
+#         port: 5432

@@ -1,0 +1,37 @@
+.page { padding: 20px; max-width: 1200px; margin: 0 auto; }
+.state, .stateErr { padding: 40px; text-align: center; color: #888; font-size: 14px; }
+.stateErr { color: #e74c3c; }
+
+.header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
+.header h2 { font-size: 18px; color: #1a1a1a; font-weight: 700; }
+.header h2 i { color: var(--gold); margin-right: 8px; }
+.sub { font-size: 12px; color: #888; }
+
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 18px; }
+.stat { border-radius: 8px; padding: 20px 16px; text-align: center; }
+.statValue { font-size: 32px; font-weight: 800; color: #fff; line-height: 1; }
+.statLabel { font-size: 10px; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+.grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 16px; }
+.card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.cardHeader { padding: 12px 16px; border-bottom: 1px solid #e8e8e8; font-size: 13px; font-weight: 700; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+.cardHeader i { color: var(--gold); margin-right: 8px; }
+
+.tableWrap { max-height: 520px; overflow-y: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th { text-align: left; padding: 10px 16px; color: #ccc; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #333; position: sticky; top: 0; background: #1a1a1a; }
+.table td { padding: 10px 16px; border-bottom: 1px solid #f0f0f0; color: #333; }
+.table tbody tr { cursor: pointer; }
+.table tbody tr:hover { background: #f9f9f9; }
+.activeRow { background: rgba(201, 162, 39, 0.08) !important; }
+.activeRow td { color: #1a1a1a; }
+.dim { color: #aaa; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+.empty { padding: 40px 16px; text-align: center; color: #aaa; font-size: 13px; }
+.detail { padding: 16px; }
+.detailName { font-size: 16px; font-weight: 700; color: #1a1a1a; }
+.detailRole { font-size: 12px; color: #888; margin: 4px 0 16px; }
+.dl { display: grid; grid-template-columns: 92px 1fr; gap: 8px 12px; font-size: 13px; }
+.dl dt { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 1px; }
+.dl dd { color: #333; }

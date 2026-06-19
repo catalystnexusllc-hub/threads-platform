@@ -1,0 +1,54 @@
+.banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: var(--banner-h);
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 1000;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+}
+
+.top {
+  top: 0;
+  border-bottom: 1px solid #111;
+}
+
+.bottom {
+  bottom: 0;
+  border-top: 1px solid #111;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* white-tinted pill instead of gold */
+.pill {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.3);
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.sep {
+  color: #1e1e1e;
+  margin: 0 2px;
+}
+
+.right {
+  font-size: 7px;
+  color: #1e1e1e;
+  letter-spacing: 0.5px;
+}

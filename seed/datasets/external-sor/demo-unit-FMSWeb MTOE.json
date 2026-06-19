@@ -1,0 +1,418 @@
+{
+  "extractMetadata": {
+    "system": "FMSWeb",
+    "fullName": "Force Management System Web",
+    "url": "https://fmsweb.army.mil",
+    "report": "Unit Manning Document (UMD) — Approved MTOE Extract",
+    "mtoeNumber": "07645L000",
+    "uic": "W25T2A",
+    "unit": "2nd Battalion, Demo Battalion",
+    "higherHQ": "Demo Battalion — W25T2000",
+    "majorCommand": "USASOC — U.S. Army Special Operations Command",
+    "dutyStation": "Fort Campbell, KY 40242",
+    "fy": "FY2026",
+    "approvalDate": "2025-10-01",
+    "effectiveDate": "2025-10-01",
+    "expirationDate": "2026-09-30",
+    "umdVersion": "1.3",
+    "extractDate": "2026-06-18",
+    "extractedBy": "S3 Plans — MAJ Vasquez, Carlos R.",
+    "classification": "FOUO",
+    "notes": "SF-specific MTOE. All 18-series positions require SF Qualification (18-series MOS or 18X pipeline with SFQC complete). ODA structure: 12 soldiers per ODA (18A, 180A, 18Z, 18F, 18B×2, 18C×2, 18D×2, 18E×2). Special pay authorizations (SDAP, FLPP, HALO) embedded per position."
+  },
+
+  "personnelSummary": {
+    "totalAuthorized": 319,
+    "totalOnHand": 318,
+    "totalVacant": 1,
+    "totalOverstrength": 0,
+    "percentFill": 99.7,
+    "byGrade": {
+      "O6": { "authorized": 0, "onHand": 0 },
+      "O5": { "authorized": 1, "onHand": 1 },
+      "O4": { "authorized": 5, "onHand": 5 },
+      "O3": { "authorized": 9, "onHand": 9 },
+      "O2": { "authorized": 2, "onHand": 2 },
+      "O1": { "authorized": 1, "onHand": 1 },
+      "W3": { "authorized": 2, "onHand": 2 },
+      "W2": { "authorized": 1, "onHand": 1 },
+      "W1": { "authorized": 7, "onHand": 7 },
+      "WO1": { "authorized": 1, "onHand": 1 },
+      "E9": { "authorized": 1, "onHand": 1 },
+      "E8": { "authorized": 8, "onHand": 8 },
+      "E7": { "authorized": 59, "onHand": 59 },
+      "E6": { "authorized": 88, "onHand": 88 },
+      "E5": { "authorized": 77, "onHand": 77 },
+      "E4": { "authorized": 48, "onHand": 47, "vacant": 1 },
+      "E3": { "authorized": 14, "onHand": 14 },
+      "E2": { "authorized": 0, "onHand": 0 },
+      "E1": { "authorized": 0, "onHand": 0 }
+    },
+    "byComponent": {
+      "activeComponent": { "authorized": 319, "onHand": 318 },
+      "reserveComponent": { "authorized": 0, "onHand": 0 },
+      "civilianFTE": { "authorized": 0, "onHand": 0 }
+    }
+  },
+
+  "organizations": [
+    {
+      "orgCode": "BN-HQ",
+      "name": "Battalion Headquarters & Staff",
+      "uic": "W25T2A",
+      "totalAuthorized": 65,
+      "totalOnHand": 65,
+      "sections": [
+        {
+          "section": "Command",
+          "positions": [
+            { "paraLine": "001/001", "grade": "O5", "mos": "18A", "title": "Battalion Commander", "filled": true, "sdap": null, "notes": "CMF 18 required — SF Qualified" },
+            { "paraLine": "001/002", "grade": "O4", "mos": "18A", "title": "Executive Officer", "filled": true, "sdap": null },
+            { "paraLine": "001/003", "grade": "E9", "mos": "18Z", "title": "Command Sergeant Major", "filled": true, "sdap": null, "notes": "18Z50 required — Master SF Sergeant" }
+          ]
+        },
+        {
+          "section": "S1 Personnel",
+          "positions": [
+            { "paraLine": "002/001", "grade": "O3", "mos": "42H", "title": "S1 OIC", "filled": true },
+            { "paraLine": "002/002", "grade": "E7", "mos": "42A", "title": "S1 NCOIC", "filled": true },
+            { "paraLine": "002/003", "grade": "E6", "mos": "42A", "title": "Personnel Actions SSG", "filled": true },
+            { "paraLine": "002/004", "grade": "E6", "mos": "42A", "title": "Strength Management SSG", "filled": true },
+            { "paraLine": "002/005", "grade": "E5", "mos": "42A", "title": "Personnel SGT", "filled": true },
+            { "paraLine": "002/006", "grade": "E5", "mos": "42A", "title": "Admin SGT", "filled": true },
+            { "paraLine": "002/007", "grade": "E4", "mos": "42A", "title": "Admin Specialist", "filled": true }
+          ]
+        },
+        {
+          "section": "S2 Intelligence",
+          "positions": [
+            { "paraLine": "003/001", "grade": "O3", "mos": "35D", "title": "S2 OIC", "filled": true, "notes": "TS/SCI required" },
+            { "paraLine": "003/002", "grade": "E7", "mos": "35F", "title": "S2 NCOIC", "filled": true, "notes": "TS/SCI required" },
+            { "paraLine": "003/003", "grade": "E6", "mos": "35F", "title": "All-Source Intel SSG", "filled": true },
+            { "paraLine": "003/004", "grade": "E6", "mos": "35F", "title": "Intel SSG (SIGINT)", "filled": true, "notes": "SIGINT/35P cross-trained preferred" },
+            { "paraLine": "003/005", "grade": "E5", "mos": "35F", "title": "Intel SGT", "filled": true },
+            { "paraLine": "003/006", "grade": "E5", "mos": "35F", "title": "Intel SGT", "filled": true },
+            { "paraLine": "003/007", "grade": "E5", "mos": "35P", "title": "SIGINT SGT", "filled": true },
+            { "paraLine": "003/008", "grade": "E4", "mos": "35F", "title": "Intel SPC", "filled": true }
+          ]
+        },
+        {
+          "section": "S3 Operations",
+          "positions": [
+            { "paraLine": "004/001", "grade": "O4", "mos": "18A", "title": "S3 Operations Officer", "filled": true, "notes": "SF Qualified required" },
+            { "paraLine": "004/002", "grade": "E8", "mos": "18Z", "title": "S3 Sergeant Major", "filled": true, "notes": "18Z50 preferred" },
+            { "paraLine": "004/003", "grade": "E7", "mos": "18Z", "title": "Operations NCOIC", "filled": true },
+            { "paraLine": "004/004", "grade": "O3", "mos": "18A", "title": "Current Ops Officer", "filled": true },
+            { "paraLine": "004/005", "grade": "E6", "mos": "18Z", "title": "Ops SSG", "filled": true },
+            { "paraLine": "004/006", "grade": "E7", "mos": "18Z", "title": "Operations NCOIC (WTU)", "filled": true, "notes": "Position held pending MEB" },
+            { "paraLine": "004/007", "grade": "E6", "mos": "18Z", "title": "Plans and Training SSG", "filled": true },
+            { "paraLine": "004/008", "grade": "E5", "mos": "11A", "title": "Ops SGT", "filled": true },
+            { "paraLine": "004/009", "grade": "E5", "mos": "11A", "title": "Fires SGT", "filled": true },
+            { "paraLine": "004/010", "grade": "E5", "mos": "18Z", "title": "Training SGT", "filled": true },
+            { "paraLine": "004/011", "grade": "E4", "mos": "25U", "title": "Comms SPC (Ops)", "filled": true },
+            { "paraLine": "004/012", "grade": "O3", "mos": "18A", "title": "Future Ops Officer", "filled": true }
+          ]
+        },
+        {
+          "section": "S4 Logistics",
+          "positions": [
+            { "paraLine": "005/001", "grade": "O4", "mos": "90A", "title": "S4 Logistics Officer", "filled": true },
+            { "paraLine": "005/002", "grade": "E7", "mos": "92A", "title": "S4 NCOIC", "filled": true },
+            { "paraLine": "005/003", "grade": "E5", "mos": "92A", "title": "Supply SGT / Hand Receipt", "filled": true },
+            { "paraLine": "005/004", "grade": "E6", "mos": "91B", "title": "Maintenance SSG", "filled": true },
+            { "paraLine": "005/005", "grade": "E5", "mos": "92Y", "title": "Unit Supply SGT", "filled": true },
+            { "paraLine": "005/006", "grade": "E5", "mos": "91B", "title": "Maintenance SGT", "filled": true },
+            { "paraLine": "005/007", "grade": "E4", "mos": "92A", "title": "Supply SPC", "filled": true }
+          ]
+        },
+        {
+          "section": "S5 Plans / Strategy",
+          "positions": [
+            { "paraLine": "006/001", "grade": "O4", "mos": "59A", "title": "S5 Plans Officer", "filled": true, "notes": "SAMS graduate preferred" },
+            { "paraLine": "006/002", "grade": "E7", "mos": "37F", "title": "Plans NCOIC", "filled": true, "notes": "PSYOP qualified" },
+            { "paraLine": "006/003", "grade": "E6", "mos": "37F", "title": "Plans SSG", "filled": true },
+            { "paraLine": "006/004", "grade": "E5", "mos": "37F", "title": "Plans SGT", "filled": true },
+            { "paraLine": "006/005", "grade": "E4", "mos": "37F", "title": "Plans SPC", "filled": true }
+          ]
+        },
+        {
+          "section": "S6 Communications",
+          "positions": [
+            { "paraLine": "007/001", "grade": "O3", "mos": "25A", "title": "S6 Signal Officer", "filled": true },
+            { "paraLine": "007/002", "grade": "W3", "mos": "255A", "title": "S6 Warrant Officer", "filled": true, "notes": "Network and COMSEC manager" },
+            { "paraLine": "007/003", "grade": "E7", "mos": "25U", "title": "Signal NCOIC", "filled": true },
+            { "paraLine": "007/004", "grade": "E5", "mos": "25B", "title": "IT SGT", "filled": true },
+            { "paraLine": "007/005", "grade": "E5", "mos": "25U", "title": "Radio SGT", "filled": true },
+            { "paraLine": "007/006", "grade": "E6", "mos": "25U", "title": "Comms SSG", "filled": true }
+          ]
+        },
+        {
+          "section": "S7 Training",
+          "positions": [
+            { "paraLine": "008/001", "grade": "O3", "mos": "12A", "title": "S7 Training Officer", "filled": true },
+            { "paraLine": "008/002", "grade": "E7", "mos": "18Z", "title": "Training NCOIC", "filled": true, "notes": "SF Qualified; DTMS manager" },
+            { "paraLine": "008/003", "grade": "E6", "mos": "18Z", "title": "DTMS Manager", "filled": true },
+            { "paraLine": "008/004", "grade": "E5", "mos": "11B", "title": "Training SGT", "filled": true },
+            { "paraLine": "008/005", "grade": "E4", "mos": "11B", "title": "Training SPC", "filled": true },
+            { "paraLine": "008/006", "grade": "E6", "mos": "18Z", "title": "Plans and Programs SSG", "filled": true },
+            { "paraLine": "008/007", "grade": "E6", "mos": "18Z", "title": "Training SSG (WTU Position)", "filled": true, "notes": "Position held pending MEB resolution" }
+          ]
+        },
+        {
+          "section": "S8 Resource Management",
+          "positions": [
+            { "paraLine": "009/001", "grade": "O4", "mos": "36A", "title": "S8 Resource Manager", "filled": true },
+            { "paraLine": "009/002", "grade": "W3", "mos": "360A", "title": "Finance Technician", "filled": true },
+            { "paraLine": "009/003", "grade": "E7", "mos": "36B", "title": "Finance NCOIC", "filled": true },
+            { "paraLine": "009/004", "grade": "E6", "mos": "36B", "title": "Finance SSG", "filled": true },
+            { "paraLine": "009/005", "grade": "E5", "mos": "36B", "title": "Finance SGT", "filled": true }
+          ]
+        },
+        {
+          "section": "S9 Civil Affairs",
+          "positions": [
+            { "paraLine": "010/001", "grade": "O4", "mos": "38A", "title": "S9 Civil Affairs Officer", "filled": true, "notes": "Civil Affairs Branch" },
+            { "paraLine": "010/002", "grade": "E7", "mos": "38B", "title": "Civil Affairs NCOIC", "filled": true, "notes": "FLPP authorized — Arabic/Spanish" },
+            { "paraLine": "010/003", "grade": "E6", "mos": "38B", "title": "Civil Affairs SSG", "filled": true },
+            { "paraLine": "010/004", "grade": "E5", "mos": "38B", "title": "Civil Affairs SGT", "filled": true },
+            { "paraLine": "010/005", "grade": "E4", "mos": "38B", "title": "Civil Affairs SPC", "filled": true }
+          ]
+        }
+      ]
+    },
+
+    {
+      "orgCode": "HHC",
+      "name": "Headquarters and Headquarters Company",
+      "uic": "W25T2B",
+      "totalAuthorized": 70,
+      "totalOnHand": 70,
+      "sections": [
+        { "section": "Command", "positions": [
+          { "paraLine": "H01/001", "grade": "O3", "mos": "18A", "title": "HHC Commander", "filled": true },
+          { "paraLine": "H01/002", "grade": "O2", "mos": "18A", "title": "HHC Executive Officer", "filled": true },
+          { "paraLine": "H01/003", "grade": "E7", "mos": "18Z", "title": "HHC First Sergeant", "filled": true }
+        ]},
+        { "section": "Medical", "authorizedPositions": 10, "onHand": 10,
+          "mosList": ["68W","68W","68W","68W","68W","68L","68L","68L","68D","68D"],
+          "key": "Battalion aid station organic to HHC; 68W senior medics support ODAs during SRP/PDHA cycles" },
+        { "section": "Communications", "authorizedPositions": 8, "onHand": 8,
+          "mosList": ["25U","25U","25U","25U","25B","25B","25B","25W"],
+          "key": "SATCOM, NIPR/SIPR network, COMSEC management" },
+        { "section": "Intelligence", "authorizedPositions": 5, "onHand": 5,
+          "mosList": ["35F","35F","35F","35F","35P"] },
+        { "section": "Supply", "authorizedPositions": 8, "onHand": 8,
+          "mosList": ["92A","92A","92A","92A","92Y","92Y","92Y","92Y"] },
+        { "section": "Maintenance", "authorizedPositions": 10, "onHand": 10,
+          "mosList": ["91Z","91B","91B","91B","91B","91B","91H","91H","91H","91S"],
+          "key": "Organic maintenance — Class IX through GCSS-Army; NMC processing" },
+        { "section": "Motor Pool", "authorizedPositions": 5, "onHand": 5,
+          "mosList": ["88M","88M","88M","88M","88M"] },
+        { "section": "Admin", "authorizedPositions": 6, "onHand": 6,
+          "mosList": ["42A","42A","42A","42A","42A","42A"] },
+        { "section": "Misc", "authorizedPositions": 15, "onHand": 15,
+          "mosList": ["92R","92R","92R","92R","74D","74D","56A","56M","27A","65A","25W","25W","79S","11B","11B"],
+          "key": "Includes rigger section, CBRN, Chaplain, JAG, Surgeon" }
+      ]
+    },
+
+    {
+      "orgCode": "A-CO",
+      "name": "Alpha Company",
+      "uic": "W25T2C",
+      "totalAuthorized": 48,
+      "totalOnHand": 47,
+      "vacant": 1,
+      "sections": [
+        { "section": "Company HQ", "positions": [
+          { "paraLine": "A00/001", "grade": "O3", "mos": "18A", "title": "Company Commander", "filled": true, "sdap": "Level 4", "notes": "ODA-rated position; deploying 01 Jul 2026" },
+          { "paraLine": "A00/002", "grade": "W1", "mos": "180A", "title": "Company XO (ADC)", "filled": true, "sdap": "Level 4" },
+          { "paraLine": "A00/003", "grade": "E8", "mos": "18Z", "title": "Company First Sergeant", "filled": true, "sdap": "Level 3" },
+          { "paraLine": "A00/004", "grade": "E6", "mos": "18Z", "title": "Operations Sergeant", "filled": true, "sdap": "Level 3" }
+        ]},
+        { "section": "ODA-5211", "authorizedPositions": 12, "onHand": 12,
+          "deployStatus": "Deploying 01 Jul 2026 — 85% readiness",
+          "positions": [
+            { "paraLine": "A11/001", "grade": "O3", "mos": "18A", "title": "ODA Team Leader", "filled": true, "sdap": "Level 4", "haloAuth": true },
+            { "paraLine": "A11/002", "grade": "W1", "mos": "180A", "title": "Asst Detachment CDR", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/003", "grade": "E7", "mos": "18Z", "title": "Team Sergeant", "filled": true, "sdap": "Level 4", "haloAuth": true, "flppAuth": true },
+            { "paraLine": "A11/004", "grade": "E6", "mos": "18B", "title": "Weapons Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/005", "grade": "E6", "mos": "18C", "title": "Engineer Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/006", "grade": "E7", "mos": "18D", "title": "Medical Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/007", "grade": "E6", "mos": "18E", "title": "Comms Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/008", "grade": "E7", "mos": "18D", "title": "Medical Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/009", "grade": "E5", "mos": "18B", "title": "Weapons Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/010", "grade": "E5", "mos": "18C", "title": "Engineer Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/011", "grade": "E5", "mos": "18E", "title": "Comms Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A11/012", "grade": "E6", "mos": "18F", "title": "Intelligence Sgt", "filled": true, "sdap": "Level 4", "notes": "SCI-bileted position" }
+          ]},
+        { "section": "ODA-5212", "authorizedPositions": 12, "onHand": 12,
+          "deployStatus": "Deploying 01 Jul 2026 — 85% readiness",
+          "positions": [
+            { "paraLine": "A12/001", "grade": "E7", "mos": "18Z", "title": "Team Sergeant", "filled": true, "sdap": "Level 4", "flppAuth": true },
+            { "paraLine": "A12/002", "grade": "O3", "mos": "18A", "title": "ODA Team Leader", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/003", "grade": "W1", "mos": "180A", "title": "Asst Detachment CDR", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/004", "grade": "E6", "mos": "18B", "title": "Weapons Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/005", "grade": "E7", "mos": "18D", "title": "Medical Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/006", "grade": "E6", "mos": "18C", "title": "Engineer Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/007", "grade": "E6", "mos": "18E", "title": "Comms Sgt (Sr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/008", "grade": "E7", "mos": "18D", "title": "Medical Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/009", "grade": "E5", "mos": "18B", "title": "Weapons Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/010", "grade": "E5", "mos": "18C", "title": "Engineer Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/011", "grade": "E5", "mos": "18E", "title": "Comms Sgt (Jr)", "filled": true, "sdap": "Level 4" },
+            { "paraLine": "A12/012", "grade": "E6", "mos": "18F", "title": "Intelligence Sgt", "filled": true, "sdap": "Level 4" }
+          ]},
+        { "section": "Company Support", "authorizedPositions": 20, "onHand": 19,
+          "vacant": 1,
+          "vacantPosition": { "paraLine": "A13/010-variant", "grade": "E4", "mos": "11B", "note": "1 E4 SPC position vacant — gain in transit" },
+          "key": "Readiness NCO, training management, supply, maintenance, SFRE pipeline soldiers, medics" }
+      ]
+    },
+
+    {
+      "orgCode": "B-CO",
+      "name": "Bravo Company",
+      "uic": "W25T2D",
+      "totalAuthorized": 48,
+      "totalOnHand": 48,
+      "sections": [
+        { "section": "Company HQ", "authorizedPositions": 4, "onHand": 4 },
+        { "section": "ODA-5221", "authorizedPositions": 12, "onHand": 12,
+          "notes": "ODA-5221 Team Sgt on T3 profile — ODA deployable with medical clearance for advisory mission" },
+        { "section": "ODA-5222", "authorizedPositions": 12, "onHand": 12 },
+        { "section": "Company Support", "authorizedPositions": 20, "onHand": 20 }
+      ]
+    },
+
+    {
+      "orgCode": "C-CO",
+      "name": "Charlie Company",
+      "uic": "W25T2E",
+      "totalAuthorized": 48,
+      "totalOnHand": 48,
+      "sections": [
+        { "section": "Company HQ", "authorizedPositions": 4, "onHand": 4 },
+        { "section": "ODA-5231", "authorizedPositions": 12, "onHand": 12 },
+        { "section": "ODA-5232", "authorizedPositions": 12, "onHand": 12 },
+        { "section": "Company Support", "authorizedPositions": 20, "onHand": 20 }
+      ]
+    },
+
+    {
+      "orgCode": "SPT-CO",
+      "name": "Support Company",
+      "uic": "W25T2F",
+      "totalAuthorized": 40,
+      "totalOnHand": 40,
+      "sections": [
+        { "section": "Command", "authorizedPositions": 3, "onHand": 3 },
+        { "section": "Maintenance Platoon", "authorizedPositions": 15, "onHand": 15,
+          "mosList": ["915A","91Z","91B","91B","91B","91B","91B","91B","91H","91H","91H","91H","91S","91S","91S"] },
+        { "section": "Supply Platoon", "authorizedPositions": 7, "onHand": 7,
+          "mosList": ["92A","92A","92A","92A","92Y","92Y","92Y"] },
+        { "section": "Medical Support", "authorizedPositions": 5, "onHand": 5,
+          "mosList": ["68W","68W","68W","68W","68W"] },
+        { "section": "Communications", "authorizedPositions": 3, "onHand": 3,
+          "mosList": ["25U","25U","25B"] },
+        { "section": "Admin / Finance", "authorizedPositions": 2, "onHand": 2,
+          "mosList": ["42A","42A"] },
+        { "section": "Motor Pool", "authorizedPositions": 5, "onHand": 5,
+          "mosList": ["88M","88M","88M","92A","92A"] }
+      ]
+    }
+  ],
+
+  "equipmentAuthorizations": {
+    "note": "Equipment fill sourced from GCSS-Army property book (cross-reference Demo Battalion - GCSS-Army.json). Shortfalls P1 requisitioned unless noted.",
+    "smallArms": [
+      { "lin": "M49250", "nsn": "1005-01-118-2640", "nomenclature": "Rifle, 5.56mm M4A1 w/SOPMOD", "authorizedQty": 319, "onHandQty": 319, "fill": 100, "condition": "FMC", "notes": "All positions; SOPMOD Block 2 kit standard" },
+      { "lin": "M29484", "nsn": "1005-01-127-7510", "nomenclature": "Pistol, 9mm M17 (SIG Sauer P320)", "authorizedQty": 185, "onHandQty": 185, "fill": 100, "condition": "FMC", "notes": "ODA positions, officers, NCO leadership" },
+      { "lin": "M32484", "nsn": "1005-01-357-5340", "nomenclature": "Machine Gun, 5.56mm M249 SAW w/spare barrel", "authorizedQty": 24, "onHandQty": 24, "fill": 100, "condition": "FMC/NMC", "nmcQty": 4, "notes": "4 NMC — spare barrels; P1 requisition EDD 30 Jun 2026" },
+      { "lin": "M32400", "nsn": "1005-01-412-3452", "nomenclature": "Machine Gun, 7.62mm M240B", "authorizedQty": 12, "onHandQty": 12, "fill": 100, "condition": "FMC" },
+      { "lin": "M32483", "nsn": "1005-00-073-9421", "nomenclature": "Machine Gun, .50 Cal M2HB", "authorizedQty": 6, "onHandQty": 6, "fill": 100, "condition": "FMC" },
+      { "lin": "M23948", "nsn": "1010-01-433-9704", "nomenclature": "Grenade Launcher 40mm MK19 Mod 3", "authorizedQty": 4, "onHandQty": 4, "fill": 100, "condition": "FMC" },
+      { "lin": "M23912", "nsn": "1005-01-553-2197", "nomenclature": "Recoilless Rifle 84mm Carl Gustaf M3 MAAWS", "authorizedQty": 6, "onHandQty": 6, "fill": 100, "condition": "FMC", "notes": "SOCOM procured; GCSS-Army tracked" },
+      { "lin": "M32485", "nsn": "1005-01-561-7200", "nomenclature": "Grenade Launcher M32A1 MGLX 40mm", "authorizedQty": 8, "onHandQty": 8, "fill": 100, "condition": "FMC" },
+      { "lin": "M49100", "nsn": "1005-01-430-4150", "nomenclature": "Sniper Rifle .338 Norma Mag MK22 ASR", "authorizedQty": 4, "onHandQty": 4, "fill": 100, "condition": "FMC", "notes": "SOCOM Precision Sniper Rifle — TS/SCI-controlled use" }
+    ],
+    "optics": [
+      { "lin": "N94390", "nsn": "5855-01-537-7510", "nomenclature": "Night Vision Device AN/PVS-14", "authorizedQty": 280, "onHandQty": 278, "fill": 99.3, "shortfall": 2, "condition": "FMC" },
+      { "lin": "N94391", "nsn": "5855-01-629-0430", "nomenclature": "Night Vision Binocular AN/PVS-31A BNVD", "authorizedQty": 72, "onHandQty": 72, "fill": 100, "condition": "FMC", "notes": "One per ODA soldier; ODA-dedicated" },
+      { "lin": "I94340", "nsn": "5855-01-698-4950", "nomenclature": "Integrated Visual Augmentation System (IVAS) 1.2", "authorizedQty": 36, "onHandQty": 24, "fill": 66.7, "shortfall": 12, "condition": "FMC", "notes": "IVAS 1.2 — fielding in progress; 12 units in GCSS-Army requisition queue; EDD Q1 FY27" },
+      { "lin": "L98411", "nsn": "5855-01-432-0524", "nomenclature": "Laser Aiming Device AN/PEQ-15 ATPIAL", "authorizedQty": 260, "onHandQty": 260, "fill": 100, "condition": "FMC" }
+    ],
+    "communications": [
+      { "lin": "R08480", "nsn": "5820-01-571-0720", "nomenclature": "Radio AN/PRC-163 Unified Radio", "authorizedQty": 72, "onHandQty": 72, "fill": 100, "condition": "FMC", "notes": "Primary ODA individual radio; SOCOM standard" },
+      { "lin": "R08481", "nsn": "5820-01-543-6945", "nomenclature": "Radio AN/PRC-152A Harris Falcon III", "authorizedQty": 48, "onHandQty": 48, "fill": 100, "condition": "FMC", "notes": "Backup/assault radio" },
+      { "lin": "R08490", "nsn": "5820-01-603-0640", "nomenclature": "Radio AN/PRC-117G SATCOM", "authorizedQty": 18, "onHandQty": 18, "fill": 100, "condition": "FMC", "notes": "One per ODA — SATCOM primary" },
+      { "lin": "R08495", "nsn": "5895-01-561-5930", "nomenclature": "ATAK EUD Android Tablet (SOCOM)", "authorizedQty": 72, "onHandQty": 72, "fill": 100, "condition": "FMC", "notes": "ATAK-MIL — SA device per ODA member" },
+      { "lin": "R08501", "nsn": "5820-01-571-5830", "nomenclature": "Radio AN/PRC-148 MBITR JTRS", "authorizedQty": 36, "onHandQty": 34, "fill": 94.4, "shortfall": 2, "condition": "FMC/NMC" }
+    ],
+    "vehicles": [
+      { "lin": "J09401", "nsn": "2320-01-622-6465", "nomenclature": "Truck JLTV M1278A1 Heavy Guns Carrier", "authorizedQty": 8, "onHandQty": 8, "fill": 100, "nmcQty": 2, "condition": "FMC/NMC", "notes": "2 in scheduled maintenance per work orders WO-2601-014 and WO-2601-015" },
+      { "lin": "T99360", "nsn": "2320-01-447-1133", "nomenclature": "GMV 1.1 (Ground Mobility Vehicle) HMMWV", "authorizedQty": 12, "onHandQty": 12, "fill": 100, "condition": "FMC", "notes": "Company-level; ODA transport and mission support" },
+      { "lin": "T99370", "nsn": "2320-01-371-9577", "nomenclature": "LMTV Cargo Truck M1078A1P2", "authorizedQty": 6, "onHandQty": 6, "fill": 100, "condition": "FMC" },
+      { "lin": "T99380", "nsn": "2320-01-443-2739", "nomenclature": "FMTV MTV 5-Ton M1083A1P2", "authorizedQty": 4, "onHandQty": 4, "fill": 100, "condition": "FMC" },
+      { "lin": "T99390", "nsn": "2320-01-523-9987", "nomenclature": "Polaris MRZR-D4 Ultralight Tactical Vehicle", "authorizedQty": 6, "onHandQty": 6, "fill": 100, "condition": "FMC", "notes": "Air-transportable; ODA ground assault capability" }
+    ],
+    "jumpEquipment": [
+      { "lin": "P94300", "nsn": "1670-01-580-7700", "nomenclature": "Parachute, HALO MC-6 Free Fall", "authorizedQty": 72, "onHandQty": 72, "fill": 100, "condition": "Serviceable", "notes": "Jumper currency required — HALO auth per position" },
+      { "lin": "P94310", "nsn": "1670-01-430-7390", "nomenclature": "Parachute, T-11 Static Line Assembly", "authorizedQty": 140, "onHandQty": 140, "fill": 100, "condition": "Serviceable" },
+      { "lin": "P94320", "nsn": "1670-01-512-4420", "nomenclature": "Oxygen System — HAHO/HALO O2 SOFLAM", "authorizedQty": 36, "onHandQty": 36, "fill": 100, "condition": "Serviceable", "notes": "Requires HALO qual and currency (90-day); cross-reference ATTARS jump currency data" }
+    ],
+    "medicalEquipment": [
+      { "lin": "M94900", "nsn": "6545-01-530-9361", "nomenclature": "Medical Set Individual IFAK II", "authorizedQty": 319, "onHandQty": 319, "fill": 100, "condition": "Serviceable" },
+      { "lin": "M94910", "nsn": "6545-01-538-8026", "nomenclature": "Medical Set Trauma Combat SF Kit (18D)", "authorizedQty": 24, "onHandQty": 24, "fill": 100, "condition": "Serviceable", "notes": "One per 18D medic position; controlled item" },
+      { "lin": "M94920", "nsn": "6545-01-582-7930", "nomenclature": "Medical Chest SF Aid Bag M5", "authorizedQty": 6, "onHandQty": 6, "fill": 100, "condition": "Serviceable", "notes": "One per ODA; deployed with team" }
+    ]
+  },
+
+  "specialPayAuthorizations": {
+    "sdap": {
+      "level2": { "authorizedPositions": 0, "monthlyRate": 375, "description": "SDAP Level 2 — Not applicable 2nd Bn" },
+      "level3": { "authorizedPositions": 14, "monthlyRate": 450, "description": "SDAP Level 3 — Company 1SGs, Company NCOICs, Ops NCOs" },
+      "level4": { "authorizedPositions": 78, "monthlyRate": 375, "description": "SDAP Level 4 — All ODA-assigned SF soldiers (18-series on ODA)" }
+    },
+    "flpp": {
+      "authorized": true,
+      "commonLanguages": ["Arabic", "Spanish", "Pashto", "Dari", "French"],
+      "maxMonthly": 1500,
+      "policy": "AR 11-6 — FLPP paid based on DLPT score; Level 1 $100, Level 2 $250, Level 3 $500; multi-language bonus up to $1500"
+    },
+    "haloHaho": {
+      "authorizedJumpers": 72,
+      "hazardPay": 150,
+      "requirement": "HALO qualification + 90-day jump currency; tracked in DTMS/ATTARS"
+    }
+  },
+
+  "readinessAssessment": {
+    "extractDate": "2026-06-18",
+    "personnelReadiness": {
+      "fill": 99.7,
+      "deployableStrength": 312,
+      "nonDeployable": 6,
+      "meb": 2,
+      "temporaryProfile": 2,
+      "newGainSRPPending": 3,
+      "overallRating": "Green"
+    },
+    "equipmentReadiness": {
+      "criticalShortfalls": [
+        { "item": "IVAS 1.2", "shortfall": 12, "impact": "Amber — fielding in progress; EDD Q1 FY27", "priority": "P2" },
+        { "item": "M249 Spare Barrels", "shortfall": 4, "impact": "Amber — 4 NMC; P1 requisition", "priority": "P1" },
+        { "item": "AN/PRC-148 MBITR", "shortfall": 2, "impact": "Green — below threshold; backup radio", "priority": "P3" }
+      ],
+      "overallRating": "Amber",
+      "jltvNmcNote": "2 JLTVs in scheduled maintenance — projected return 30 Jun 2026"
+    },
+    "deploymentReadiness": {
+      "oda5211": { "status": "85% Ready", "deployDate": "2026-07-01", "blockingItems": ["Peters CFT admin action","Williams T2 profile","1 IVAS short"] },
+      "oda5212": { "status": "85% Ready", "deployDate": "2026-07-01", "blockingItems": ["IVAS short","Nguyen admin action"] },
+      "oda5221": { "status": "Garrison", "nextTrainingEvent": "JRTC Rotation Sep 2026" },
+      "oda5222": { "status": "Garrison", "nextTrainingEvent": "JRTC Rotation Sep 2026" },
+      "oda5231": { "status": "Garrison", "nextTrainingEvent": "Team Week Jul 2026" },
+      "oda5232": { "status": "Garrison", "nextTrainingEvent": "Team Week Jul 2026" }
+    }
+  }
+}
